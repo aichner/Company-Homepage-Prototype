@@ -3,10 +3,14 @@
 @import 'utilities/variables';
 // Global CSS
 @import 'utilities/base';
+// Fonts
+@import 'utilities/fonts';
 
 //> Components
-// Homepage (Template page)
+// Start Page
 @import 'components/pages/HomePage/HomePage.scss';
+// Footer
+@import 'components/molecules/Footer/footer.scss';
 
 /** 
  * SPDX-License-Identifier: (EUPL-1.2)

@@ -1,3 +1,6 @@
+*, html, body, footer, header{
+	font-family: 'Roboto', 'Gidole', sans-serif;
+}
 .flyout {
 	display:flex;
 	flex-direction: column;
@@ -9,13 +12,13 @@
 .agency-dark{
 	background-color: $agencyDark !important;
 	&.darken-1{
-		background-color: darken($agencyDark, 5%) !important;
+		background-color: darken($agencyDark, 2%) !important;
 	}
 	&.darken-2{
-		background-color: darken($agencyDark, 10%) !important;
+		background-color: darken($agencyDark, 5%) !important;
 	}
 	&.darken-3{
-		background-color: darken($agencyDark, 15%) !important;
+		background-color: darken($agencyDark, 10%) !important;
 	}
 	&.lighten-1{
 		background-color: lighten($agencyDark, 10%) !important;
