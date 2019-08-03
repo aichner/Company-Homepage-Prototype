@@ -5,9 +5,29 @@
 }
 
 // Custom pulsating heart
-footer .pulse {
-    -webkit-animation: pulse 1s infinite;
-    animation: pulse 1s infinite;
+footer {
+    .pulse {
+        -webkit-animation: pulse 1s infinite;
+        animation: pulse 1s infinite;
+    }
+
+    ul li i{
+        width: 30px;
+        text-align: center;
+        padding-right: .5rem;
+    }
+
+    .title{
+        text-transform: uppercase;
+        font-weight: bold;
+    }
+
+    .col-md-3{
+        hr{
+            width: 60px;
+            height: 1px;
+        }
+    }
 }
 
 /** 

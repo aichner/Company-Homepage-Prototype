@@ -17,6 +17,18 @@ import {
 // Logo
 //import Logo from '../../../assets/content/logow_h50.png';
 
+//> Dynamic texts
+// Slogans
+const slogans = [
+    "Wählen Sie den Weg zum Erfolg!",
+    "Erhöhen Sie Ihren Bekanntheitsgrad!",
+    "Jetzt Beratungsgespräch vereinbaren!",
+    "Lassen Sie sich von uns beraten!",
+    "Worauf warten Sie noch?",
+    "Der Erfolg wartet hinter diesem Kontakt!",
+    "Heraus aus der Komfortzone!"
+]
+
 class Footer extends React.Component{
     render(){
         return(
@@ -98,69 +110,80 @@ class Footer extends React.Component{
                 </MDBRow>
                 <MDBContainer className="text-center text-md-left pt-4">
                     <MDBRow>
-                        <MDBCol md="3">
-                            <h5 className="title">Werbeagentur Christian Aichner</h5>
+                        <MDBCol md="2">
+                            <h5>Logo</h5>
                             <p>
                             Hochwertige und individuelle Lösungen
                             </p>
                         </MDBCol>
                         <MDBCol md="3">
-                            <h5 className="title text-uppercase font-weight-bold">Dienste</h5>
+                            <h5 className="title">Dienste</h5>
+                            <hr className="agency-red mb-4 mt-0 d-inline-block" />
                             <ul>
                             <li className="list-unstyled">
-                                <a href="#!">Link 1</a>
+                                <a href="#!"><MDBIcon icon="globe" />Online-Präsenz</a>
                             </li>
                             <li className="list-unstyled">
-                                <a href="#!">Link 2</a>
+                                <a href="#!"><MDBIcon icon="handshake" />Events / Messen</a>
                             </li>
                             <li className="list-unstyled">
-                                <a href="#!">Link 3</a>
+                                <a href="#!"><MDBIcon icon="ring" />Ihre Hochzeit</a>
                             </li>
                             <li className="list-unstyled">
-                                <a href="#!">Link 4</a>
+                                <a href="#!"><MDBIcon icon="user-tie" />Ihr Image</a>
                             </li>
                             </ul>
                         </MDBCol>
                         <MDBCol md="3">
-                            <h5 className="title">Links</h5>
+                            <h5 className="title">Nützliche Links</h5>
+                            <hr className="agency-red mb-4 mt-0 d-inline-block" />
                             <ul>
                             <li className="list-unstyled">
-                                <a href="#!">Link 1</a>
+                                <a href="#!"><MDBIcon icon="user" />Kundenportal</a>
                             </li>
                             <li className="list-unstyled">
-                                <a href="#!">Link 2</a>
+                                <a href="#!"><MDBIcon icon="question" />FAQ</a>
                             </li>
                             <li className="list-unstyled">
-                                <a href="#!">Link 3</a>
+                                <a href="#!"><MDBIcon icon="code" />Development Roadmap</a>
                             </li>
                             <li className="list-unstyled">
-                                <a href="#!">Link 4</a>
+                                <a href="#!"><MDBIcon icon="coffee" />Einen Kaffee spendieren</a>
                             </li>
                             </ul>
                         </MDBCol>
-                        <MDBCol md="3">
-                            <h5 className="title">Links</h5>
+                        <MDBCol md="4">
+                            <h5 className="title">Kontakt</h5>
+                            <hr className="agency-red mb-4 mt-0 d-inline-block" />
                             <ul>
                             <li className="list-unstyled">
-                                <a href="#!">Link 1</a>
+                                <a href="#!"><MDBIcon icon="home" />Villach, Kärnten, AT</a>
                             </li>
                             <li className="list-unstyled">
-                                <a href="#!">Link 2</a>
+                                <a href="#!"><MDBIcon far icon="envelope" />info@aichner-christian.com</a>
                             </li>
                             <li className="list-unstyled">
-                                <a href="#!">Link 3</a>
+                                <a href="#!"><MDBIcon icon="phone" />+43 681 205027 54</a>
+                            </li>
+                            <hr />
+                            <li className="list-unstyled">
+                                <a href="#!"><MDBIcon far icon="file-alt" />Impressum</a>
                             </li>
                             <li className="list-unstyled">
-                                <a href="#!">Link 4</a>
+                                <a href="#!"><MDBIcon icon="balance-scale" />Datenschutzerklärung</a>
                             </li>
                             </ul>
+                        </MDBCol>
+                        <MDBCol md="12" className="text-center my-5">
+                            <h4>{slogans[Math.floor(Math.random()*slogans.length)]}</h4>
+                            <MDBBtn size="lg" rounded color="agency-red">Kontakt</MDBBtn>
                         </MDBCol>
                     </MDBRow>
                 </MDBContainer>
                 <div className="footer-copyright text-center py-3">
                     <MDBContainer fluid>
                         &copy; 2017 - {new Date().getFullYear()} Copyright: Werbeagentur Christian Aichner
-                        <p className="my-3 font-weight-bold">Made with <i class="fas fa-heart pulse red-text" aria-hidden="true"></i> by us.</p>
+                        <p className="my-2 font-weight-bold">Made with <i className="fas fa-heart pulse red-text" aria-hidden="true"></i> by us.</p>
                     </MDBContainer>
                 </div>
             </MDBFooter>
