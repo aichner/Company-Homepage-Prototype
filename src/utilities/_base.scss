@@ -1,3 +1,9 @@
+*, html, body, footer, header{
+	font-family: 'Roboto', 'Gidole', sans-serif;
+}
+.gidole{
+	font-family: 'Gidole', 'Roboto', sans-serif;
+}
 .flyout {
 	display:flex;
 	flex-direction: column;
@@ -9,13 +15,13 @@
 .agency-dark{
 	background-color: $agencyDark !important;
 	&.darken-1{
-		background-color: darken($agencyDark, 5%) !important;
+		background-color: darken($agencyDark, 2%) !important;
 	}
 	&.darken-2{
-		background-color: darken($agencyDark, 10%) !important;
+		background-color: darken($agencyDark, 5%) !important;
 	}
 	&.darken-3{
-		background-color: darken($agencyDark, 15%) !important;
+		background-color: darken($agencyDark, 10%) !important;
 	}
 	&.lighten-1{
 		background-color: lighten($agencyDark, 10%) !important;
@@ -32,7 +38,7 @@
 	&.darken-1{
 		background-color: darken($agencyRed, 10%) !important;
 	}
-	&.darken-21{
+	&.darken-2{
 		background-color: darken($agencyRed, 20%) !important;
 	}
 	&.darken-3{
@@ -46,6 +52,17 @@
 	}
 	&.lighten-3{
 		background-color: lighten($agencyRed, 30%) !important;
+	}
+}
+.btn-agency-red{
+	background-color: $agencyRed !important;
+	&:hover{
+		background-color: darken($agencyRed, 10%) !important;
+		color: white;
+	}
+	&:focus{
+		background-color: darken($agencyRed, 20%) !important;
+		color: white;
 	}
 }
 
