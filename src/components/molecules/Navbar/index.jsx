@@ -15,8 +15,9 @@ import {
   MDBContainer,
 } from 'mdbreact';
 
-// React Logo
-import { ReactComponent as Logo } from '../../../assets/logo.svg';
+//> Images
+// Company logo
+import Logo from '../../../assets/content/logow_h50.png';
 
 class Navbar extends React.Component{
     state = {
@@ -48,8 +49,7 @@ class Navbar extends React.Component{
                 <MDBNavbar color="agency-dark" dark expand="md" fixed="top" scrolling>
                 <MDBContainer>
                     <MDBNavbarBrand href="/" className="py-0 font-weight-bold">
-                    <Logo style={{ height: "2.5rem", width: "2.5rem" }} />
-                    <strong className="align-middle">MDB React Template</strong>
+                    <img src={Logo} style={{ height: "2.5rem" }} />
                     </MDBNavbarBrand>
                     <MDBNavbarToggler
                     onClick={this.toggleCollapse("mainNavbarCollapse")}
