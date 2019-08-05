@@ -19,6 +19,7 @@ import {
   MDBAnimation,
 } from 'mdbreact';
 
+// This component shall not return any content
 class HomePage extends React.Component {
   scrollToTop = () => window.scrollTo(0, 0);
   render() {
