@@ -1,6 +1,8 @@
 //> React
 // Contains all the functionality necessary to define React components
 import React from 'react';
+// Links (replaces <a> tags)
+import { Link } from 'react-router-dom'
 
 //> MDB
 // "Material Design for Bootstrap" is a great UI design framework
@@ -121,16 +123,16 @@ class Footer extends React.Component{
                             <hr className="agency-red mb-4 mt-0 d-inline-block" />
                             <ul>
                             <li className="list-unstyled">
-                                <a href="#!"><MDBIcon icon="globe" />Online-Präsenz</a>
+                                <Link to="/service/online-presence"><MDBIcon icon="globe" />Online-Präsenz</Link>
                             </li>
                             <li className="list-unstyled">
-                                <a href="#!"><MDBIcon icon="handshake" />Events / Messen</a>
+                                <Link to="/service/events"><MDBIcon icon="handshake" />Events / Messen</Link>
                             </li>
                             <li className="list-unstyled">
-                                <a href="#!"><MDBIcon icon="ring" />Ihre Hochzeit</a>
+                                <Link to="/service/wedding"><MDBIcon icon="ring" />Ihre Hochzeit</Link>
                             </li>
                             <li className="list-unstyled">
-                                <a href="#!"><MDBIcon icon="user-tie" />Ihr Image</a>
+                                <Link to="/service/image"><MDBIcon icon="user-tie" />Ihr Image</Link>
                             </li>
                             </ul>
                         </MDBCol>
@@ -139,16 +141,16 @@ class Footer extends React.Component{
                             <hr className="agency-red mb-4 mt-0 d-inline-block" />
                             <ul>
                             <li className="list-unstyled">
-                                <a href="#!"><MDBIcon icon="user" />Kundenportal</a>
+                                <Link to="/kisy"><MDBIcon icon="user" />Kundenportal</Link>
                             </li>
                             <li className="list-unstyled">
-                                <a href="#!"><MDBIcon icon="question" />FAQ</a>
+                                <Link to="/faq"><MDBIcon icon="question" />FAQ</Link>
                             </li>
                             <li className="list-unstyled">
-                                <a href="#!"><MDBIcon icon="code" />Development Roadmap</a>
+                                <Link to="/dev"><MDBIcon icon="code" />Development Roadmap</Link>
                             </li>
                             <li className="list-unstyled">
-                                <a href="#!"><MDBIcon icon="coffee" />Einen Kaffee spendieren</a>
+                                <Link to="/coffee"><MDBIcon icon="coffee" />Einen Kaffee spendieren</Link>
                             </li>
                             </ul>
                         </MDBCol>
@@ -157,20 +159,20 @@ class Footer extends React.Component{
                             <hr className="agency-red mb-4 mt-0 d-inline-block" />
                             <ul>
                             <li className="list-unstyled">
-                                <a href="#!"><MDBIcon icon="home" />Villach, Kärnten, AT</a>
+                                <MDBIcon icon="home" />Villach, Kärnten, AT
                             </li>
                             <li className="list-unstyled">
-                                <a href="#!"><MDBIcon far icon="envelope" />info@aichner-christian.com</a>
+                                <a href="mailto:info@aichner-christian.com"><MDBIcon far icon="envelope" />info@aichner-christian.com</a>
                             </li>
                             <li className="list-unstyled">
-                                <a href="#!"><MDBIcon icon="phone" />+43 681 205027 54</a>
+                                <a href="tel:004368120502754"><MDBIcon icon="phone" />+43 681 205027 54</a>
                             </li>
                             <hr />
                             <li className="list-unstyled">
-                                <a href="#!"><MDBIcon far icon="file-alt" />Impressum</a>
+                                <Link to="/about"><MDBIcon far icon="file-alt" />Impressum</Link>
                             </li>
                             <li className="list-unstyled">
-                                <a href="#!"><MDBIcon icon="balance-scale" />Datenschutzerklärung</a>
+                                <Link to="/privacy"><MDBIcon icon="balance-scale" />Datenschutzerklärung</Link>
                             </li>
                             </ul>
                         </MDBCol>
