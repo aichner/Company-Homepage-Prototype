@@ -15,7 +15,7 @@ import {
 
 //> Images
 // Logo
-//import Logo from '../../../assets/content/logow_h50.png';
+import Logo from '../../../assets/content/logow_h50.png';
 
 //> Dynamic texts
 // Slogans
@@ -111,8 +111,8 @@ class Footer extends React.Component{
                 <MDBContainer className="text-center text-md-left pt-4">
                     <MDBRow>
                         <MDBCol md="2">
-                            <h5>Logo</h5>
-                            <p>
+                            <img src={Logo} style={{ height: "2.5rem" }} />
+                            <p className="mt-2">
                             Hochwertige und individuelle Lösungen
                             </p>
                         </MDBCol>
