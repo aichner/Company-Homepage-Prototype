@@ -10,9 +10,9 @@
   This is the official website of the Advertisement Agency Christian Aichner.
   <br>
   <br>
-  <a href="https://github.com/aichner/Company-Homepage/issues/new?template=bug.md">Report bug</a>
+  <a href="https://github.com/aichner/Company-Homepage/issues/new?template=bug_report.md">Report bug</a>
   ·
-  <a href="https://github.com/aichner/Company-Homepage/issues/new?template=feature.md&labels=feature">Request feature</a>
+  <a href="https://github.com/aichner/Company-Homepage/issues/new?template=feature_request.md">Request feature</a>
   ·
   <a href="https://blog.aichner-christian.com/">Blog</a>
 </p>
