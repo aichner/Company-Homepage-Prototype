@@ -64,6 +64,7 @@ Have a bug or a feature request? Please first search for existing and closed iss
 
 ![GitHub last commit](https://img.shields.io/github/last-commit/aichner/Company-Homepage)
 ![GitHub issues](https://img.shields.io/github/issues-raw/aichner/Company-Homepage)
+![GitHub closed issues](https://img.shields.io/github/issues-closed-raw/aichner/Company-Homepage?color=green)
 
 Please read through our [contributing guidelines](https://github.com/aichner/Company-Homepage/blob/master/CONTRIBUTING.md). Included are directions for opening issues, coding standards, and notes on development.
 
@@ -102,6 +103,8 @@ For transparency into our release cycle and in striving to maintain backward com
 We do not have any external contributors yet, but if you want your name to be here, feel free to [contribute to our project](#contributing).
 
 ## [](#copyright-and-license)Copyright and license
+
+![GitHub repository license](https://img.shields.io/badge/license-EUPL--1.2-blue)
 
 SPDX-License-Identifier: (EUPL-1.2)
 Copyright © 2019 Werbeagentur Christian Aichner
