@@ -29,7 +29,7 @@
 - [Copyright and license](#copyright-and-license)
 
 
-## Quick start
+## [](#quick-start)Quick start 
 
 Several quick start options are available:
 
@@ -52,15 +52,15 @@ How to start this application?
 - Start a local copy of the docs site with `npm start`
 - Or build a local copy of the library with `npm run build`
 
-## Status
+## [](#status)Status
 
 ![Website](https://img.shields.io/website/https/www.aichner-christian.com?label=website)
 
-## Bugs and feature requests
+## [](#bug-and-feature-requests)Bugs and feature requests
 
 Have a bug or a feature request? Please first search for existing and closed issues. If your problem or idea is not addressed yet, [please open a new issue](https://github.com/aichner/Company-Homepage/issues/new/choose).
 
-## Contributing
+## [](#contributing)Contributing
 
 ![GitHub issues](https://img.shields.io/github/issues-raw/aichner/Company-Homepage)
 
@@ -68,7 +68,7 @@ Please read through our [contributing guidelines](https://github.com/aichner/Com
 
 All HTML and CSS should conform to the [Code Guide](https://github.com/mdo/code-guide), maintained by [Mark Otto](https://github.com/mdo).
 
-## Community
+## [](#community)Community
 
 Get updates on our development and chat/talk with the project maintainers and community members.
 
@@ -78,13 +78,13 @@ Get updates on our development and chat/talk with the project maintainers and co
 - Follow us on [Facebook](https://www.facebook.com/werbeagentur.aichner).
 
 
-## Versioning
+## [](#versioning)Versioning
 
 ![GitHub package.json version](https://img.shields.io/github/package-json/v/aichner/Company-Homepage)
 
 For transparency into our release cycle and in striving to maintain backward compatibility, this repository is maintained under [the Semantic Versioning guidelines](https://semver.org/). Sometimes we screw up, but we adhere to those rules whenever possible.
 
-## Creators
+## [](#creators)Creators
 
 **Christian Aichner**
 
@@ -96,11 +96,11 @@ For transparency into our release cycle and in striving to maintain backward com
 
 - <https://github.com/kleberbaum>
 
-## Thanks
+## [](#thanks)Thanks
 
 We do not have any external contributors yet, but if you want your name to be here, feel free to [contribute to our project](#contributing).
 
-## Copyright and license
+## [](#copyright-and-license)Copyright and license
 
 SPDX-License-Identifier: (EUPL-1.2)
 Copyright © 2019 Werbeagentur Christian Aichner
