@@ -62,6 +62,7 @@ Have a bug or a feature request? Please first search for existing and closed iss
 
 ## [](#contributing)Contributing
 
+![GitHub last commit](https://img.shields.io/github/last-commit/aichner/Company-Homepage)
 ![GitHub issues](https://img.shields.io/github/issues-raw/aichner/Company-Homepage)
 
 Please read through our [contributing guidelines](https://github.com/aichner/Company-Homepage/blob/master/CONTRIBUTING.md). Included are directions for opening issues, coding standards, and notes on development.
