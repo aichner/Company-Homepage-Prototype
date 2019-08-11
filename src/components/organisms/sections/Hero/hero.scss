@@ -6,7 +6,7 @@
     background: linear-gradient(45deg, rgba(42, 27, 161, 0.7), rgba(29, 210, 177, 0.7) 100%);
 }
 
-#hero .view {
+#hero .hero-view {
     height: 100vh;
 }
 
@@ -16,6 +16,10 @@
 
 #hero .col-md-6{
     align-self: center;
+    .card{
+        background-color: rgba(0, 0, 0, 0.2);
+        border-radius: 0;
+    }
 }
 
 #hero h6 {

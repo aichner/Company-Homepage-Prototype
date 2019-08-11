@@ -9,20 +9,16 @@ import { ParallaxBanner, Parallax } from 'react-scroll-parallax';
 //> MDB
 // "Material Design for Bootstrap" is a great UI design framework
 import {
-  MDBNavbar,
-  MDBNavbarBrand,
-  MDBNavbarNav,
-  MDBNavItem,
-  MDBNavLink,
-  MDBNavbarToggler,
-  MDBCollapse,
-  MDBMask,
   MDBRow,
   MDBCol,
   MDBBtn,
   MDBView,
   MDBContainer,
-  MDBFormInline
+  MDBIcon,
+  MDBCard,
+  MDBCardBody,
+  MDBInput,
+  MDBMask,
 } from 'mdbreact';
 
 //> Images
@@ -36,16 +32,9 @@ import layerLogo from '../../../../assets/bg/logo.png';
 class Hero extends React.Component {
 
     render() {
-        const overlay = (
-        <div
-            id="sidenav-overlay"
-            style={{ backgroundColor: "transparent" }}
-            onClick={this.handleTogglerClick}
-        />
-        );
         return (
         <div id="hero">
-                <MDBView>
+                <MDBView className="hero-view">
                     <ParallaxBanner
                     className="hero-parallax"
                     layers={[
@@ -76,12 +65,14 @@ class Hero extends React.Component {
                                 <MDBCol md="6">
                                     <Parallax y={[20, -20]} tagOuter="figure">
                                         <div className="white-text text-center text-md-left mt-xl-5 mb-5">
-                                            <div className="text-center w-100">
-                                                <img src={layerLogo} className="m-auto" alt="Logo"/>
-                                            </div>
+                                            <MDBView>
+                                                 <img src={layerLogo} className="m-auto img-fluid" alt="Logo"/>
+                                                <MDBMask className="flex-center">
+                                                </MDBMask>
+                                            </MDBView>
                                             
                                             <h1 className="h1-responsive font-weight-bold mt-sm-5">
-                                                Make purchases with our app{" "}
+                                                Ihre Vision ist unser Auftrag.{" "}
                                             </h1>
                                             <hr className="hr-light" />
                                             
@@ -92,12 +83,40 @@ class Hero extends React.Component {
                                                 molestiae iste.
                                             </h6>
                                             
-                                            <MDBBtn color="white">Download</MDBBtn>
-                                            <MDBBtn outline color="white">
-                                                Learn More
+                                            <MDBBtn color="white">Was wir bieten</MDBBtn>
+                                            <MDBBtn outline color="warning">
+                                                <MDBIcon icon="paper-plane" className="pr-2" />Kontakt
                                             </MDBBtn>
                                         </div>
                                     </Parallax>
+                                </MDBCol>
+                                <MDBCol md="6">
+                                    <MDBCard id="classic-card">
+                                        <MDBCardBody className="z-depth-2 white-text">
+                                        <h3 className="text-center">
+                                            Was suchen Sie?
+                                        </h3>
+                                        <hr className="hr-light" />
+                                        <MDBBtn color="white">Website</MDBBtn>
+                                        <MDBBtn color="white">Video</MDBBtn>
+                                        <MDBBtn color="white">Foto</MDBBtn>
+                                        <MDBBtn color="white">Design</MDBBtn>
+                                        <div className="text-center mt-4 black-text">
+                                            <hr className="hr-light" />
+                                            <div className="text-center d-flex justify-content-center white-label">
+                                            <a href="#!" className="p-2 m-2">
+                                                <MDBIcon fab icon="twitter" className="white-text" />
+                                            </a>
+                                            <a href="#!" className="p-2 m-2">
+                                                <MDBIcon fab icon="linkedin-in" className="white-text" />
+                                            </a>
+                                            <a href="#!" className="p-2 m-2">
+                                                <MDBIcon fab icon="instagram" className="white-text" />
+                                            </a>
+                                            </div>
+                                        </div>
+                                        </MDBCardBody>
+                                    </MDBCard>
                                 </MDBCol>
                             </MDBRow>
                         </MDBContainer>
