@@ -100,14 +100,14 @@ class Hero extends React.Component {
                                         </div>
                                     </Parallax>
                                 </MDBCol>
-                                <MDBCol md="6" className="d-none d-md-block d-lg-block">
+                                <MDBCol md="6" className="d-none d-md-flex d-lg-flex">
                                     <MDBCard id="classic-card">
                                         <MDBCardBody className="z-depth-2 white-text">
                                         <h3 className="text-center">
                                             Was suchen Sie?
                                         </h3>
                                         <hr className="hr-light" />
-                                        <MDBRow className="services">
+                                        <MDBRow className="services d-none d-md-none d-lg-flex" >
                                             <MDBCol md="6">
                                                 <figure>
                                                     <Link to="services/online-presence">
@@ -182,6 +182,10 @@ class Hero extends React.Component {
                                                 </figure>
                                             </MDBCol>
                                         </MDBRow>
+
+                                        <div className="text-center mt-4">
+                                            <MDBBtn color="white">Alle Leistungen</MDBBtn>
+                                        </div>
                                         <div className="text-center mt-4 black-text">
                                             <hr className="hr-light" />
                                             <div className="text-center d-flex justify-content-center white-label">
@@ -197,9 +201,12 @@ class Hero extends React.Component {
                                             </div>
                                         </div>
                                         </MDBCardBody>
+                                        
                                     </MDBCard>
+                                    
                                 </MDBCol>
                             </MDBRow>
+                            
                         </MDBContainer>
                     </ParallaxBanner>
                 </MDBView>
