@@ -114,7 +114,9 @@ class Hero extends React.Component {
                                                     <MDBView>
                                                         <img src={web} alt="Web" className="img-fluid" />
                                                         <MDBMask className="flex-center" overlay="black-strong">
-                                                            <p className="white-text">Website<br/><span>oder</span><br/><span>Webapp, Webshop, Blog</span></p>
+                                                            <p className="white-text">Website<br/>
+                                                            <span>oder</span><br/>
+                                                            <span>Webapp, Webshop, Blog</span></p>
                                                         </MDBMask>
                                                     </MDBView>
                                                     </Link>
@@ -126,7 +128,8 @@ class Hero extends React.Component {
                                                     <MDBView>
                                                         <img src={events} alt="Events" className="img-fluid" />
                                                         <MDBMask className="flex-center" overlay="black-strong">
-                                                            <p className="white-text">Eventfotografie<br/><span>oder</span><br/>Eventvideo</p>
+                                                            <p className="white-text">Eventfotografie<br/>
+                                                            <span>oder</span><br/>Eventvideo</p>
                                                         </MDBMask>
                                                     </MDBView>
                                                     
@@ -137,7 +140,11 @@ class Hero extends React.Component {
                                                 <figure>
                                                     <Link to="services/identity">
                                                     <MDBView>
-                                                        <img src={identity} alt="Corporate identity" className="img-fluid" />
+                                                        <img
+                                                        src={identity}
+                                                        alt="Corporate identity"
+                                                        className="img-fluid"
+                                                        />
                                                         <MDBMask className="flex-center" overlay="black-strong">
                                                             <p className="white-text">Corporate Identity</p>
                                                         </MDBMask>
@@ -163,7 +170,9 @@ class Hero extends React.Component {
                                                     <MDBView>
                                                         <img src={concept} alt="Concept" className="img-fluid" />
                                                         <MDBMask className="flex-center" overlay="black-strong">
-                                                            <p className="white-text">Webdesign<br/><span>und</span><br/>Konzept</p>
+                                                            <p className="white-text">Webdesign<br/>
+                                                            <span>und</span><br/>Konzept
+                                                            </p>
                                                         </MDBMask>
                                                     </MDBView>
                                                     </Link>
@@ -171,7 +180,7 @@ class Hero extends React.Component {
                                             </MDBCol>
                                             <MDBCol md="6">
                                                 <figure>
-                                                    <Link to="services/wedding">
+                                                    <Link to="services/design">
                                                     <MDBView>
                                                         <img src={design} alt="Design" className="img-fluid" />
                                                         <MDBMask className="flex-center" overlay="black-strong">
