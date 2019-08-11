@@ -71,7 +71,8 @@ Please read through our
 [contributing guidelines](https://github.com/aichner/Company-Homepage/blob/master/CONTRIBUTING.md). Included are
 directions for opening issues, coding standards, and notes on development.
 
-All HTML and CSS should conform to the [Code Guide](https://github.com/mdo/code-guide), maintained by [Mark Otto](https://github.com/mdo).
+All HTML and CSS should conform to the [Code Guide](https://github.com/mdo/code-guide), maintained by
+[Mark Otto](https://github.com/mdo).
 
 ## [](#community)Community
 
