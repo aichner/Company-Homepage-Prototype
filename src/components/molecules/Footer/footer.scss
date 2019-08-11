@@ -26,10 +26,17 @@ footer {
     }
 
     // Column header separator
-    .col-md-3{
+    .col-md-3, .col-md-4{
         hr{
             width: 60px;
             height: 1px;
+        }
+    }
+
+    // Column image size
+    .col-md-2{
+        img{
+            height: 2.5rem;
         }
     }
 }
