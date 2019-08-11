@@ -1,0 +1,89 @@
+#hero .gradient {
+    background: -moz-linear-gradient(45deg, rgba(42, 27, 161, 0.7), rgba(29, 210, 177, 0.7) 100%);
+    background: -webkit-linear-gradient(45deg, rgba(42, 27, 161, 0.7), rgba(29, 210, 177, 0.7) 100%);
+    background: -webkit-gradient(linear, 45deg, from(rgba(42, 27, 161, 0.7)), to(rgba(29, 210, 177, 0.7)));
+    background: -o-linear-gradient(45deg, rgba(42, 27, 161, 0.7), rgba(29, 210, 177, 0.7) 100%);
+    background: linear-gradient(45deg, rgba(42, 27, 161, 0.7), rgba(29, 210, 177, 0.7) 100%);
+}
+
+#hero .hero-view {
+    height: 100vh;
+}
+
+#hero .container, #hero .hero-row{
+    height: 100%;
+}
+
+#hero .col-md-6{
+    align-self: center;
+    .card{
+        background-color: rgba(0, 0, 0, 0.2);
+        border-radius: 0;
+    }
+}
+
+#hero h6 {
+    line-height: 1.7;
+}
+
+// Make the hero parallax fill the entire screen
+.hero-parallax{
+    height: 100% !important;
+}
+
+// Services
+.services{
+    margin: 0;
+    .col-md-6{
+        margin: 0;
+        padding: 0;
+        figure{
+            margin: 0;
+            overflow: hidden;
+            .mask{
+                transition: all .3s ease;
+                p{
+                    text-align: center;
+                    transition: all .1s ease;
+                    font-size: 1.1em;
+                    span{
+                        font-size: .8em;
+                    }
+                }
+            }
+            .view{
+                cursor: pointer;
+                img{
+                    filter: saturate(0);
+                    -webkit-filter: saturate(0);
+                    transition: all .3s ease;
+                }
+
+                &:hover{
+                    & > .mask{
+                        background-color: rgba(0, 0, 0, 0.4) !important;
+                        p{
+                            font-size: 1.4em;
+                        }
+                    }
+                    & > img{
+                        filter: saturate(1.5);
+                        -webkit-filter: saturate(1.5);
+                        transform: scale(1.1);
+                    }                    
+                }
+
+                p{
+                    font-weight: bold;
+                    color: white;
+                }
+            }   
+        }
+    }
+    
+}
+
+/** 
+ * SPDX-License-Identifier: (EUPL-1.2)
+ * Copyright © 2019 Werbeagentur Christian Aichner
+ */

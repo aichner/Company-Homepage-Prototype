@@ -19,12 +19,17 @@ import {
   MDBAnimation,
 } from 'mdbreact';
 
+//> Components
+import {
+  Hero
+} from '../../organisms/sections';
+
 // This component shall not return any content
 class HomePage extends React.Component {
   scrollToTop = () => window.scrollTo(0, 0);
   render() {
     return (
-      null
+      <Hero />
     );
   }
 }
