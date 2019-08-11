@@ -123,16 +123,24 @@ class Footer extends React.Component{
                             <hr className="agency-red mb-4 mt-0 d-inline-block" />
                             <ul>
                             <li className="list-unstyled">
-                                <Link to="/service/online-presence"><MDBIcon icon="globe" />Online-Präsenz</Link>
+                                <Link to="/service/online-presence">
+                                <   MDBIcon icon="globe" />Online-Präsenz
+                                </Link>
                             </li>
                             <li className="list-unstyled">
-                                <Link to="/service/events"><MDBIcon icon="handshake" />Events / Messen</Link>
+                                <Link to="/service/events">
+                                    <MDBIcon icon="handshake" />Events / Messen
+                                </Link>
                             </li>
                             <li className="list-unstyled">
-                                <Link to="/service/wedding"><MDBIcon icon="ring" />Ihre Hochzeit</Link>
+                                <Link to="/service/wedding">
+                                    <MDBIcon icon="ring" />Ihre Hochzeit
+                                </Link>
                             </li>
                             <li className="list-unstyled">
-                                <Link to="/service/image"><MDBIcon icon="user-tie" />Ihr Image</Link>
+                                <Link to="/service/image">
+                                    <MDBIcon icon="user-tie" />Ihr Image
+                                </Link>
                             </li>
                             </ul>
                         </MDBCol>
@@ -141,16 +149,24 @@ class Footer extends React.Component{
                             <hr className="agency-red mb-4 mt-0 d-inline-block" />
                             <ul>
                             <li className="list-unstyled">
-                                <Link to="/kisy"><MDBIcon icon="user" />Kundenportal</Link>
+                                <Link to="/kisy">
+                                    <MDBIcon icon="user" />Kundenportal
+                                </Link>
                             </li>
                             <li className="list-unstyled">
-                                <Link to="/faq"><MDBIcon icon="question" />FAQ</Link>
+                                <Link to="/faq">
+                                    <MDBIcon icon="question" />FAQ
+                                </Link>
                             </li>
                             <li className="list-unstyled">
-                                <Link to="/dev"><MDBIcon icon="code" />Development Roadmap</Link>
+                                <Link to="/dev">
+                                    <MDBIcon icon="code" />Development Roadmap
+                                </Link>
                             </li>
                             <li className="list-unstyled">
-                                <Link to="/coffee"><MDBIcon icon="coffee" />Einen Kaffee spendieren</Link>
+                                <Link to="/coffee">
+                                    <MDBIcon icon="coffee" />Einen Kaffee spendieren
+                                </Link>
                             </li>
                             </ul>
                         </MDBCol>
@@ -162,17 +178,25 @@ class Footer extends React.Component{
                                 <MDBIcon icon="home" />Villach, Kärnten, AT
                             </li>
                             <li className="list-unstyled">
-                                <a href="mailto:info@aichner-christian.com"><MDBIcon far icon="envelope" />info@aichner-christian.com</a>
+                                <a href="mailto:info@aichner-christian.com">
+                                    <MDBIcon far icon="envelope" />info@aichner-christian.com
+                                </a>
                             </li>
                             <li className="list-unstyled">
-                                <a href="tel:004368120502754"><MDBIcon icon="phone" />+43 681 205027 54</a>
+                                <a href="tel:004368120502754">
+                                    <MDBIcon icon="phone" />+43 681 205027 54
+                                </a>
                             </li>
                             <hr />
                             <li className="list-unstyled">
-                                <Link to="/about"><MDBIcon far icon="file-alt" />Impressum</Link>
+                                <Link to="/about">
+                                    <MDBIcon far icon="file-alt" />Impressum
+                                </Link>
                             </li>
                             <li className="list-unstyled">
-                                <Link to="/privacy"><MDBIcon icon="balance-scale" />Datenschutzerklärung</Link>
+                                <Link to="/privacy">
+                                    <MDBIcon icon="balance-scale" />Datenschutzerklärung
+                                </Link>
                             </li>
                             </ul>
                         </MDBCol>
