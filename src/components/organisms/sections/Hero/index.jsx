@@ -7,6 +7,8 @@ import { Link } from 'react-router-dom'
 //> Additional libraries
 // Parallax
 import { ParallaxBanner, Parallax } from 'react-scroll-parallax';
+// Fade-In animation
+import FadeIn from 'react-fade-in';
 
 //> MDB
 // "Material Design for Bootstrap" is a great UI design framework
@@ -75,38 +77,41 @@ class Hero extends React.Component {
                                 <MDBCol md="6">
                                     <Parallax y={[20, -20]} tagOuter="figure">
                                         <div className="white-text text-center text-md-left mt-xl-5 mb-5">
+                                            <FadeIn>
                                             <MDBView>
                                                  <img src={layerLogo} className="m-auto img-fluid" alt="Logo"/>
                                                 <MDBMask className="flex-center">
                                                 </MDBMask>
                                             </MDBView>
-                                            
+                                            </FadeIn>
+                                            <FadeIn>
                                             <h1 className="h1-responsive font-weight-bold mt-sm-5">
                                                 Ihre Vision ist unser Auftrag.{" "}
                                             </h1>
                                             <hr className="hr-light" />
-                                            
                                             <h6 className="mb-4">
                                                 Lorem ipsum dolor sit amet, consectetur adipisicing elit.
                                                 Rem repellendus quasi fuga nesciunt dolorum nulla magnam
                                                 veniam sapiente, fugiat! Commodi sequi non animi ea dolor
                                                 molestiae iste.
                                             </h6>
-                                            
                                             <MDBBtn color="white">Was wir bieten</MDBBtn>
                                             <MDBBtn outline color="warning">
                                                 <MDBIcon icon="paper-plane" className="pr-2" />Kontakt
                                             </MDBBtn>
+                                            </FadeIn>
                                         </div>
                                     </Parallax>
                                 </MDBCol>
                                 <MDBCol md="6" className="d-none d-md-flex d-lg-flex">
+                                    <FadeIn>
                                     <MDBCard id="classic-card">
                                         <MDBCardBody className="z-depth-2 white-text">
                                         <h3 className="text-center">
                                             Was suchen Sie?
                                         </h3>
                                         <hr className="hr-light" />
+                                        <FadeIn>
                                         <MDBRow className="services d-none d-md-none d-lg-flex" >
                                             <MDBCol md="6">
                                                 <figure>
@@ -191,7 +196,7 @@ class Hero extends React.Component {
                                                 </figure>
                                             </MDBCol>
                                         </MDBRow>
-
+                                        </FadeIn>
                                         <div className="text-center mt-4">
                                             <MDBBtn color="white">Alle Leistungen</MDBBtn>
                                         </div>
@@ -212,8 +217,9 @@ class Hero extends React.Component {
                                         </MDBCardBody>
                                         
                                     </MDBCard>
-                                    
+                                    </FadeIn>
                                 </MDBCol>
+                                
                             </MDBRow>
                             
                         </MDBContainer>
