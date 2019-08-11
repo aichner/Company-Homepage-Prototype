@@ -58,7 +58,8 @@ How to start this application?
 
 ## [](#bug-and-feature-requests)Bugs and feature requests
 
-Have a bug or a feature request? Please first search for existing and closed issues. If your problem or idea is not addressed yet, [please open a new issue](https://github.com/aichner/Company-Homepage/issues/new/choose).
+Have a bug or a feature request? Please first search for existing and closed issues. If your problem or idea is not
+addressed yet, [please open a new issue](https://github.com/aichner/Company-Homepage/issues/new/choose).
 
 ## [](#contributing)Contributing
 
@@ -66,7 +67,9 @@ Have a bug or a feature request? Please first search for existing and closed iss
 ![GitHub issues](https://img.shields.io/github/issues-raw/aichner/Company-Homepage)
 ![GitHub closed issues](https://img.shields.io/github/issues-closed-raw/aichner/Company-Homepage?color=green)
 
-Please read through our [contributing guidelines](https://github.com/aichner/Company-Homepage/blob/master/CONTRIBUTING.md). Included are directions for opening issues, coding standards, and notes on development.
+Please read through our
+[contributing guidelines](https://github.com/aichner/Company-Homepage/blob/master/CONTRIBUTING.md). Included are
+directions for opening issues, coding standards, and notes on development.
 
 All HTML and CSS should conform to the [Code Guide](https://github.com/mdo/code-guide), maintained by [Mark Otto](https://github.com/mdo).
 
@@ -84,7 +87,9 @@ Get updates on our development and chat/talk with the project maintainers and co
 
 ![GitHub package.json version](https://img.shields.io/github/package-json/v/aichner/Company-Homepage)
 
-For transparency into our release cycle and in striving to maintain backward compatibility, this repository is maintained under [the Semantic Versioning guidelines](https://semver.org/). Sometimes we screw up, but we adhere to those rules whenever possible.
+For transparency into our release cycle and in striving to maintain backward compatibility, this repository is
+maintained under [the Semantic Versioning guidelines](https://semver.org/). Sometimes we screw up, but we adhere to
+those rules whenever possible.
 
 ## [](#creators)Creators
 
@@ -100,7 +105,8 @@ For transparency into our release cycle and in striving to maintain backward com
 
 ## [](#thanks)Thanks
 
-We do not have any external contributors yet, but if you want your name to be here, feel free to [contribute to our project](#contributing).
+We do not have any external contributors yet, but if you want your name to be here, feel free 
+to [contribute to our project](#contributing).
 
 ## [](#copyright-and-license)Copyright and license
 
