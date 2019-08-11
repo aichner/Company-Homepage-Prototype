@@ -1,0 +1,33 @@
+#hero .gradient {
+    background: -moz-linear-gradient(45deg, rgba(42, 27, 161, 0.7), rgba(29, 210, 177, 0.7) 100%);
+    background: -webkit-linear-gradient(45deg, rgba(42, 27, 161, 0.7), rgba(29, 210, 177, 0.7) 100%);
+    background: -webkit-gradient(linear, 45deg, from(rgba(42, 27, 161, 0.7)), to(rgba(29, 210, 177, 0.7)));
+    background: -o-linear-gradient(45deg, rgba(42, 27, 161, 0.7), rgba(29, 210, 177, 0.7) 100%);
+    background: linear-gradient(45deg, rgba(42, 27, 161, 0.7), rgba(29, 210, 177, 0.7) 100%);
+}
+
+#hero .view {
+    height: 100vh;
+}
+
+#hero .container, #hero .row{
+    height: 100%;
+}
+
+#hero .col-md-6{
+    align-self: center;
+}
+
+#hero h6 {
+    line-height: 1.7;
+}
+
+// Make the hero parallax fill the entire screen
+.hero-parallax{
+    height: 100% !important;
+}
+
+/** 
+ * SPDX-License-Identifier: (EUPL-1.2)
+ * Copyright © 2019 Werbeagentur Christian Aichner
+ */
