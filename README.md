@@ -14,7 +14,7 @@
   ·
   <a href="https://github.com/aichner/Company-Homepage/issues/new?template=feature_request.md">Request feature</a>
   ·
-  <a href="https://blog.aichner-christian.com/">Blog</a>
+  <a href="https://www.aichner-christian.com/damn/dev">Blog</a>
 </p>
 
 ## Table of contents
