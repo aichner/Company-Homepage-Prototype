@@ -23,7 +23,7 @@ class App extends React.Component {
       <Router>
         <div className="flyout">
           <Navbar />
-          <main style={{ marginTop: "3rem" }}>
+          <main>
             <Routes />
           </main>
           <Footer />

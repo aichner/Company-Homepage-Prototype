@@ -1,9 +1,16 @@
 *, html, body, footer, header{
 	font-family: 'Roboto', 'Gidole', sans-serif;
 }
+
+main{
+	margin-top: 3rem;
+}
+
+// Font
 .gidole{
 	font-family: 'Gidole', 'Roboto', sans-serif;
 }
+
 .flyout {
 	display:flex;
 	flex-direction: column;
