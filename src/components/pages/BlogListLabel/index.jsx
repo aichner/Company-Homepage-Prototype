@@ -169,7 +169,7 @@ class BlogListLabel extends React.Component {
                             return(
                                 <MDBCol key={i} lg="3" md="12" className="mb-lg-0 mb-4">
                                     {image &&
-                                    <Link to={"/news/"+blog.id}>
+                                    <Link to={"/news/article/"+blog.id}>
                                         <MDBView hover className="mb-4" >
                                         <img
                                             className="img-fluid m-auto"
@@ -203,9 +203,11 @@ class BlogListLabel extends React.Component {
                                     <p className="dark-grey-text">
                                     {text}
                                     </p>
-                                    <MDBBtn color={color} rounded size="md">
-                                    Read more
-                                    </MDBBtn>
+                                    <Link to={"/news/article/"+blog.id}>
+                                        <MDBBtn color={color} rounded size="md">
+                                        Read more
+                                        </MDBBtn>
+                                    </Link>
                                 </MDBCol>
                             );
                         })
