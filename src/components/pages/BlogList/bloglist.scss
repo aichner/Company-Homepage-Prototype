@@ -2,6 +2,11 @@
     img{
         max-height: 150px;
     }
+    @media (min-width: 992px){
+        .mb-lg-0, .my-lg-0 {
+            margin-bottom: 3rem !important;
+        }
+    }
 }
 
 /** 

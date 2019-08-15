@@ -27,21 +27,26 @@ import './blog.scss';
 //> API
 // Keys
 import API_KEY from '../../keys/blogger.json';
-// Set API config
-const API_LIST = 'https://content.googleapis.com/blogger/v3/blogs/8573796855968165555/posts/8464263462869579327?alt=json&key='+API_KEY.apiKey;
 
 // This component shall not return any content
 class Blog extends React.Component {
-     constructor(props) {
-    super(props);
+    constructor(props) {
+        super(props);
 
-    this.state = {
-      data: null,
-    };
-  }
+        this.state = {
+            data: null,
+        };
+    }
 
     componentDidMount() {
-        // Get blog list
+        // Fetch when component is mounted
+        this.fetchData();
+    }
+
+    fetchData = () => {
+        // Set API blog list url
+        const API_LIST = 'https://content.googleapis.com/blogger/v3/blogs/8573796855968165555/posts/'+this.props.match.params.id+'?alt=json&key='+API_KEY.apiKey;
+        // Get blog content
         fetch(API_LIST)
             .then(response => response.json())
             .then(data => this.setState({ data }));

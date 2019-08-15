@@ -193,7 +193,7 @@ class BlogList extends React.Component {
     render() {
         console.log(this.state.data);
         return (
-            <MDBCard className="my-5 px-5 pb-5 recent-post-list">
+            <MDBCard id="article-list" className="my-5 px-5 pb-5 recent-post-list">
                 <MDBCardBody className="text-center">
                     <h2 className="h1-responsive font-weight-bold text-center my-5">
                     Recent posts
