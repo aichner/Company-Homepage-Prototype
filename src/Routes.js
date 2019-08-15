@@ -7,9 +7,12 @@ import { Route, Switch } from 'react-router-dom';
 //> Components
 /**
  * HomePage: A basic template page
+ * BlogPage: Our blog (based on Google Blogger)
  */
 import {
-  HomePage
+  HomePage,
+  BlogPage,
+  BlogListPage,
 } from './components/pages';
 
 class Routes extends React.Component {
@@ -17,6 +20,8 @@ class Routes extends React.Component {
     return (
       <Switch>
         <Route exact path='/' component={HomePage} />
+        <Route exact path='/blog' component={BlogListPage} />
+        <Route exact path='/blog/:id' component={BlogPage} />
           
         <Route
           render={function () {
