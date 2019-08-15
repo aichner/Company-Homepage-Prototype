@@ -173,11 +173,9 @@ class BlogList extends React.Component {
                                 <p className="dark-grey-text">
                                 {text}
                                 </p>
-                                <Link to={"/news/article/"+blog.id}>
-                                    <MDBBtn color={color} rounded size="md">
-                                    Read more
-                                    </MDBBtn>
-                                </Link>
+                                <MDBBtn color={color} rounded size="md">
+                                Read more
+                                </MDBBtn>
                             </MDBCol>
                         );
                     })
