@@ -16,6 +16,8 @@ import {
     MDBView,
     MDBBtn,
     MDBBadge,
+    MDBChipsInput,
+    MDBContainer,
 } from "mdbreact";
 
 //> Components
@@ -53,23 +55,55 @@ const color_LIST = [
 ]
 
 // This component shall not return any content
-class BlogList extends React.Component {
+class BlogListLabel extends React.Component {
     constructor(props) {
         super(props);
 
         this.state = {
             data: null,
+            labels: [],
+            labels_formatted: this.setInitialLabelFormatted(),
         };
     }
 
     componentDidMount() {
-        let labels = "label:cat|label:blue";
+        // Fetch data when component has mounted
+        this.fetchData();
+    }
+
+    fetchData = () => {
+        //Format for labels: "label:cat|label:blue|label:wow";
+
         // Set API blog list by label url
-        const API_LIST_LABEL = 'https://content.googleapis.com/blogger/v3/blogs/8573796855968165555/posts/search/?q='+labels+'&key='+API_KEY.apiKey;
+        const API_LIST_LABEL = 'https://content.googleapis.com/blogger/v3/blogs/8573796855968165555/posts/search/?q='+this.state.labels_formatted+'&key='+API_KEY.apiKey;
         // Get blog list
         fetch(API_LIST_LABEL)
             .then(response => response.json())
             .then(data => this.setState({ data }));
+    }
+
+    setInitialLabelFormatted = () => {
+        if(this.props.match !== undefined){
+            if(this.props.match.params !== undefined){
+                if(this.props.match.params.label !== undefined){
+                    console.log(this.props.match.params.label);
+                    return "label:"+this.props.match.params.label;
+                }
+            }
+        }
+    }
+
+    setLabelFormatted = () => {
+        let labels = "";
+        this.state.labels.map((tag, i) => {
+            if(i+1 === this.state.labels.length){
+                labels += "label:"+tag;
+            } else {
+                labels += "label:"+tag+["|"];
+            }
+        })
+
+        this.setState({labels_formatted: labels}, () => this.fetchData());
     }
 
     getPureText = (text) => {
@@ -156,8 +190,8 @@ class BlogList extends React.Component {
                                     {blog.labels && blog.labels.map((title, i) => {
                                         if(!color_LIST.includes(title)){
                                             return(
-                                                <Link to={"/news/"+title}>
-                                                    <MDBBadge key={i} className="mr-2" pill color={color}>{title}</MDBBadge>
+                                                <Link key={i} to={"/news/"+title}>
+                                                    <MDBBadge className="mr-2" pill color={color}>{title}</MDBBadge>
                                                 </Link>
                                             );
                                         } else {
@@ -189,20 +223,59 @@ class BlogList extends React.Component {
         }
     }
 
+    // Handle change in tag search
+    handleChange = (e) => {
+        // If the ENTER key is pressed
+        if (e.key === 'Enter') {
+            // Get the main HTML chips element
+            let layer1 = document.getElementsByClassName('chips')[0].outerHTML;
+            // Create a new temporary element
+            let temp = document.createElement("div");
+            // Set the innerHTML of the temporary element to the main HTML element's outerHTML
+            temp.innerHTML = layer1;
+            // Get all the chips from the list
+            let layer2 = temp.getElementsByClassName('chip');
+            // Push all the chips to an array
+            var arr = [...layer2];
+            // If the array has been set
+            if(Array.isArray(arr)){
+                // For each chip in chips
+                let chips = arr.map((chip, i) => {
+                    // Split the HTML's innerHTML element (remove the icon)
+                    let chip_parts = chip.innerHTML.split("<");
+                    // [0] is the pure chip text, [1] would be the close icon
+                    return chip_parts[0];
+                })
+                // Add the newly added chip to the already existent chips
+                chips.push(e.target.value);
+                // Set the state accordingly
+                this.setState({labels: chips}, () => this.setLabelFormatted());
+            }
+        }
+    }
+
+    // Handle the closing of one of the badges
+    handleClose = (e) => {
+        console.log(e.target.value);
+    }
+
     render() {
-        console.log(this.state.data);
+        console.log(this.state);
         return (
             <MDBCard className="my-5 px-5 pb-5 recent-post-list">
                 <MDBCardBody className="text-center">
-                    <h2 className="h1-responsive font-weight-bold text-center my-5">
-                    Tag search
-                    </h2>
-                    <p className="text-center w-responsive mx-auto mb-5">
-                    Duis aute irure dolor in reprehenderit in voluptate velit esse
-                    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-                    cupidatat non proident, sunt in culpa qui officia deserunt mollit
-                    anim id est laborum.
-                    </p>
+                    <MDBContainer>
+                        <h2 className="h1-responsive font-weight-bold text-center my-5">
+                        Tag search
+                        </h2>
+                        <MDBChipsInput chips={[this.props.match.params.label]} onKeyDown={this.handleChange} handleClose={this.handleClose}  />
+                        <p className="text-center w-responsive mx-auto mb-5">
+                        Duis aute irure dolor in reprehenderit in voluptate velit esse
+                        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+                        cupidatat non proident, sunt in culpa qui officia deserunt mollit
+                        anim id est laborum.
+                        </p>
+                    </MDBContainer>
                     <MDBRow className="justify-content-center">
                         {this.renderList()}
                     </MDBRow>
@@ -212,7 +285,7 @@ class BlogList extends React.Component {
     }
 }
 
-export default BlogList;
+export default BlogListLabel;
 
 /** 
  * SPDX-License-Identifier: (EUPL-1.2)

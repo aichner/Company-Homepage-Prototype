@@ -155,8 +155,8 @@ class BlogList extends React.Component {
                                     {blog.labels && blog.labels.map((title, i) => {
                                         if(!color_LIST.includes(title)){
                                             return(
-                                                <Link to={"/news/"+title}>
-                                                    <MDBBadge key={i} className="mr-2" pill color={color}>{title}</MDBBadge>
+                                                <Link key={i} to={"/news/"+title}>
+                                                    <MDBBadge className="mr-2" pill color={color}>{title}</MDBBadge>
                                                 </Link>
                                             );
                                         } else {
