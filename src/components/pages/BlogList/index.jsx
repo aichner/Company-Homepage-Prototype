@@ -29,8 +29,10 @@ import './bloglist.scss';
 //> API
 // Keys
 import API_KEY from './key.json';
-// Set API config
+// Set API blog list url
 const API_LIST = 'https://www.googleapis.com/blogger/v3/blogs/8573796855968165555/posts?key='+API_KEY.apiKey;
+// Set API blog list by label url
+//const API_LIST_LABEL = 'https://www.googleapis.com/blogger/v3/blogs/8573796855968165555/posts/search?q=label:'+label+'&key='+API_KEY.apiKey;
 
 //> Component related config
 const color_LIST = [
@@ -137,9 +139,8 @@ class BlogList extends React.Component {
                         return(
                              <MDBCol key={i} lg="3" md="12" className="mb-lg-0 mb-4">
                                 {image &&
-                                <Link to={"/"+blog.id}>
+                                <Link to={"/news/"+blog.id}>
                                     <MDBView hover className="mb-4" >
-                                    
                                     <img
                                         className="img-fluid m-auto"
                                         src={image}
@@ -156,7 +157,9 @@ class BlogList extends React.Component {
                                     {blog.labels && blog.labels.map((title, i) => {
                                         if(!color_LIST.includes(title)){
                                             return(
-                                                <MDBBadge key={i} className="mr-2" pill color={color}>{title}</MDBBadge>
+                                                <Link to={"/news/"+title}>
+                                                    <MDBBadge key={i} className="mr-2" pill color={color}>{title}</MDBBadge>
+                                                </Link>
                                             );
                                         } else {
                                             return null;
