@@ -28,7 +28,7 @@ import {
 
 //> API
 // Keys
-import API_KEY from './key.json';
+import API_KEY from '../../keys/blogger.json';
 // Set API config
 const API_LIST = 'https://www.googleapis.com/blogger/v3/blogs/8573796855968165555/posts?key='+API_KEY.apiKey;
 

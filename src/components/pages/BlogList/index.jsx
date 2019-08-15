@@ -28,11 +28,9 @@ import './bloglist.scss';
 
 //> API
 // Keys
-import API_KEY from './key.json';
+import API_KEY from '../../keys/blogger.json';
 // Set API blog list url
 const API_LIST = 'https://www.googleapis.com/blogger/v3/blogs/8573796855968165555/posts?key='+API_KEY.apiKey;
-// Set API blog list by label url
-//const API_LIST_LABEL = 'https://www.googleapis.com/blogger/v3/blogs/8573796855968165555/posts/search?q=label:'+label+'&key='+API_KEY.apiKey;
 
 //> Component related config
 const color_LIST = [

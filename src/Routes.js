@@ -13,6 +13,7 @@ import {
   HomePage,
   BlogPage,
   BlogListPage,
+  BlogListPageLabel,
 } from './components/pages';
 
 class Routes extends React.Component {
@@ -21,7 +22,7 @@ class Routes extends React.Component {
       <Switch>
         <Route exact path='/' component={HomePage} />
         <Route exact path='/news' component={BlogListPage} />
-        <Route exact path='/news/:label' component={BlogListPage} />
+        <Route exact path='/news/:label' component={BlogListPageLabel} />
         <Route exact path='/news/article/:id' component={BlogPage} />
           
         <Route

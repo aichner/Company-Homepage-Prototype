@@ -28,11 +28,7 @@ import './bloglist.scss';
 
 //> API
 // Keys
-import API_KEY from './key.json';
-// Set API blog list url
-const API_LIST = 'https://www.googleapis.com/blogger/v3/blogs/8573796855968165555/posts?key='+API_KEY.apiKey;
-// Set API blog list by label url
-//const API_LIST_LABEL = 'https://www.googleapis.com/blogger/v3/blogs/8573796855968165555/posts/search?q=label:'+label+'&key='+API_KEY.apiKey;
+import API_KEY from '../../keys/blogger.json';
 
 //> Component related config
 const color_LIST = [
@@ -67,8 +63,11 @@ class BlogList extends React.Component {
     }
 
     componentDidMount() {
+        let labels = "label:cat|label:blue";
+        // Set API blog list by label url
+        const API_LIST_LABEL = 'https://content.googleapis.com/blogger/v3/blogs/8573796855968165555/posts/search/?q='+labels+'&key='+API_KEY.apiKey;
         // Get blog list
-        fetch(API_LIST)
+        fetch(API_LIST_LABEL)
             .then(response => response.json())
             .then(data => this.setState({ data }));
     }
@@ -196,7 +195,7 @@ class BlogList extends React.Component {
             <MDBCard className="my-5 px-5 pb-5 recent-post-list">
                 <MDBCardBody className="text-center">
                     <h2 className="h1-responsive font-weight-bold text-center my-5">
-                    Recent posts
+                    Tag search
                     </h2>
                     <p className="text-center w-responsive mx-auto mb-5">
                     Duis aute irure dolor in reprehenderit in voluptate velit esse

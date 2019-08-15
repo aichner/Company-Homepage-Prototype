@@ -3,11 +3,13 @@
 import HomePage from './HomePage';
 import BlogPage from './Blog';
 import BlogListPage from './BlogList';
+import BlogListPageLabel from './BlogListLabel';
 
 export {
     HomePage,
     BlogPage,
     BlogListPage,
+    BlogListPageLabel,
 }
 
 /** 
