@@ -136,8 +136,10 @@ class BlogList extends React.Component {
 
                         return(
                              <MDBCol key={i} lg="3" md="12" className="mb-lg-0 mb-4">
+                                {image &&
                                 <Link to={"/"+blog.id}>
                                     <MDBView hover className="mb-4" >
+                                    
                                     <img
                                         className="img-fluid m-auto"
                                         src={image}
@@ -146,6 +148,10 @@ class BlogList extends React.Component {
                                     <MDBMask overlay="white-slight" />
                                     </MDBView>
                                 </Link>
+                                }
+                                <h4 className="font-weight-bold mb-2">
+                                <strong>{blog.title}</strong>
+                                </h4>
                                 <h6 className="font-weight-bold mb-3">
                                     {blog.labels && blog.labels.map((title, i) => {
                                         if(!color_LIST.includes(title)){
@@ -157,9 +163,6 @@ class BlogList extends React.Component {
                                         }
                                     })}
                                 </h6>
-                                <h4 className="font-weight-bold mb-3">
-                                <strong>{blog.title}</strong>
-                                </h4>
                                 <p>
                                 by <a href="#!" className="font-weight-bold">
                                 {blog.author.displayName}</a>, {new Date(blog.published).toDateString()}
