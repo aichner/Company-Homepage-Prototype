@@ -4,33 +4,31 @@ import React from 'react';
 
 //> MDB
 // "Material Design for Bootstrap" is a great UI design framework
-/*
-import {
-  MDBEdgeHeader,
-  MDBFreeBird,
-  MDBContainer,
-  MDBCol,
-  MDBRow,
-  MDBCardBody,
-  MDBIcon,
-  MDBCard,
-  MDBCardTitle,
-  MDBCardImage,
-  MDBCardText,
-  MDBAnimation,
-} from 'mdbreact';
-*/
+import { 
+    MDBRow,
+    MDBCol,
+    MDBCard,
+    MDBCardBody,
+    MDBMask,
+    MDBIcon,
+    MDBView,
+    MDBBtn,
+    MDBBadge,
+    MDBContainer,
+} from "mdbreact";
 
-//> Components
-import {
-  Hero
-} from '../../organisms/sections';
+//> Helpers for setting innerHTML of JSX elements
+import { renderToString } from 'react-dom/server';
+import ReactHtmlParser from 'react-html-parser'; 
+
+//> CSS
+import './blog.scss';
 
 //> API
 // Keys
 import API_KEY from '../../keys/blogger.json';
 // Set API config
-const API_LIST = 'https://www.googleapis.com/blogger/v3/blogs/8573796855968165555/posts?key='+API_KEY.apiKey;
+const API_LIST = 'https://content.googleapis.com/blogger/v3/blogs/8573796855968165555/posts/8464263462869579327?alt=json&key='+API_KEY.apiKey;
 
 // This component shall not return any content
 class Blog extends React.Component {
@@ -49,35 +47,53 @@ class Blog extends React.Component {
             .then(data => this.setState({ data }));
     }
 
-    renderList = () => {
+    beautifyContent = (content) => {
+        let c = ReactHtmlParser(content);
+        return renderToString(c);
+    }
+
+    renderBlog = () => {
         let data = this.state.data;
+        console.log(data);
         // If the state has been set
         if(data !== undefined && data !== null){
             // Check if it's the correct patch of data
-            if(data.kind === "blogger#postList"){
+            if(data.kind === "blogger#post"){
                 // Check if there are any blogs
-                if(data.items.length > 0){
-                    let blogs = data.items;
-                    // For each blog
-                    blogs.map((blog, i) => {
-                        console.log(blog,i);
-                    })
+                if(data.content){
+                    return(
+                        <>
+                            <div className="heading-container">
+                                <h1 className="h1-responsive font-weight-bold my-5">
+                                    {data.title}
+                                </h1>
+                            </div>
+                            <p dangerouslySetInnerHTML={{__html: this.beautifyContent(data.content)}} style={{"fontSize": "22px !important"}}></p>
+                        </>
+                    )
+                    
                 } else {
-                     return { "value": false, "msg": "There are no posts to display" }
+                     return false;
                 }
             } else {
-                return { "value": false, "msg": "This API does not return the correct data" }
+                 return false;
             }
         } else {
-            return { "value": false, "msg": "There is no data" }
+             return false;
         }
     }
 
     render() {
-        console.log(this.renderList());
+        console.log(this.state);
 
         return (
-            null
+            <MDBCard id="article" className="my-5 px-5 pb-5">
+                <MDBCardBody className="text-left">
+                    <MDBContainer>
+                    {this.renderBlog()}
+                    </MDBContainer>
+                </MDBCardBody>
+            </MDBCard>
         );
     }
 }

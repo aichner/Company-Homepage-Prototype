@@ -1,0 +1,30 @@
+#article{
+    font-size: 11px !important;
+    img{
+        width: inherit !important;
+        max-width: 50%;
+        min-width: 30%;
+        height: auto !important;
+    }
+    .heading-container{
+        max-width: 50%;
+        margin: 2rem 0 2rem 0;
+    }
+    h1{
+        background: lightgrey;
+        display: inline;
+        background-image: url('../../../assets/content/news/bg.jpg');
+        background-size: cover;
+        color: white;
+        line-height: 140%;
+        font-size: 55px;
+    }
+    p, span{
+        font-size: 18px !important;
+    }
+}
+
+/** 
+ * SPDX-License-Identifier: (EUPL-1.2)
+ * Copyright © 2019 Werbeagentur Christian Aichner
+ */
