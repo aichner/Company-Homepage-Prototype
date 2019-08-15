@@ -45,7 +45,8 @@ class Blog extends React.Component {
 
     fetchData = () => {
         // Set API blog list url
-        const API_LIST = 'https://content.googleapis.com/blogger/v3/blogs/8573796855968165555/posts/'+this.props.match.params.id+'?alt=json&key='+API_KEY.apiKey;
+        const API_LIST = 'https://content.googleapis.com/blogger/v3/blogs/8573796855968165555/posts/'+
+        this.props.match.params.id+'?alt=json&key='+API_KEY.apiKey;
         // Get blog content
         fetch(API_LIST)
             .then(response => response.json())
@@ -73,7 +74,9 @@ class Blog extends React.Component {
                                     {data.title}
                                 </h1>
                             </div>
-                            <p dangerouslySetInnerHTML={{__html: this.beautifyContent(data.content)}} style={{"fontSize": "22px !important"}}></p>
+                            <p dangerouslySetInnerHTML={
+                                {__html: this.beautifyContent(data.content)}
+                            } style={{"fontSize": "22px !important"}}></p>
                         </>
                     )
                     

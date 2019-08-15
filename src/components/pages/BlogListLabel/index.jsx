@@ -75,7 +75,8 @@ class BlogListLabel extends React.Component {
         //Format for labels: "label:cat|label:blue|label:wow";
 
         // Set API blog list by label url
-        const API_LIST_LABEL = 'https://content.googleapis.com/blogger/v3/blogs/8573796855968165555/posts/search/?q='+this.state.labels_formatted+'&key='+API_KEY.apiKey;
+        const API_LIST_LABEL = 'https://content.googleapis.com/blogger/v3/blogs/8573796855968165555/posts/search/?q='+
+        this.state.labels_formatted+'&key='+API_KEY.apiKey;
         // Get blog list
         fetch(API_LIST_LABEL)
             .then(response => response.json())
@@ -188,7 +189,12 @@ class BlogListLabel extends React.Component {
                                             if(!color_LIST.includes(title)){
                                                 return(
                                                     <Link key={i} to={"/news/"+title}>
-                                                        <MDBBadge className="mr-2" pill color={color}>{title}</MDBBadge>
+                                                        <MDBBadge 
+                                                        className="mr-2"
+                                                        pill
+                                                        color={color}>
+                                                        {title}
+                                                        </MDBBadge>
                                                     </Link>
                                                 );
                                             } else {
@@ -270,7 +276,11 @@ class BlogListLabel extends React.Component {
                         <h2 className="h1-responsive font-weight-bold text-center my-5">
                         Tag search
                         </h2>
-                        <MDBChipsInput chips={[this.props.match.params.label]} onKeyDown={this.handleChange} handleClose={this.myCloseFunction} />
+                        <MDBChipsInput
+                        chips={[this.props.match.params.label]}
+                        onKeyDown={this.handleChange}
+                        handleClose={this.myCloseFunction}
+                        />
                         <p className="text-center w-responsive mx-auto mb-5">
                         Duis aute irure dolor in reprehenderit in voluptate velit esse
                         cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
