@@ -97,6 +97,8 @@ class BlogList extends React.Component {
                         let image = undefined;
                         // Preset color
                         let color = "dark";
+                        // Preset text preview
+                        let text = "";
                         if(blog.content !== undefined && blog.content !== null && blog.content !== ""){
                             //> Get image to show as title image
                             // Create a new DOM to crawl the image from
@@ -120,6 +122,15 @@ class BlogList extends React.Component {
                                     }
                                 })
                             }
+
+                            //> Get text preview
+                            // Create temporary HTML element
+                            let temp = document.createElement("div");
+                            // Write html blog content to temporary HTML element
+                            temp.innerHTML = blog.content;
+                            // Get the first 
+                            text = temp.textContent.substring(0,180) + "...";
+                            
                             
                         }
 
@@ -154,9 +165,7 @@ class BlogList extends React.Component {
                                 {blog.author.displayName}</a>, {new Date(blog.published).toDateString()}
                                 </p>
                                 <p className="dark-grey-text">
-                                Nam libero tempore, cum soluta nobis est eligendi optio cumque
-                                nihil impedit quo minus id quod maxime placeat facere possimus
-                                voluptas.
+                                {text}
                                 </p>
                                 <MDBBtn color={color} rounded size="md">
                                 Read more
