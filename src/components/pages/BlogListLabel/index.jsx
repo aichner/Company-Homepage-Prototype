@@ -263,11 +263,10 @@ class BlogListLabel extends React.Component {
 
     // Handle the closing of one of the badges
     myCloseFunction = () => {
-        console.log("Please just fire already...");
+        //console.log("Please just fire already...");
     }
 
     render() {
-        console.log(this.state);
         return (
             <MDBCard id="article-list" className="my-5 px-5 pb-5 recent-post-list">
                 <MDBCardBody className="text-center">
