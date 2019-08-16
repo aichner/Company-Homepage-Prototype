@@ -12,6 +12,9 @@
 # MDB React Pro
 mdbreact-*
 
+# API Keys
+/src/components/keys/blogger.json
+
 # All editor configs but vscode
 .editorconfig
 .idea

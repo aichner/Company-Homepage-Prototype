@@ -13,16 +13,16 @@ import FadeIn from 'react-fade-in';
 //> MDB
 // "Material Design for Bootstrap" is a great UI design framework
 import {
-  MDBRow,
-  MDBCol,
-  MDBBtn,
-  MDBView,
-  MDBContainer,
-  MDBIcon,
-  MDBCard,
-  MDBCardBody,
-  MDBInput,
-  MDBMask,
+    MDBRow,
+    MDBCol,
+    MDBBtn,
+    MDBView,
+    MDBContainer,
+    MDBIcon,
+    MDBCard,
+    MDBCardBody,
+    MDBInput,
+    MDBMask,
 } from 'mdbreact';
 
 //> Images
@@ -79,7 +79,7 @@ class Hero extends React.Component {
                                         <div className="white-text text-center text-md-left mt-xl-5 mb-5">
                                             <FadeIn>
                                             <MDBView>
-                                                 <img src={layerLogo} className="m-auto img-fluid" alt="Logo"/>
+                                                <img src={layerLogo} className="m-auto img-fluid" alt="Logo"/>
                                                 <MDBMask className="flex-center">
                                                 </MDBMask>
                                             </MDBView>

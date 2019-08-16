@@ -49,7 +49,7 @@ class Navbar extends React.Component{
                 <MDBNavbar color="agency-dark" dark expand="md" fixed="top" scrolling>
                 <MDBContainer>
                     <MDBNavbarBrand href="/" className="py-0 font-weight-bold">
-                    <img src={Logo} />
+                    <img src={Logo} alt="Logo" />
                     </MDBNavbarBrand>
                     <MDBNavbarToggler
                     onClick={this.toggleCollapse("mainNavbarCollapse")}
