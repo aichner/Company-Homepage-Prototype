@@ -33,7 +33,7 @@ import './bloglistlabel.scss';
 import API_KEY from '../../keys/blogger.json';
 
 //> Component related config
-const color_LIST = [
+const colorList = [
     "primary",
     "secondary",
     "success",
@@ -87,7 +87,6 @@ class BlogListLabel extends React.Component {
         if(this.props.match !== undefined){
             if(this.props.match.params !== undefined){
                 if(this.props.match.params.label !== undefined){
-                    console.log(this.props.match.params.label);
                     return "label:"+this.props.match.params.label;
                 }
             }
@@ -137,17 +136,17 @@ class BlogListLabel extends React.Component {
                                 // Create a new DOM to crawl the image from
                                 let content_HTML = new DOMParser().parseFromString(blog.content, "text/html");
                                 // Get the first image from the new blog content DOM
-                                let first_image = content_HTML.getElementsByTagName('img')[0];
+                                let firstImage = content_HTML.getElementsByTagName('img')[0];
                                 // Check if there is an image
-                                if(first_image !== undefined){
+                                if(firstImage !== undefined){
                                     // Extract image source
-                                    image = first_image.src;
+                                    image = firstImage.src;
                                 }
 
                                 // Get color label
                                 if(blog.labels !== undefined && blog.labels !== null){
                                     blog.labels.map((title, i) => {
-                                        if(color_LIST.includes(title)){
+                                        if(colorList.includes(title)){
                                             color = title;
                                             return true;
                                         } else {
@@ -186,7 +185,7 @@ class BlogListLabel extends React.Component {
                                     </h4>
                                     <h6 className="font-weight-bold mb-3">
                                         {blog.labels && blog.labels.map((title, i) => {
-                                            if(!color_LIST.includes(title)){
+                                            if(!colorList.includes(title)){
                                                 return(
                                                     <Link key={i} to={"/news/"+title}>
                                                         <MDBBadge 
@@ -250,9 +249,9 @@ class BlogListLabel extends React.Component {
                 // For each chip in chips
                 let chips = arr.map((chip, i) => {
                     // Split the HTML's innerHTML element (remove the icon)
-                    let chip_parts = chip.innerHTML.split("<");
+                    let chipParts = chip.innerHTML.split("<");
                     // [0] is the pure chip text, [1] would be the close icon
-                    return chip_parts[0];
+                    return chipParts[0];
                 })
                 // Add the newly added chip to the already existent chips
                 chips.push(e.target.value);

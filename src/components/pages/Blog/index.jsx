@@ -19,7 +19,7 @@ import {
 
 //> Helpers for setting innerHTML of JSX elements
 import { renderToString } from 'react-dom/server';
-import ReactHtmlParser from 'react-html-parser'; 
+import reactHtmlParser from 'react-html-parser'; 
 
 //> CSS
 import './blog.scss';
@@ -54,13 +54,12 @@ class Blog extends React.Component {
     }
 
     beautifyContent = (content) => {
-        let c = ReactHtmlParser(content);
+        let c = reactHtmlParser(content);
         return renderToString(c);
     }
 
     renderBlog = () => {
         let data = this.state.data;
-        console.log(data);
         // If the state has been set
         if(data !== undefined && data !== null){
             // Check if it's the correct patch of data
@@ -78,22 +77,19 @@ class Blog extends React.Component {
                                 {__html: this.beautifyContent(data.content)}
                             } style={{"fontSize": "22px !important"}}></p>
                         </>
-                    )
-                    
+                    );
                 } else {
-                     return false;
+                    return false;
                 }
             } else {
-                 return false;
+                return false;
             }
         } else {
-             return false;
+            return false;
         }
     }
 
     render() {
-        console.log(this.state);
-
         return (
             <MDBCard id="article" className="my-5 px-5 pb-5">
                 <MDBCardBody className="text-left">

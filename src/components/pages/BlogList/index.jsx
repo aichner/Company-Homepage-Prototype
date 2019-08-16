@@ -33,7 +33,7 @@ import API_KEY from '../../keys/blogger.json';
 const API_LIST = 'https://www.googleapis.com/blogger/v3/blogs/8573796855968165555/posts?key='+API_KEY.apiKey;
 
 //> Component related config
-const color_LIST = [
+const colorList = [
     "primary",
     "secondary",
     "success",
@@ -94,7 +94,7 @@ class BlogList extends React.Component {
                     return blogs.map((blog, i) => {
                         
                         // Preset Image
-                        let image = undefined;
+                        let image = null;
                         // Preset color
                         let color = "dark";
                         // Preset text preview
@@ -102,19 +102,18 @@ class BlogList extends React.Component {
                         if(blog.content !== undefined && blog.content !== null && blog.content !== ""){
                             //> Get image to show as title image
                             // Create a new DOM to crawl the image from
-                            let content_HTML = new DOMParser().parseFromString(blog.content, "text/html");
+                            let contentHTML = new DOMParser().parseFromString(blog.content, "text/html");
                             // Get the first image from the new blog content DOM
-                            let first_image = content_HTML.getElementsByTagName('img')[0];
+                            let firstImage = contentHTML.getElementsByTagName('img')[0];
                             // Check if there is an image
-                            if(first_image !== undefined){
+                            if(firstImage !== undefined){
                                 // Extract image source
-                                image = first_image.src;
+                                image = firstImage.src;
                             }
-
                             // Get color label
                             if(blog.labels !== undefined && blog.labels !== null){
                                 blog.labels.map((title, i) => {
-                                    if(color_LIST.includes(title)){
+                                    if(colorList.includes(title)){
                                         color = title;
                                         return true;
                                     } else {
@@ -122,7 +121,6 @@ class BlogList extends React.Component {
                                     }
                                 })
                             }
-
                             //> Get text preview
                             // Create temporary HTML element
                             let temp = document.createElement("div");
@@ -130,12 +128,10 @@ class BlogList extends React.Component {
                             temp.innerHTML = blog.content;
                             // Get the first 
                             text = temp.textContent.substring(0,180) + "...";
-                            
-                            
                         }
 
                         return(
-                             <MDBCol key={i} lg="3" md="12" className="mb-lg-0 mb-4">
+                            <MDBCol key={i} lg="3" md="12" className="mb-lg-0 mb-4">
                                 {image &&
                                 <Link to={"/news/article/"+blog.id}>
                                     <MDBView hover className="mb-4" >
@@ -153,7 +149,7 @@ class BlogList extends React.Component {
                                 </h4>
                                 <h6 className="font-weight-bold mb-3">
                                     {blog.labels && blog.labels.map((title, i) => {
-                                        if(!color_LIST.includes(title)){
+                                        if(!colorList.includes(title)){
                                             return(
                                                 <Link key={i} to={"/news/"+title}>
                                                     <MDBBadge className="mr-2" pill color={color}>{title}</MDBBadge>
@@ -178,9 +174,9 @@ class BlogList extends React.Component {
                                 </Link>
                             </MDBCol>
                         );
-                    })
+                    });
                 } else {
-                     return null;
+                    return null;
                 }
             } else {
                 return null;
