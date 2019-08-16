@@ -79,7 +79,7 @@ class Hero extends React.Component {
                                         <div className="white-text text-center text-md-left mt-xl-5 mb-5">
                                             <FadeIn>
                                             <MDBView>
-                                                 <img src={layerLogo} className="m-auto img-fluid" alt="Logo"/>
+                                                <img src={layerLogo} className="m-auto img-fluid" alt="Logo"/>
                                                 <MDBMask className="flex-center">
                                                 </MDBMask>
                                             </MDBView>
