@@ -49,8 +49,8 @@ class Blog extends React.Component {
         this.props.match.params.id+'?alt=json&key='+API_KEY.apiKey;
         // Get blog content
         fetch(API_LIST)
-            .then(response => response.json())
-            .then(data => this.setState({ data }));
+            .then((response) => response.json())
+            .then((data) => this.setState({ data }));
     }
 
     beautifyContent = (content) => {

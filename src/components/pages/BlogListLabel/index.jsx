@@ -22,7 +22,7 @@ import {
 
 //> Components
 import {
-  Hero
+    Hero
 } from '../../organisms/sections';
 
 //> SCSS
@@ -79,8 +79,8 @@ class BlogListLabel extends React.Component {
         this.state.labels_formatted+'&key='+API_KEY.apiKey;
         // Get blog list
         fetch(API_LIST_LABEL)
-            .then(response => response.json())
-            .then(data => this.setState({ data }));
+            .then((response) => response.json())
+            .then((data) => this.setState({ data }));
     }
 
     setInitialLabelFormatted = () => {

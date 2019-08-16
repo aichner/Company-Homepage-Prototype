@@ -20,7 +20,7 @@ import {
 
 //> Components
 import {
-  Hero
+    Hero
 } from '../../organisms/sections';
 
 //> SCSS
@@ -67,8 +67,8 @@ class BlogList extends React.Component {
     componentDidMount() {
         // Get blog list
         fetch(API_LIST)
-            .then(response => response.json())
-            .then(data => this.setState({ data }));
+            .then((response) => response.json())
+            .then((data) => this.setState({ data }));
     }
 
     getPureText = (text) => {

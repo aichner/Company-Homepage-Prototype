@@ -13,16 +13,16 @@ import FadeIn from 'react-fade-in';
 //> MDB
 // "Material Design for Bootstrap" is a great UI design framework
 import {
-  MDBRow,
-  MDBCol,
-  MDBBtn,
-  MDBView,
-  MDBContainer,
-  MDBIcon,
-  MDBCard,
-  MDBCardBody,
-  MDBInput,
-  MDBMask,
+    MDBRow,
+    MDBCol,
+    MDBBtn,
+    MDBView,
+    MDBContainer,
+    MDBIcon,
+    MDBCard,
+    MDBCardBody,
+    MDBInput,
+    MDBMask,
 } from 'mdbreact';
 
 //> Images
