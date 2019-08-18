@@ -91,7 +91,7 @@ class Navbar extends React.Component{
                     </MDBNavbarNav>
                     </MDBCollapse>
                 </MDBContainer>
-            </MDBNavbarcolor={this.props.mode>
+            </MDBNavbar>
             {collapseID && overlay}
             </div>
         )
