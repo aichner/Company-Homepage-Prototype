@@ -39,6 +39,16 @@ footer {
             height: 2.5rem;
         }
     }
+
+    // Dark Mode switch
+    .switch-red{
+        label input[type=checkbox]:checked + .lever {
+            background-color: lighten($agencyRed, 35%);
+            &::after{
+                background-color: $agencyRed !important;
+            }
+        }
+    }
 }
 
 /** 
