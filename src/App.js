@@ -22,6 +22,7 @@ function getMode() {
     if(mode !== null){
       return JSON.parse(mode);
     } else {
+      // Set default
       localStorage.setItem('mode', false);
       return false;
     }

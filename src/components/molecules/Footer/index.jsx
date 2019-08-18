@@ -44,18 +44,17 @@ class Footer extends React.Component{
     }
 
     componentWillMount(){
-        this._getSlogan();
         this._getMode();
+        this._getSlogan();
     }
 
-    // Check if dark or light mode
+    // Get mode
     _getMode = () => {
         let mode = localStorage.getItem('mode');
         if(mode !== null){
-            if(mode !== this.state.darkmode){
-                let modeJSON = JSON.parse(mode);
-                this.setState({darkmode: modeJSON});
-            }
+            this.setState({
+                darkmode: JSON.parse(mode)
+            })
         }
     }
 
@@ -66,8 +65,8 @@ class Footer extends React.Component{
 
     render(){
         return(
-            <MDBFooter color="agency-dark">
-                <MDBRow className="agency-dark darken-1 py-3 m-0">
+            <MDBFooter color={this.state.darkmode ? ("agency-dark") : ("white text-dark")}>
+                <MDBRow className="social">
                     <MDBCol md="12" className="text-center">
                         <h4>Verbinden Sie sich mit uns!</h4>
                     </MDBCol>

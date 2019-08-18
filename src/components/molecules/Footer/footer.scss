@@ -49,6 +49,41 @@ footer {
             }
         }
     }
+
+    // Social tab
+    .social{
+        padding: 2rem 0 2rem 0;
+        margin: 0;
+        background-color: rgba(0, 0, 0, 0.1);
+    }
+
+
+    // Dark Mode / Light Mode
+    &.agency-dark{
+        .social{
+            padding: 2rem 0 2rem 0;
+            margin: 0;
+            background-color: rgba(0, 0, 0, 0.2);
+        }
+    }
+    &.white{
+        .footer-copyright{
+            background: rgba(0, 0, 0, 0.1);
+            color: #212121 !important;
+        }
+        ul{
+            i{
+                color: #212121 !important;
+            }
+            a{
+                color: #212121 !important;
+            }
+        }
+        .btn{
+            color: white;
+        }
+    }
+    
 }
 
 /** 
