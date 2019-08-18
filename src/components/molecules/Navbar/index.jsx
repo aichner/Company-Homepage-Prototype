@@ -39,6 +39,17 @@ class Navbar extends React.Component{
         this.state.collapseID === collapseID && this.setState({ collapseID: "" });
     };
 
+    // Get navbar mode
+    _getMode = () => {
+        let opts = {};
+        if(this.props.mode){
+            opts['dark'] = 'dark';
+        } else {
+            opts['light'] = 'light';
+        }
+        return opts;
+    }
+
     render(){
         const overlay = (
         <div
@@ -51,7 +62,7 @@ class Navbar extends React.Component{
         const { collapseID } = this.state;
         return(
             <div>
-                <MDBNavbar color={this.props.mode ? ("agency-dark") : ("white")} dark expand="md" fixed="top" scrolling>
+                <MDBNavbar color={this.props.mode ? ("agency-dark") : ("white")} {...this._getMode()} expand="md" fixed="top" scrolling>
                 <MDBContainer>
                     <MDBNavbarBrand href="/" className="py-0 font-weight-bold">
                     {this.props.mode ? (<LogoLight/>) : (<LogoDark/>)}
