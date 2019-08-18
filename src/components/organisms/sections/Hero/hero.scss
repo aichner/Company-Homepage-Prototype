@@ -1,4 +1,51 @@
 #hero{
+    // SVG Image
+    svg{
+        display: block;
+        margin: auto;
+        width: 80%;
+        .st0{
+            fill: #ffffff;
+        }
+        .st1{
+            fill: #F61A42;
+        }
+    }
+
+    // Dark mode
+    &.dark{
+        background-color: $agencyDark !important;
+        color: white;
+    }
+    // Light mode
+    &.light{
+        background-color: rgba(0, 0, 0, 0.05);
+        // Logo color
+        .st0{
+            fill: $agencyDark;
+        }
+        color: $agencyDark !important;
+
+        #classic-card{
+            background-color: white;
+            border-bottom-left-radius: 5rem;
+            border-bottom-right-radius: 2rem;
+            border-top-left-radius: 2rem;
+            border-top-right-radius: 5rem;
+            box-shadow: none;
+            .card-body{
+                box-shadow: none !important;
+            }
+            .mask, .mask:after{
+                background-color: rgba(255, 255, 255, 0.7);
+            }
+            .services .col-md-6 figure .view p{
+                color: $agencyDark !important;
+            }
+        }
+    }
+
+    // Basic setup
     .gradient {
         background: -moz-linear-gradient(45deg, rgba(42, 27, 161, 0.7), rgba(29, 210, 177, 0.7) 100%);
         background: -webkit-linear-gradient(45deg, rgba(42, 27, 161, 0.7), rgba(29, 210, 177, 0.7) 100%);
@@ -28,17 +75,7 @@
         height: 100% !important;
     }
 
-    // SVG Image
-    svg{
-        .st0{
-            fill: #ffffff;
-        }
-        .st1{
-            fill: #F61A42;
-        }
-    }
-
-    // Services
+    // Services card
     .services{
         margin: 0;
         .col-md-6{

@@ -75,7 +75,7 @@ class Hero extends React.Component {
                             <MDBRow className="h-100">
                                 <MDBCol md="6">
                                     <Parallax y={[20, -20]} tagOuter="figure">
-                                        <div className="white-text text-center text-md-left mt-xl-5 mb-5">
+                                        <div className="text-center text-md-left mt-xl-5 mb-5">
                                             <FadeIn>
                                             <MDBView>
                                                 <Logo />
@@ -105,7 +105,7 @@ class Hero extends React.Component {
                                 <MDBCol md="6" className="d-none d-md-flex d-lg-flex">
                                     <FadeIn>
                                     <MDBCard id="classic-card">
-                                        <MDBCardBody className="z-depth-2 white-text">
+                                        <MDBCardBody className="z-depth-2">
                                         <h3 className="text-center">
                                             Was suchen Sie?
                                         </h3>
@@ -118,7 +118,7 @@ class Hero extends React.Component {
                                                     <MDBView>
                                                         <img src={web} alt="Web" className="img-fluid" />
                                                         <MDBMask className="flex-center" overlay="black-strong">
-                                                            <p className="white-text">Website<br/>
+                                                            <p className="">Website<br/>
                                                             <span>oder</span><br/>
                                                             <span>Webapp, Webshop, Blog</span></p>
                                                         </MDBMask>
@@ -132,7 +132,7 @@ class Hero extends React.Component {
                                                     <MDBView>
                                                         <img src={events} alt="Events" className="img-fluid" />
                                                         <MDBMask className="flex-center" overlay="black-strong">
-                                                            <p className="white-text">Eventfotografie<br/>
+                                                            <p className="">Eventfotografie<br/>
                                                             <span>oder</span><br/>Eventvideo</p>
                                                         </MDBMask>
                                                     </MDBView>
@@ -150,7 +150,7 @@ class Hero extends React.Component {
                                                         className="img-fluid"
                                                         />
                                                         <MDBMask className="flex-center" overlay="black-strong">
-                                                            <p className="white-text">Corporate Identity</p>
+                                                            <p className="">Corporate Identity</p>
                                                         </MDBMask>
                                                     </MDBView>
                                                     </Link>
@@ -162,7 +162,7 @@ class Hero extends React.Component {
                                                     <MDBView>
                                                         <img src={wedding} alt="Wedding" className="img-fluid" />
                                                         <MDBMask className="flex-center" overlay="black-strong">
-                                                            <p className="white-text">Ihre Hochzeit</p>
+                                                            <p className="">Ihre Hochzeit</p>
                                                         </MDBMask>
                                                     </MDBView>
                                                     </Link>
@@ -174,7 +174,7 @@ class Hero extends React.Component {
                                                     <MDBView>
                                                         <img src={concept} alt="Concept" className="img-fluid" />
                                                         <MDBMask className="flex-center" overlay="black-strong">
-                                                            <p className="white-text">Webdesign<br/>
+                                                            <p className="">Webdesign<br/>
                                                             <span>und</span><br/>Konzept
                                                             </p>
                                                         </MDBMask>
@@ -188,7 +188,7 @@ class Hero extends React.Component {
                                                     <MDBView>
                                                         <img src={design} alt="Design" className="img-fluid" />
                                                         <MDBMask className="flex-center" overlay="black-strong">
-                                                            <p className="white-text">Grafik Design</p>
+                                                            <p className="">Grafik Design</p>
                                                         </MDBMask>
                                                     </MDBView>
                                                     </Link>
@@ -203,13 +203,13 @@ class Hero extends React.Component {
                                             <hr className="hr-light" />
                                             <div className="text-center d-flex justify-content-center white-label">
                                             <a href="#!" className="p-2 m-2">
-                                                <MDBIcon fab icon="twitter" className="white-text" />
+                                                <MDBIcon fab icon="twitter" className="" />
                                             </a>
                                             <a href="#!" className="p-2 m-2">
-                                                <MDBIcon fab icon="linkedin-in" className="white-text" />
+                                                <MDBIcon fab icon="linkedin-in" className="" />
                                             </a>
                                             <a href="#!" className="p-2 m-2">
-                                                <MDBIcon fab icon="instagram" className="white-text" />
+                                                <MDBIcon fab icon="instagram" className="" />
                                             </a>
                                             </div>
                                         </div>
