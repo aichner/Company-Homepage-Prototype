@@ -21,6 +21,9 @@ function getMode() {
     let mode = localStorage.getItem('mode');
     if(mode !== null){
       return JSON.parse(mode);
+    } else {
+      localStorage.setItem('mode', false);
+      return false;
     }
 }
 
