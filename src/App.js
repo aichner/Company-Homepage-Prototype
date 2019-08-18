@@ -38,7 +38,7 @@ class App extends React.Component {
   _handler = () => {
     this.setState({
       darkmode: !this.state.darkmode
-    })
+    }, () => localStorage.setItem('mode', this.state.darkmode))
   }
 
   render() {
