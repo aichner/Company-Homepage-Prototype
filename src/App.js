@@ -16,6 +16,14 @@ import {
 // Routes
 import Routes from './Routes';
 
+// Check if dark or light mode
+function getMode() {
+    let mode = localStorage.getItem('mode');
+    if(mode !== null){
+      return JSON.parse(mode);
+    }
+}
+
 class App extends React.Component {
   render() {
     return (
@@ -23,7 +31,7 @@ class App extends React.Component {
         <div className="flyout">
           <Navbar />
           <main>
-            <Routes />
+            <Routes mode={getMode()} />
           </main>
           <Footer />
         </div>

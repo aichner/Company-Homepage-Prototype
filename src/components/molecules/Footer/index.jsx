@@ -65,7 +65,6 @@ class Footer extends React.Component{
     }
 
     render(){
-        console.log(this.state.darkmode);
         return(
             <MDBFooter color="agency-dark">
                 <MDBRow className="agency-dark darken-1 py-3 m-0">
