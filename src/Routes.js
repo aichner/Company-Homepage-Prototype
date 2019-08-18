@@ -8,6 +8,8 @@ import { Route, Switch } from 'react-router-dom';
 /**
  * HomePage: A basic template page
  * BlogPage: Our blog (based on Google Blogger)
+ * BlogListPage: An overview of all our blogs (based on Google Blogger)
+ * BlogListPageLabel: An overview of all blogs sorted by a label (based on Google Blogger)
  */
 import {
   HomePage,
@@ -20,11 +22,27 @@ class Routes extends React.Component {
   render() {
     return (
       <Switch>
-        <Route exact path='/' component={HomePage} />
-        <Route exact path='/news' component={BlogListPage} />
-        <Route exact path='/news/:label' component={BlogListPageLabel} />
-        <Route exact path='/news/article/:id' component={BlogPage} />
-          
+        <Route
+        exact
+        path='/'
+        component={(props) => <HomePage globalStore={this.props} {...props} />}
+        />
+        <Route
+        exact
+        path='/news'
+        component={(props) => <BlogListPage globalStore={this.props} {...props} />}
+        />
+        <Route
+        exact
+        path='/news/:label'
+        component={(props) => <BlogListPageLabel globalStore={this.props} {...props} />}
+        />
+        <Route
+        exact
+        path='/news/article/:id'
+        component={(props) => <BlogPage globalStore={this.props} {...props} />}
+        />
+
         <Route
           render={function () {
             return <h1>Not Found</h1>;

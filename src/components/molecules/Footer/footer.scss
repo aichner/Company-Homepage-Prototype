@@ -6,6 +6,8 @@
 
 // Footer
 footer {
+    transition: all .5s ease;
+
     // Custom pulsating heart
     .pulse {
         -webkit-animation: pulse 1s infinite;
@@ -33,12 +35,63 @@ footer {
         }
     }
 
-    // Column image size
-    .col-md-2{
-        img{
-            height: 2.5rem;
+    // Dark Mode switch
+    .switch-red{
+        label input[type=checkbox]:checked + .lever {
+            background-color: lighten($agencyRed, 35%);
+            &::after{
+                background-color: $agencyRed !important;
+            }
         }
     }
+
+    // Social tab
+    .social{
+        padding: 2rem 0 2rem 0;
+        margin: 0;
+        background-color: rgba(0, 0, 0, 0.1);
+    }
+
+    // Company img
+    svg{
+        width: 80%;
+    }
+
+    // Dark Mode
+    &.agency-dark{
+        .social{
+            padding: 2rem 0 2rem 0;
+            margin: 0;
+            background-color: rgba(0, 0, 0, 0.2);
+        }
+        svg{
+            .st0{
+                fill: #ffffff;
+            }
+            .st1{
+                fill: #F61A42;
+            }
+        }
+    }
+    // Light Mode
+    &.white{
+        .footer-copyright{
+            background: rgba(0, 0, 0, 0.1);
+            color: #212121 !important;
+        }
+        ul{
+            i{
+                color: #212121 !important;
+            }
+            a{
+                color: #212121 !important;
+            }
+        }
+        .btn{
+            color: white;
+        }
+    }
+    
 }
 
 /** 

@@ -5,24 +5,27 @@ import React from 'react';
 //> MDB
 // "Material Design for Bootstrap" is a great UI design framework
 import {
-  MDBNavbar,
-  MDBNavbarBrand,
-  MDBNavbarNav,
-  MDBNavbarToggler,
-  MDBCollapse,
-  MDBNavItem,
-  MDBNavLink,
-  MDBContainer,
+    MDBNavbar,
+    MDBNavbarBrand,
+    MDBNavbarNav,
+    MDBNavbarToggler,
+    MDBCollapse,
+    MDBNavItem,
+    MDBNavLink,
+    MDBContainer,
 } from 'mdbreact';
 
 //> Images
-// Company logo
-import Logo from '../../../assets/content/logow_h50.png';
+// Logo
+import { ReactComponent as Logo } from  '../../../assets/content/logo_main.svg';
 
 class Navbar extends React.Component{
-    state = {
-        collapseID: ""
-    };
+    constructor(props){
+        super(props);
+        this.state = {
+            collapseID: "",
+        };
+    }
 
     toggleCollapse = collapseID => () =>
         this.setState(prevState => ({
@@ -33,6 +36,17 @@ class Navbar extends React.Component{
         window.scrollTo(0, 0);
         this.state.collapseID === collapseID && this.setState({ collapseID: "" });
     };
+
+    // Get navbar mode
+    _getMode = () => {
+        let opts = {};
+        if(this.props.mode){
+            opts['dark'] = 'dark';
+        } else {
+            opts['light'] = 'light';
+        }
+        return opts;
+    }
 
     render(){
         const overlay = (
@@ -46,10 +60,18 @@ class Navbar extends React.Component{
         const { collapseID } = this.state;
         return(
             <div>
-                <MDBNavbar color="agency-dark" dark expand="md" fixed="top" scrolling>
+                <MDBNavbar
+                color={this.props.mode ? ("agency-dark") : ("white")} {...this._getMode()}
+                expand="md"
+                fixed="top"
+                scrolling
+                >
                 <MDBContainer>
-                    <MDBNavbarBrand href="/" className="py-0 font-weight-bold">
-                    <img src={Logo} alt="Logo" />
+                    <MDBNavbarBrand
+                    href="/"
+                    className="py-0 font-weight-bold"
+                    >
+                    <Logo />
                     </MDBNavbarBrand>
                     <MDBNavbarToggler
                     onClick={this.toggleCollapse("mainNavbarCollapse")}
@@ -74,7 +96,7 @@ class Navbar extends React.Component{
                 </MDBContainer>
             </MDBNavbar>
             {collapseID && overlay}
-          </div>
+            </div>
         )
     }
 }

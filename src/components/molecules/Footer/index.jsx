@@ -7,17 +7,18 @@ import { Link } from 'react-router-dom'
 //> MDB
 // "Material Design for Bootstrap" is a great UI design framework
 import {
-  MDBFooter,
-  MDBRow,
-  MDBCol,
-  MDBContainer,
-  MDBIcon,
-  MDBBtn,
+    MDBFooter,
+    MDBRow,
+    MDBCol,
+    MDBContainer,
+    MDBIcon,
+    MDBBtn,
+    MDBSwitch,
 } from 'mdbreact';
 
 //> Images
 // Logo
-import Logo from '../../../assets/content/logow_h50.png';
+import { ReactComponent as Logo } from  '../../../assets/content/logo_main.svg';
 
 //> Dynamic texts
 // Slogans
@@ -27,15 +28,33 @@ const slogans = [
     "Jetzt Beratungsgespräch vereinbaren!",
     "Lassen Sie sich von uns beraten!",
     "Worauf warten Sie noch?",
-    "Der Erfolg wartet hinter diesem Kontakt!",
-    "Heraus aus der Komfortzone!"
+    "Der Erfolg wartet hinter diesem Kontakt!"
 ]
 
 class Footer extends React.Component{
+    state = {
+        slogan: "",
+    }
+
+    // Update parent state (Root Component)
+    handleSwitchChange = () => {
+        this.props.handler();
+    }
+
+    // When component is ready to mount
+    componentWillMount(){
+        this._getSlogan();
+    }
+
+    // Get a random slogan and save to state
+    _getSlogan = () => {
+        this.setState({slogan: slogans[Math.floor(Math.random()*slogans.length)]});
+    }
+
     render(){
         return(
-            <MDBFooter color="agency-dark">
-                <MDBRow className="agency-dark darken-1 py-3 m-0">
+            <MDBFooter color={this.props.mode ? ("agency-dark") : ("white text-dark")}>
+                <MDBRow className="social">
                     <MDBCol md="12" className="text-center">
                         <h4>Verbinden Sie sich mit uns!</h4>
                     </MDBCol>
@@ -113,10 +132,17 @@ class Footer extends React.Component{
                 <MDBContainer className="text-center text-md-left pt-4">
                     <MDBRow>
                         <MDBCol md="2">
-                            <img src={Logo} />
+                            <Logo />
                             <p className="mt-2">
                             Hochwertige und individuelle Lösungen
                             </p>
+                            <hr/>
+                            <h4>Dark Mode</h4>
+                            <MDBSwitch
+                            className="switch-red"
+                            checked={this.props.mode}
+                            onChange={this.handleSwitchChange}
+                            />
                         </MDBCol>
                         <MDBCol md="3">
                             <h5 className="title">Dienste</h5>
@@ -201,7 +227,7 @@ class Footer extends React.Component{
                             </ul>
                         </MDBCol>
                         <MDBCol md="12" className="text-center my-5">
-                            <h4>{slogans[Math.floor(Math.random()*slogans.length)]}</h4>
+                            <h4>{this.state.slogan}</h4>
                             <MDBBtn size="lg" rounded color="agency-red">Kontakt</MDBBtn>
                         </MDBCol>
                     </MDBRow>
