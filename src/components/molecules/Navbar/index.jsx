@@ -67,7 +67,10 @@ class Navbar extends React.Component{
                 scrolling
                 >
                 <MDBContainer>
-                    <MDBNavbarBrand href="/" className="py-0 font-weight-bold">
+                    <MDBNavbarBrand
+                    href="/"
+                    className="py-0 font-weight-bold"
+                    >
                     <Logo />
                     </MDBNavbarBrand>
                     <MDBNavbarToggler
