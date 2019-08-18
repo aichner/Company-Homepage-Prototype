@@ -17,8 +17,10 @@ import {
 } from 'mdbreact';
 
 //> Images
-// Logo
-import Logo from '../../../assets/content/logow_h50.png';
+// Logo light
+import { ReactComponent as LogoLight } from  '../../../assets/content/logo_withtype_white.svg';
+// Logo dark
+import { ReactComponent as LogoDark } from '../../../assets/content/logo_withtype_dark.svg';
 
 //> Dynamic texts
 // Slogans
@@ -144,7 +146,7 @@ class Footer extends React.Component{
                 <MDBContainer className="text-center text-md-left pt-4">
                     <MDBRow>
                         <MDBCol md="2">
-                            <img src={Logo} />
+                            {this.state.darkmode ? (<LogoLight/>) : (<LogoDark/>)}
                             <p className="mt-2">
                             Hochwertige und individuelle Lösungen
                             </p>

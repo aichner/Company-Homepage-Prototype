@@ -6,6 +6,8 @@
 
 // Footer
 footer {
+    transition: all .5s ease;
+
     // Custom pulsating heart
     .pulse {
         -webkit-animation: pulse 1s infinite;
@@ -33,13 +35,6 @@ footer {
         }
     }
 
-    // Column image size
-    .col-md-2{
-        img{
-            height: 2.5rem;
-        }
-    }
-
     // Dark Mode switch
     .switch-red{
         label input[type=checkbox]:checked + .lever {
@@ -57,6 +52,11 @@ footer {
         background-color: rgba(0, 0, 0, 0.1);
     }
 
+    // Company img
+    svg{
+        max-width: 80%;
+
+    }
 
     // Dark Mode / Light Mode
     &.agency-dark{
