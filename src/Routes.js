@@ -20,11 +20,27 @@ class Routes extends React.Component {
   render() {
     return (
       <Switch>
-        <Route exact path='/' component={(props) => <HomePage globalStore={this.props} {...props} />} />
-        <Route exact path='/news' component={(props) => <BlogListPage globalStore={this.props} {...props} />} />
-        <Route exact path='/news/:label' component={(props) => <BlogListPageLabel globalStore={this.props} {...props} />} />
-        <Route exact path='/news/article/:id' component={(props) => <BlogPage globalStore={this.props} {...props} />} />
-          
+        <Route
+        exact
+        path='/'
+        component={(props) => <HomePage globalStore={this.props} {...props} />}
+        />
+        <Route
+        exact
+        path='/news'
+        component={(props) => <BlogListPage globalStore={this.props} {...props} />}
+        />
+        <Route
+        exact
+        path='/news/:label'
+        component={(props) => <BlogListPageLabel globalStore={this.props} {...props} />}
+        />
+        <Route
+        exact
+        path='/news/article/:id'
+        component={(props) => <BlogPage globalStore={this.props} {...props} />}
+        />
+
         <Route
           render={function () {
             return <h1>Not Found</h1>;
