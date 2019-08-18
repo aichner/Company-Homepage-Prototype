@@ -12,14 +12,18 @@ import {
 
 //> Components
 import {
-  Hero
+  Hero,
+  CallToAction,
 } from '../../organisms/sections';
 
 // This component shall not return any content
 class HomePage extends React.Component {
   render() {
     return (
-      <Hero globalStore={this.props.globalStore} />
+      <>
+        <Hero globalStore={this.props.globalStore} />
+        <CallToAction globalStore={this.props.globalStore} />
+      </>
     );
   }
 }
