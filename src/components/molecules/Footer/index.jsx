@@ -28,8 +28,7 @@ const slogans = [
     "Jetzt Beratungsgespräch vereinbaren!",
     "Lassen Sie sich von uns beraten!",
     "Worauf warten Sie noch?",
-    "Der Erfolg wartet hinter diesem Kontakt!",
-    "Heraus aus der Komfortzone!"
+    "Der Erfolg wartet hinter diesem Kontakt!"
 ]
 
 class Footer extends React.Component{
@@ -41,19 +40,32 @@ class Footer extends React.Component{
     handleSwitchChange = () => {
         this.setState({
             darkmode: !this.state.darkmode
-        });
+        }, () => localStorage.setItem('mode', JSON.parse(this.state.darkmode)));
+    }
+
+    componentWillMount(){
+        this._getSlogan();
+        this._getMode();
+    }
+
+    // Check if dark or light mode
+    _getMode = () => {
+        let mode = localStorage.getItem('mode');
+        if(mode !== null){
+            if(mode !== this.state.darkmode){
+                let modeJSON = JSON.parse(mode);
+                this.setState({darkmode: modeJSON});
+            }
+        }
     }
 
     // Select one slogan
-    _setSlogan = () => {
+    _getSlogan = () => {
         this.setState({slogan: slogans[Math.floor(Math.random()*slogans.length)]});
     }
 
-    componentDidMount(){
-        this._setSlogan();
-    }
-
     render(){
+        console.log(this.state.darkmode);
         return(
             <MDBFooter color="agency-dark">
                 <MDBRow className="agency-dark darken-1 py-3 m-0">
