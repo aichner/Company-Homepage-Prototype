@@ -18,9 +18,8 @@ import {
 // This component shall not return any content
 class HomePage extends React.Component {
   render() {
-    console.log(this.props);
     return (
-      <Hero />
+      <Hero globalStore={this.props.globalStore} />
     );
   }
 }

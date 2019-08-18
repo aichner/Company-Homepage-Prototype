@@ -64,6 +64,14 @@ footer {
             margin: 0;
             background-color: rgba(0, 0, 0, 0.2);
         }
+        svg{
+            .st0{
+                fill: #ffffff;
+            }
+            .st1{
+                fill: #F61A42;
+            }
+        }
     }
     // Light Mode
     &.white{

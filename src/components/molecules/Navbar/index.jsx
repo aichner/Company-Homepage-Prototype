@@ -16,10 +16,8 @@ import {
 } from 'mdbreact';
 
 //> Images
-// Logo light
-import { ReactComponent as LogoLight } from  '../../../assets/content/logo_withtype_white_sm.svg';
-// Logo dark
-import { ReactComponent as LogoDark } from '../../../assets/content/logo_withtype_dark_sm.svg';
+// Logo
+import { ReactComponent as Logo } from  '../../../assets/content/logo_main.svg';
 
 class Navbar extends React.Component{
     constructor(props){
@@ -65,7 +63,7 @@ class Navbar extends React.Component{
                 <MDBNavbar color={this.props.mode ? ("agency-dark") : ("white")} {...this._getMode()} expand="md" fixed="top" scrolling>
                 <MDBContainer>
                     <MDBNavbarBrand href="/" className="py-0 font-weight-bold">
-                    {this.props.mode ? (<LogoLight/>) : (<LogoDark/>)}
+                    <Logo />
                     </MDBNavbarBrand>
                     <MDBNavbarToggler
                     onClick={this.toggleCollapse("mainNavbarCollapse")}

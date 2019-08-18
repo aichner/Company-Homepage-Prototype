@@ -2,6 +2,23 @@
     // Brand image size
     svg{
         height: 2.5rem;
+        // Color of logo
+        .st0{
+            fill: #ffffff;
+        }
+        .st1{
+            fill: #F61A42;
+        }
+    }
+    &.white{
+        svg{
+            .st0{
+                fill: $agencyDark;
+            }
+            .st1{
+                fill: #F61A42;
+            }
+        }
     }
 }
 

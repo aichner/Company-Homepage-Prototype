@@ -32,7 +32,7 @@ import layer2 from '../../../../assets/bg/l2.png';
 import layer3 from '../../../../assets/bg/l3.png';
 import layer4 from '../../../../assets/bg/l4.png';
 // Logo
-import layerLogo from '../../../../assets/bg/logo.png';
+import { ReactComponent as Logo } from  '../../../../assets/content/logo_full.svg';
 // Content (services)
 import concept from '../../../../assets/content/hero/concept.jpg';
 import design from '../../../../assets/content/hero/design.jpg';
@@ -42,10 +42,9 @@ import web from '../../../../assets/content/hero/web.jpg';
 import wedding from '../../../../assets/content/hero/wedding.jpg';
 
 class Hero extends React.Component {
-
     render() {
         return (
-        <div id="hero">
+            <div id="hero" className={this.props.globalStore.mode ? ("dark") : ("light")}>
                 <MDBView className="hero-view">
                     <ParallaxBanner
                     className="hero-parallax"
@@ -79,7 +78,7 @@ class Hero extends React.Component {
                                         <div className="white-text text-center text-md-left mt-xl-5 mb-5">
                                             <FadeIn>
                                             <MDBView>
-                                                <img src={layerLogo} className="m-auto img-fluid" alt="Logo"/>
+                                                <Logo />
                                                 <MDBMask className="flex-center">
                                                 </MDBMask>
                                             </MDBView>
