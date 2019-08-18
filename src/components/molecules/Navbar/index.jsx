@@ -22,9 +22,12 @@ import { ReactComponent as LogoLight } from  '../../../assets/content/logo_witht
 import { ReactComponent as LogoDark } from '../../../assets/content/logo_withtype_dark_sm.svg';
 
 class Navbar extends React.Component{
-    state = {
-        collapseID: ""
-    };
+    constructor(props){
+        super(props);
+        this.state = {
+            collapseID: "",
+        };
+    }
 
     toggleCollapse = collapseID => () =>
         this.setState(prevState => ({
@@ -48,10 +51,10 @@ class Navbar extends React.Component{
         const { collapseID } = this.state;
         return(
             <div>
-                <MDBNavbar color="agency-dark" dark expand="md" fixed="top" scrolling>
+                <MDBNavbar color={this.props.mode ? ("agency-dark") : ("white")} dark expand="md" fixed="top" scrolling>
                 <MDBContainer>
                     <MDBNavbarBrand href="/" className="py-0 font-weight-bold">
-                    <LogoLight/>
+                    {this.props.mode ? (<LogoLight/>) : (<LogoDark/>)}
                     </MDBNavbarBrand>
                     <MDBNavbarToggler
                     onClick={this.toggleCollapse("mainNavbarCollapse")}

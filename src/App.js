@@ -31,15 +31,25 @@ function getMode() {
 const mode = getMode();
 
 class App extends React.Component {
+  state = {
+    darkmode: mode
+  }
+
+  _handler = () => {
+    this.setState({
+      darkmode: !this.state.darkmode
+    })
+  }
+
   render() {
     return (
       <Router>
         <div className="flyout">
-          <Navbar mode={mode} />
+          <Navbar mode={this.state.darkmode} />
           <main>
-            <Routes mode={mode} />
+            <Routes mode={this.state.darkmode} />
           </main>
-          <Footer mode={mode} />
+          <Footer handler = {this._handler} mode={this.state.darkmode} />
         </div>
       </Router>
     );

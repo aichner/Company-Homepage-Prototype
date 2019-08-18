@@ -35,29 +35,15 @@ const slogans = [
 
 class Footer extends React.Component{
     state = {
-        darkmode: false,
         slogan: "",
     }
 
     handleSwitchChange = () => {
-        this.setState({
-            darkmode: !this.state.darkmode
-        }, () => localStorage.setItem('mode', JSON.parse(this.state.darkmode)));
+        this.props.handler();
     }
 
     componentWillMount(){
-        this._getMode();
         this._getSlogan();
-    }
-
-    // Get mode
-    _getMode = () => {
-        let mode = localStorage.getItem('mode');
-        if(mode !== null){
-            this.setState({
-                darkmode: JSON.parse(mode)
-            })
-        }
     }
 
     // Select one slogan
@@ -67,7 +53,7 @@ class Footer extends React.Component{
 
     render(){
         return(
-            <MDBFooter color={this.state.darkmode ? ("agency-dark") : ("white text-dark")}>
+            <MDBFooter color={this.props.mode ? ("agency-dark") : ("white text-dark")}>
                 <MDBRow className="social">
                     <MDBCol md="12" className="text-center">
                         <h4>Verbinden Sie sich mit uns!</h4>
@@ -146,13 +132,13 @@ class Footer extends React.Component{
                 <MDBContainer className="text-center text-md-left pt-4">
                     <MDBRow>
                         <MDBCol md="2">
-                            {this.state.darkmode ? (<LogoLight/>) : (<LogoDark/>)}
+                            {this.props.mode ? (<LogoLight/>) : (<LogoDark/>)}
                             <p className="mt-2">
                             Hochwertige und individuelle Lösungen
                             </p>
                             <hr/>
                             <h4>Dark Mode</h4>
-                            <MDBSwitch className="switch-red" checked={this.state.darkmode} onChange={this.handleSwitchChange} />
+                            <MDBSwitch className="switch-red" checked={this.props.mode} onChange={this.handleSwitchChange} />
                         </MDBCol>
                         <MDBCol md="3">
                             <h5 className="title">Dienste</h5>
