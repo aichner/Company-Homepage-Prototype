@@ -24,16 +24,18 @@ function getMode() {
     }
 }
 
+const mode = getMode();
+
 class App extends React.Component {
   render() {
     return (
       <Router>
         <div className="flyout">
-          <Navbar />
+          <Navbar mode={mode} />
           <main>
-            <Routes mode={getMode()} />
+            <Routes mode={mode} />
           </main>
-          <Footer />
+          <Footer mode={mode} />
         </div>
       </Router>
     );
