@@ -129,7 +129,7 @@ class Footer extends React.Component{
                         </MDBBtn>
                     </MDBCol>
                 </MDBRow>
-                <MDBContainer className="text-center text-md-left pt-4">
+                <MDBContainer className="text-center text-md-left pt-5">
                     <MDBRow>
                         <MDBCol md="2">
                             <Logo />
