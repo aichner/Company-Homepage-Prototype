@@ -138,7 +138,11 @@ class Footer extends React.Component{
                             </p>
                             <hr/>
                             <h4>Dark Mode</h4>
-                            <MDBSwitch className="switch-red" checked={this.props.mode} onChange={this.handleSwitchChange} />
+                            <MDBSwitch
+                            className="switch-red"
+                            checked={this.props.mode}
+                            onChange={this.handleSwitchChange}
+                            />
                         </MDBCol>
                         <MDBCol md="3">
                             <h5 className="title">Dienste</h5>
