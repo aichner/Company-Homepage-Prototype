@@ -42,7 +42,7 @@ class App extends React.Component {
     // Update mode for all child components and write it to localStorage
     this.setState({
       darkmode: !this.state.darkmode
-    }, () => localStorage.setItem('mode', this.state.darkmode))
+    }, () => localStorage.setItem('mode', this.state.darkmode));
   }
 
   render() {
