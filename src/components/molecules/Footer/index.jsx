@@ -18,9 +18,9 @@ import {
 
 //> Images
 // Logo light
-import { ReactComponent as LogoLight } from  '../../../assets/content/logo_withtype_white.svg';
+import { ReactComponent as LogoLight } from  '../../../assets/content/logo_withtype_white_sm.svg';
 // Logo dark
-import { ReactComponent as LogoDark } from '../../../assets/content/logo_withtype_dark.svg';
+import { ReactComponent as LogoDark } from '../../../assets/content/logo_withtype_dark_sm.svg';
 
 //> Dynamic texts
 // Slogans

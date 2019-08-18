@@ -5,19 +5,21 @@ import React from 'react';
 //> MDB
 // "Material Design for Bootstrap" is a great UI design framework
 import {
-  MDBNavbar,
-  MDBNavbarBrand,
-  MDBNavbarNav,
-  MDBNavbarToggler,
-  MDBCollapse,
-  MDBNavItem,
-  MDBNavLink,
-  MDBContainer,
+    MDBNavbar,
+    MDBNavbarBrand,
+    MDBNavbarNav,
+    MDBNavbarToggler,
+    MDBCollapse,
+    MDBNavItem,
+    MDBNavLink,
+    MDBContainer,
 } from 'mdbreact';
 
 //> Images
-// Company logo
-import Logo from '../../../assets/content/logow_h50.png';
+// Logo light
+import { ReactComponent as LogoLight } from  '../../../assets/content/logo_withtype_white_sm.svg';
+// Logo dark
+import { ReactComponent as LogoDark } from '../../../assets/content/logo_withtype_dark_sm.svg';
 
 class Navbar extends React.Component{
     state = {
@@ -49,7 +51,7 @@ class Navbar extends React.Component{
                 <MDBNavbar color="agency-dark" dark expand="md" fixed="top" scrolling>
                 <MDBContainer>
                     <MDBNavbarBrand href="/" className="py-0 font-weight-bold">
-                    <img src={Logo} alt="Logo" />
+                    <LogoLight/>
                     </MDBNavbarBrand>
                     <MDBNavbarToggler
                     onClick={this.toggleCollapse("mainNavbarCollapse")}
@@ -74,7 +76,7 @@ class Navbar extends React.Component{
                 </MDBContainer>
             </MDBNavbar>
             {collapseID && overlay}
-          </div>
+            </div>
         )
     }
 }
