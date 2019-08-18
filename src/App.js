@@ -28,14 +28,18 @@ function getMode() {
     }
 }
 
+// Save the mode
 const mode = getMode();
 
+// Root Component
 class App extends React.Component {
   state = {
     darkmode: mode
   }
 
+  // Handler for all child components who can set the mode
   _handler = () => {
+    // Update mode for all child components and write it to localStorage
     this.setState({
       darkmode: !this.state.darkmode
     }, () => localStorage.setItem('mode', this.state.darkmode))

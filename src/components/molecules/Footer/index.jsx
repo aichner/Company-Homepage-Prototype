@@ -38,15 +38,17 @@ class Footer extends React.Component{
         slogan: "",
     }
 
+    // Update parent state (Root Component)
     handleSwitchChange = () => {
         this.props.handler();
     }
 
+    // When component is ready to mount
     componentWillMount(){
         this._getSlogan();
     }
 
-    // Select one slogan
+    // Get a random slogan and save to state
     _getSlogan = () => {
         this.setState({slogan: slogans[Math.floor(Math.random()*slogans.length)]});
     }
