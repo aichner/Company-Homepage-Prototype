@@ -8,6 +8,8 @@ import { Route, Switch } from 'react-router-dom';
 /**
  * HomePage: A basic template page
  * BlogPage: Our blog (based on Google Blogger)
+ * BlogListPage: An overview of all our blogs (based on Google Blogger)
+ * BlogListPageLabel: An overview of all blogs sorted by a label (based on Google Blogger)
  */
 import {
   HomePage,
