@@ -9,6 +9,8 @@ import { Link } from 'react-router-dom'
 import { ParallaxBanner, Parallax } from 'react-scroll-parallax';
 // Fade-In animation
 import FadeIn from 'react-fade-in';
+// Particles
+import Particles from 'react-particles-js';
 
 //> MDB
 // "Material Design for Bootstrap" is a great UI design framework
@@ -45,6 +47,37 @@ class Hero extends React.Component {
     render() {
         return (
             <div id="hero" className={this.props.globalStore.mode ? ("dark") : ("light")}>
+                <Particles
+                className="particles"
+                params={{
+                    "particles": {
+                        "number": {
+                            "value": 60
+                        },
+                        "size": {
+                            "value": 3
+                        },
+                        "color":{
+                            "value": this.props.globalStore.mode ? ("#ffffff") : ("#000000")
+                        },
+                        "line_linked":{
+                            "enable":true,
+                            "distance":200,
+                            "color": this.props.globalStore.mode ? ("#ffffff") : ("#000000"),
+                            "opacity":0.3,
+                            "width":1
+                        },
+                    },
+                    
+                    "interactivity": {
+                        "events": {
+                            "onhover": {
+                                "enable": true,
+                                "mode": "repulse"
+                            }
+                        }
+                    },
+                }} />
                 <MDBView className="hero-view">
                     <ParallaxBanner
                     className="hero-parallax"
@@ -72,7 +105,7 @@ class Hero extends React.Component {
                     ]}
                     >
                         <MDBContainer>
-                            <MDBRow className="h-100">
+                            <MDBRow className="h-100 main-row">
                                 <MDBCol md="6">
                                     <Parallax y={[20, -20]} tagOuter="figure">
                                         <div className="text-center text-md-left mt-xl-5 mb-5">

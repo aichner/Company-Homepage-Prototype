@@ -43,21 +43,6 @@ class CallToAction extends React.Component {
             <div id="calltoaction" className={this.props.globalStore.mode ? ("dark") : ("light")}>
                 <MDBRow>
                     <MDBCol className="text-center">
-                        {/*<ParallaxBanner
-                        className="hero-parallax"
-                        layers={[
-                            {
-                                image: rocket_pen,
-                                amount: 0.0,
-                                expanded: true
-                            },
-                            {
-                                image: rocket,
-                                amount: -0.4,
-                                expanded: true
-                            },
-                        ]}
-                        />*/}
                         <MDBRow className="space-left">
                             <MDBCol>
                                 <MDBView>
