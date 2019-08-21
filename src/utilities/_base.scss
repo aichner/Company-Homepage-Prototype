@@ -18,6 +18,11 @@ main{
 	justify-content: space-between;
 }
 
+section{
+	padding-top: 2rem;
+	padding-bottom: 2rem;
+}
+
 // Navigation
 .agency-dark{
 	background-color: $agencyDark !important;
@@ -84,14 +89,13 @@ main{
 .btn-fancy {
 	--offset: 10px;
 	--border-size: 2px;
-	
 	display: block;
 	position: relative;
-	padding: 1.5em 3em;
+	padding: 1em 2em;
 	appearance: none;
 	border: 0;
 	background: transparent;
-	color: #e55743;
+	color: $agencyRed;
 	text-transform: uppercase;
 	letter-spacing: .25em;
 	outline: none;
@@ -105,8 +109,7 @@ main{
 		background: rgba(100, 0, 0, .03);
 	}
 	
-	&__horizontal,
-	&__vertical {
+	.button__horizontal, .button__vertical {
 		position: absolute;
 		top: var(--horizontal-offset, 0);
 		right: var(--vertical-offset, 0);
@@ -122,7 +125,7 @@ main{
 		}
 	}
 	
-	&__horizontal {
+	.button__horizontal {
 		--vertical-offset: calc(var(--offset) * -1);
 		border-top: var(--border-size) solid currentcolor;
 		border-bottom: var(--border-size) solid currentcolor;
@@ -135,11 +138,11 @@ main{
 		}
 	}
 	
-	&:hover &__horizontal {
+	&:hover > .button__horizontal {
 		transform: scaleX(0);
 	}
 	
-	&__vertical {
+	.button__vertical {
 		--horizontal-offset: calc(var(--offset) * -1);
 		border-left: var(--border-size) solid currentcolor;
 		border-right: var(--border-size) solid currentcolor;
@@ -152,7 +155,7 @@ main{
 		}
 	}
 	
-	&:hover &__vertical {
+	&:hover > .button__vertical {
 		transform: scaleY(0);
 	}
 	

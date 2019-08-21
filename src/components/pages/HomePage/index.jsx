@@ -14,6 +14,7 @@ import {
 import {
   Hero,
   CallToAction,
+  Additional,
 } from '../../organisms/sections';
 
 // This component shall not return any content
@@ -23,6 +24,7 @@ class HomePage extends React.Component {
       <>
         <Hero globalStore={this.props.globalStore} />
         <CallToAction globalStore={this.props.globalStore} />
+        <Additional globalStore={this.props.globalStore} />
       </>
     );
   }
