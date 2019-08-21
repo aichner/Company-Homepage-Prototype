@@ -12,19 +12,12 @@ import {
     MDBCard,
     MDBCardBody,
     MDBMask,
-    MDBIcon,
     MDBView,
     MDBBtn,
     MDBBadge,
     MDBChipsInput,
     MDBContainer,
 } from "mdbreact";
-
-//> Components
-import {
-    
-    Hero
-} from '../../organisms/sections';
 
 //> SCSS
 import './bloglistlabel.scss';
@@ -102,6 +95,7 @@ class BlogListLabel extends React.Component {
             } else {
                 labels += "label:"+tag+["|"];
             }
+            return true;
         })
 
         this.setState({labels_formatted: labels}, () => this.fetchData());

@@ -21,7 +21,6 @@ import {
     MDBIcon,
     MDBCard,
     MDBCardBody,
-    MDBInput,
     MDBMask,
 } from 'mdbreact';
 

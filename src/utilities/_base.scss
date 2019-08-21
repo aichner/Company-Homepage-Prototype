@@ -61,6 +61,7 @@ main{
 		background-color: lighten($agencyRed, 30%) !important;
 	}
 }
+// Custom buttons
 .btn-agency-red{
 	background-color: $agencyRed !important;
 	color: white;
@@ -71,6 +72,12 @@ main{
 	&:focus{
 		background-color: darken($agencyRed, 20%) !important;
 		color: white;
+	}
+}
+.btn{
+	box-shadow: none;
+	&:hover{
+		box-shadow: none;
 	}
 }
 
