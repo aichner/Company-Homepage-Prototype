@@ -66,7 +66,7 @@ class CallToAction extends React.Component {
                         </MDBRow>
                     </MDBCol>
                     <MDBCol md="auto" className="text-center">
-                        <h2 className="gidole">Es ist einfach zu starten!</h2>
+                        <h2 className="gidole">Es ist einfach <strong>jetzt</strong> zu starten!</h2>
                         <p>Und der Einstieg ist kostenlos. Zwei Dinge die jeder liebt.</p>
                         <MDBBtn color="agency-red" size="lg"><MDBIcon icon="rocket" className="pr-2"/>Jetzt starten</MDBBtn>
                     </MDBCol>
