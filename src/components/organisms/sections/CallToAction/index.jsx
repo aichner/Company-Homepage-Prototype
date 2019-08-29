@@ -28,9 +28,10 @@ import planet1 from '../../../../assets/content/icons/planet1.jpg';
 
 class CallToAction extends React.Component {
     render() {
+        const { globalstore } = this.props;
         return (
             <FadeIn>
-                <div id="calltoaction" className={this.props.globalStore.mode ? ("dark") : ("light")}>
+                <div id="calltoaction" className={globalstore.mode ? ("dark") : ("light")}>
                     <MDBRow>
                         <MDBCol className="text-center">
                             <MDBRow className="space-left">
