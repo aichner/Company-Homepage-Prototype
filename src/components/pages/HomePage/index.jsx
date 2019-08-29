@@ -2,6 +2,11 @@
 // Contains all the functionality necessary to define React components
 import React from 'react';
 
+//> Additional libraries
+// Loadable
+import LoadableVisibility from "react-loadable-visibility/react-loadable";
+import Loader from "../../atoms/Loader";
+
 //> MDB
 // "Material Design for Bootstrap" is a great UI design framework
 /*
@@ -11,20 +16,29 @@ import {
 */
 
 //> Components
-import {
-  Hero,
-  CallToAction,
-  Additional,
-} from '../../organisms/sections';
+const Hero = LoadableVisibility({
+  loader: () => import("../../organisms/sections/Hero"),
+  loading: Loader
+});
+const CallToAction = LoadableVisibility({
+  loader: () => import("../../organisms/sections/CallToAction"),
+  loading: Loader
+});
+const Additional = LoadableVisibility({
+  loader: () => import("../../organisms/sections/Additional"),
+  loading: Loader
+});
+
+
 
 // This component shall not return any content
 class HomePage extends React.Component {
   render() {
     return (
       <>
-        <Hero globalStore={this.props.globalStore} />
-        <CallToAction globalStore={this.props.globalStore} />
-        <Additional globalStore={this.props.globalStore} />
+        <Hero globalstore={this.props.globalStore} />
+        <CallToAction globalstore={this.props.globalStore} />
+        <Additional globalstore={this.props.globalStore} />
       </>
     );
   }

@@ -31,7 +31,7 @@ const slogans = [
     "Der Erfolg wartet hinter diesem Kontakt!"
 ]
 
-class Footer extends React.Component{
+class Footer extends React.PureComponent{
     state = {
         slogan: "",
     }
