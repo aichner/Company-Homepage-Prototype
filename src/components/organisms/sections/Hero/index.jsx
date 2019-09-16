@@ -58,7 +58,9 @@ class Hero extends React.Component {
                                     className="font-weight-bold pb-4">
                                     Ihre Vision ist unser Auftrag.
                                     </h1>
-                                    <MDBBtn size="lg" color="white">Mehr erfahren<MDBIcon icon="angle-down" className="pl-2" /></MDBBtn>
+                                    <MDBBtn size="lg" color="white">
+                                    Mehr erfahren<MDBIcon icon="angle-down" className="pl-2" />
+                                    </MDBBtn>
                                 </MDBCol>
                                 <MDBCol md="6" className="py-5">
                                     <Working />
