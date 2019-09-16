@@ -4,7 +4,7 @@ import React from 'react';
 
 //> Additional libraries
 // Loadable
-import LoadableVisibility from "react-loadable-visibility/react-loadable";
+import loadableVisibility from "react-loadable-visibility/react-loadable";
 import Loader from "../../atoms/Loader";
 
 //> MDB
@@ -16,15 +16,15 @@ import {
 */
 
 //> Components
-const Hero = LoadableVisibility({
+const Hero = loadableVisibility({
   loader: () => import("../../organisms/sections/Hero"),
   loading: Loader
 });
-const CallToAction = LoadableVisibility({
+const CallToAction = loadableVisibility({
   loader: () => import("../../organisms/sections/CallToAction"),
   loading: Loader
 });
-const Additional = LoadableVisibility({
+const Additional = loadableVisibility({
   loader: () => import("../../organisms/sections/Additional"),
   loading: Loader
 });
