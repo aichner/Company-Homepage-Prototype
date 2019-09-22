@@ -1,51 +1,8 @@
 #hero{
-    // SVG Image
-    svg{
-        display: block;
-        margin: auto;
-        width: 80%;
-        .st0{
-            fill: #ffffff;
-        }
-        .st1{
-            fill: #F61A42;
-        }
-    }
-
-    // Dark mode
-    &.dark{
-        background-color: $agencyDark !important;
-        color: white;
-    }
-    // Light mode
-    &.light{
-        background-color: rgba(0, 0, 0, 0.05);
-        // Logo color
-        .st0{
-            fill: $agencyDark;
-        }
-        color: $agencyDark !important;
-
-        #classic-card{
-            background-color: white;
-            border-bottom-left-radius: 5rem;
-            border-bottom-right-radius: 2rem;
-            border-top-left-radius: 2rem;
-            border-top-right-radius: 5rem;
-            box-shadow: none;
-            .card-body{
-                box-shadow: none !important;
-            }
-            .mask, .mask:after{
-                background-color: rgba(255, 255, 255, 0.7);
-            }
-            .services .col-md-6 figure .view p{
-                color: $agencyDark !important;
-            }
-        }
-    }
-
     // Basic setup
+    h1{
+        font-size: 4.625rem;
+    }
     .gradient {
         background: -moz-linear-gradient(45deg, rgba(42, 27, 161, 0.7), rgba(29, 210, 177, 0.7) 100%);
         background: -webkit-linear-gradient(45deg, rgba(42, 27, 161, 0.7), rgba(29, 210, 177, 0.7) 100%);
@@ -54,80 +11,44 @@
         background: linear-gradient(45deg, rgba(42, 27, 161, 0.7), rgba(29, 210, 177, 0.7) 100%);
     }
     .hero-view {
-        height: 100vh;
+        max-height: 100vh;
     }
     .container, #hero .hero-row{
-        height: 100%;
-    }
-    .col-md-6{
-        align-self: center;
-        .card{
-            background-color: rgba(0, 0, 0, 0.2);
-            border-radius: 0;
-        }
+        max-height: 100%;
     }
     h6 {
         line-height: 1.7;
     }
 
-    // Make the hero parallax fill the entire screen
-    .hero-parallax{
-        height: 100% !important;
+    // Dark mode
+    &.dark{
+        background: linear-gradient(to top, $agencyDark 0%,darken($agencyDark, 10%) 100%);
+        color: white;
     }
-
-    // Services card
-    .services{
-        margin: 0;
-        .col-md-6{
-            margin: 0;
-            padding: 0;
-            figure{
-                margin: 0;
-                overflow: hidden;
-                .mask{
-                    transition: all .3s ease;
-                    p{
-                        text-align: center;
-                        transition: all .1s ease;
-                        font-size: 1.1em;
-                        span{
-                            font-size: .8em;
-                        }
-                    }
-                }
-                .view{
-                    cursor: pointer;
-                    img{
-                        filter: saturate(0);
-                        -webkit-filter: saturate(0);
-                        transition: all .3s ease;
-                    }
-
-                    &:hover{
-                        & > .mask{
-                            background-color: rgba(0, 0, 0, 0.4) !important;
-                            p{
-                                font-size: 1.4em;
-                            }
-                        }
-                        & > img{
-                            filter: saturate(1.5);
-                            -webkit-filter: saturate(1.5);
-                            transform: scale(1.1);
-                        }                    
-                    }
-
-                    p{
-                        font-weight: bold;
-                        color: white;
-                    }
-                }   
-            }
-        }
-        
+    // Light mode
+    &.light{
+        background: linear-gradient(to top, $agencyRed 0%,lighten($agencyRed, 10%) 100%);
+        color: $agencyDark !important;
     }
 } 
 
+#seperator{
+    background-image: url('./assets/bg/title-curve.svg');
+    background-position: left top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 2rem 0 2rem 0;
+    width: 100%;
+    min-height: 400px;
+    max-height: 500px;
+    margin-top: -200px;
+    margin-bottom: 2rem;
+    position: relative;
+    z-index: 1;
+    .row{
+        margin-top: 8rem;
+    }
+}
 
 /** 
  * SPDX-License-Identifier: (EUPL-1.2)

@@ -12,16 +12,10 @@ import {
     MDBCard,
     MDBCardBody,
     MDBMask,
-    MDBIcon,
     MDBView,
     MDBBtn,
     MDBBadge,
 } from "mdbreact";
-
-//> Components
-import {
-    Hero
-} from '../../organisms/sections';
 
 //> SCSS
 import './bloglist.scss';

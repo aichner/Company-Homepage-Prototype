@@ -5,15 +5,8 @@ import React from 'react';
 //> MDB
 // "Material Design for Bootstrap" is a great UI design framework
 import { 
-    MDBRow,
-    MDBCol,
     MDBCard,
     MDBCardBody,
-    MDBMask,
-    MDBIcon,
-    MDBView,
-    MDBBtn,
-    MDBBadge,
     MDBContainer,
 } from "mdbreact";
 

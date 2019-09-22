@@ -1,22 +1,27 @@
 .navbar{
     // Brand image size
     svg{
-        height: 2.5rem;
         // Color of logo
-        .st0{
-            fill: #ffffff;
-        }
-        .st1{
-            fill: #F61A42;
-        }
-    }
-    &.white{
-        svg{
+        &#logo{
+            height: 2.5rem;
             .st0{
-                fill: $agencyDark;
+                fill: #ffffff;
             }
             .st1{
                 fill: #F61A42;
+            }
+        } 
+    }
+    &.white{
+        svg{
+            // Color of logo
+            &#logo{
+                .st0{
+                    fill: $agencyDark;
+                }
+                .st1{
+                    fill: #F61A42;
+                }
             }
         }
     }
