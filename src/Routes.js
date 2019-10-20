@@ -7,6 +7,7 @@ import { Route, Switch } from 'react-router-dom';
 //> Components
 /**
  * HomePage: The start page
+ * BrandingPage: A page telling how to use our logos and branding
  * BlogPage: Our blog (based on Google Blogger)
  * BlogListPage: An overview of all our blogs (based on Google Blogger)
  * BlogListPageLabel: An overview of all blogs sorted by a label (based on Google Blogger)
