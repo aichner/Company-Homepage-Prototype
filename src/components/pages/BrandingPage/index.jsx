@@ -44,12 +44,12 @@ class BrandingPage extends React.Component {
           case "svg":
             options = {
               url: 'https://www.aichner-christian.com/public/logo_dark.svg'
-            }
+            };
             break;
           case "png":
             options = {
               url: 'https://www.aichner-christian.com/public/logo_dark.png'
-            }
+            };
             break;
           default:
             break;
@@ -60,12 +60,12 @@ class BrandingPage extends React.Component {
           case "svg":
             options = {
               url: 'https://www.aichner-christian.com/public/logo_white.svg'
-            }
+            };
             break;
           case "png":
             options = {
               url: 'https://www.aichner-christian.com/public/logo_white.png'
-            }
+            };
             break;
           default:
             break;
@@ -74,7 +74,7 @@ class BrandingPage extends React.Component {
       case "wedding":
         options = {
           url: 'https://www.aichner-christian.com/public/logo_wedding.png'
-        }
+        };
         break;
       default:
         break;
