@@ -24,6 +24,56 @@ import { ReactComponent as Logo } from  '../../../assets/content/logo_full.svg';
 import weddingsLogo from '../../../assets/content/weddings.png';
 
 class BrandingPage extends React.Component {
+
+  downloadImage = (type, format) => {
+
+    let options = undefined;
+
+    switch(type){
+      case "dark":
+        switch(format){
+          case "svg":
+            options = {
+              url: 'https://www.aichner-christian.com/public/logo_dark.svg'
+            }
+            break;
+          case "png":
+            options = {
+              url: 'https://www.aichner-christian.com/public/logo_dark.png'
+            }
+            break;
+          default:
+            break;
+        }
+        break;
+      case "light":
+        switch(format){
+          case "svg":
+            options = {
+              url: 'https://www.aichner-christian.com/public/logo_white.svg'
+            }
+            break;
+          case "png":
+            options = {
+              url: 'https://www.aichner-christian.com/public/logo_white.png'
+            }
+            break;
+          default:
+            break;
+        }
+        break;
+      case "wedding":
+        options = {
+          url: 'https://www.aichner-christian.com/public/logo_wedding.png'
+        }
+        break;
+      default:
+        break;
+    }
+
+    console.log(options);
+  }
+
   render() {
     return (
       <MDBContainer id="branding" className="py-5">
@@ -38,6 +88,7 @@ class BrandingPage extends React.Component {
                   <MDBBtn
                   color="elegant"
                   rounded
+                  onClick={() => this.downloadImage("dark","svg")}
                   >
                   <MDBIcon icon="download" className="pr-2" />
                   .svg
@@ -45,6 +96,7 @@ class BrandingPage extends React.Component {
                   <MDBBtn
                   color="elegant"
                   rounded
+                  onClick={() => this.downloadImage("dark","png")}
                   >
                   <MDBIcon icon="download" className="pr-2" />
                   .png
@@ -62,6 +114,7 @@ class BrandingPage extends React.Component {
                   <MDBBtn
                   color="white"
                   rounded
+                  onClick={() => this.downloadImage("light","svg")}
                   >
                   <MDBIcon icon="download" className="pr-2" />
                   .svg
@@ -69,6 +122,7 @@ class BrandingPage extends React.Component {
                   <MDBBtn
                   color="white"
                   rounded
+                  onClick={() => this.downloadImage("light","png")}
                   >
                   <MDBIcon icon="download" className="pr-2" />
                   .png
@@ -86,6 +140,7 @@ class BrandingPage extends React.Component {
                   <MDBBtn
                   color="white"
                   rounded
+                  onClick={() => this.downloadImage("wedding","png")}
                   >
                   <MDBIcon icon="download" className="pr-2" />
                   .png
