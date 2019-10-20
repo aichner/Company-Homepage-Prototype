@@ -20,15 +20,17 @@ import './branding.scss';
 //> Images
 // Logo
 import { ReactComponent as Logo } from  '../../../assets/content/logo_full.svg';
-// Weddings logo
+// Wedding logo
 import weddingsLogo from '../../../assets/content/weddings.png';
 
 class BrandingPage extends React.Component {
 
   downloadImage = (type, format) => {
 
+    // Preset variable
     let options = undefined;
 
+    // Check what URL to get
     switch(type){
       case "dark":
         switch(format){
@@ -71,7 +73,8 @@ class BrandingPage extends React.Component {
         break;
     }
 
-    console.log(options);
+    //> Temp output of the file URL
+    //console.log(options);
   }
 
   render() {
