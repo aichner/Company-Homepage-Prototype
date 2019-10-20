@@ -9,9 +9,21 @@
         fill: #F61A42;
       }
     }
+    &.logo-light{
+      .st0{
+        fill: #212529;
+      }
+      .st1{
+        fill: #F61A42;
+      }
+    }
   }
   img{
     margin: 1.5em 0 1.5em 0;
+  }
+  ul{
+    list-style: none;
+    padding: 0;
   }
 }
 
