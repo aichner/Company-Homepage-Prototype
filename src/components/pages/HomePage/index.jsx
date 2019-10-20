@@ -30,6 +30,12 @@ const Additional = loadableVisibility({
 });
 
 class HomePage extends React.Component {
+
+  componentDidMount = () => {
+    // Set page title
+    document.title = "Ihr verlässlicher Allround-Partner";
+  }
+
   render() {
     return (
       <>

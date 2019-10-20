@@ -25,6 +25,11 @@ import weddingsLogo from '../../../assets/content/weddings.png';
 
 class BrandingPage extends React.Component {
 
+  componentDidMount = () => {
+    // Set page title
+    document.title = "Evolving Our Identity";
+  }
+
   downloadImage = (type, format) => {
 
     // Preset variable
