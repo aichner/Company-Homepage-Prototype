@@ -10,6 +10,8 @@ import {
   MDBCol,
   MDBCard,
   MDBCardBody,
+  MDBTable,
+  MDBTableBody,
   MDBBtn,
   MDBIcon,
 } from 'mdbreact';
@@ -232,6 +234,90 @@ class BrandingPage extends React.Component {
                 </p>
               </li>
             </ul>
+          </MDBCol>
+        </MDBRow>
+        <hr />
+        <MDBRow>
+          <MDBCol md="4">
+            <MDBCard className="c-red">
+              <MDBCardBody>
+                <h2>AGENCY RED</h2>
+                <MDBTable>
+                  <MDBTableBody>
+                    <tr>
+                      <td>HEX COLOR</td>
+                      <td>#f61a42</td>
+                    </tr>
+                    <tr>
+                      <td>RGB</td>
+                      <td>246, 26, 66</td>
+                    </tr>
+                    <tr>
+                      <td>HSL</td>
+                      <td>349°, 92%, 53%</td>
+                    </tr>
+                    <tr>
+                      <td>CMYK</td>
+                      <td>0%, 89%, 73%, 4%</td>
+                    </tr>
+                  </MDBTableBody>
+                </MDBTable>
+              </MDBCardBody>
+            </MDBCard>
+          </MDBCol>
+          <MDBCol md="4">
+            <MDBCard className="c-dark">
+              <MDBCardBody>
+                <h2>AGENCY DARK</h2>
+                <MDBTable>
+                  <MDBTableBody>
+                    <tr>
+                      <td>HEX COLOR</td>
+                      <td>#212529</td>
+                    </tr>
+                    <tr>
+                      <td>RGB</td>
+                      <td>33, 37, 41</td>
+                    </tr>
+                    <tr>
+                      <td>HSL</td>
+                      <td>210°, 11%, 15%</td>
+                    </tr>
+                    <tr>
+                      <td>CMYK</td>
+                      <td>20%, 10%, 0%, 84%</td>
+                    </tr>
+                  </MDBTableBody>
+                </MDBTable>
+              </MDBCardBody>
+            </MDBCard>
+          </MDBCol>
+          <MDBCol md="4">
+            <MDBCard className="c-light">
+              <MDBCardBody>
+                <h2>AGENCY LIGHT</h2>
+                <MDBTable>
+                  <MDBTableBody>
+                    <tr>
+                      <td>HEX COLOR</td>
+                      <td>#e5e5e5</td>
+                    </tr>
+                    <tr>
+                      <td>RGB</td>
+                      <td>229, 229, 229</td>
+                    </tr>
+                    <tr>
+                      <td>HSL</td>
+                      <td>0°, 0%, 90%</td>
+                    </tr>
+                    <tr>
+                      <td>CMYK</td>
+                      <td>0%, 0%, 0%, 10%</td>
+                    </tr>
+                  </MDBTableBody>
+                </MDBTable>
+              </MDBCardBody>
+            </MDBCard>
           </MDBCol>
         </MDBRow>
         <hr />

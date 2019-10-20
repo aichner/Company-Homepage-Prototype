@@ -6,6 +6,13 @@
     .light-item{
       color: #212529;
     }
+    .c-light{
+      color: #212529;
+    }
+  }
+  // Card
+  .card{
+    margin-bottom: 1rem;
   }
   // SVG Logos
   svg{
@@ -35,6 +42,35 @@
   ul{
     list-style: none;
     padding: 0;
+  }
+  // Color palette
+  .c-red{
+    background: #f61a42;
+    color: white;
+    table{
+      color: white;
+      td{
+        border-top: 1px solid rgba(255,255,255,.4);
+      }
+    }
+  }
+  .c-dark{
+    background: #212529;
+    color: white;
+    table{
+      color: white;
+      td{
+        border-top: 1px solid rgba(255,255,255,.4);
+      }
+    }
+  }
+  .c-light{
+    background: #e5e5e5;
+    table{
+      td{
+        border-top: 1px solid rgba(0,0,0,.2);
+      }
+    }
   }
 }
 
