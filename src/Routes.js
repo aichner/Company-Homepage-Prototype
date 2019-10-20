@@ -13,6 +13,7 @@ import { Route, Switch } from 'react-router-dom';
  */
 import {
   HomePage,
+  BrandingPage,
   BlogPage,
   BlogListPage,
   BlogListPageLabel,
@@ -26,6 +27,11 @@ class Routes extends React.Component {
         exact
         path='/'
         component={(props) => <HomePage globalStore={this.props} {...props} />}
+        />
+        <Route
+        exact
+        path='/branding'
+        component={(props) => <BrandingPage globalStore={this.props} {...props} />}
         />
         <Route
         exact
