@@ -1,4 +1,13 @@
 #branding{
+  // Dark mode
+  &.dark{
+    background: #3e3e3e;
+    color: white;
+    .light-item{
+      color: #212529;
+    }
+  }
+  // SVG Logos
   svg{
     margin: 1.5em 0 1.5em 0;
     &.logo-dark{
@@ -18,9 +27,11 @@
       }
     }
   }
+  // Wedding logo
   img{
     margin: 1.5em 0 1.5em 0;
   }
+  // List
   ul{
     list-style: none;
     padding: 0;

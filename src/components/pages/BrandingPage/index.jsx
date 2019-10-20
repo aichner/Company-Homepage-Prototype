@@ -75,12 +75,16 @@ class BrandingPage extends React.Component {
   }
 
   render() {
+
+    const { globalStore } = this.props;
+
     return (
-      <MDBContainer id="branding" className="py-5">
+      <div id="branding" className={globalStore.mode ? "dark" : undefined}>
+      <MDBContainer className="py-5">
         <h2 className="text-center mb-5">Logos und Verwendung</h2>
         <MDBRow className="text-center">
           <MDBCol md="4">
-            <MDBCard>
+            <MDBCard className="light-item">
               <MDBCardBody>
                 <p className="lead">Logo (on light)</p>
                 <Logo className="logo-light"/>
@@ -242,7 +246,8 @@ class BrandingPage extends React.Component {
             <p className="lead font-weight-bold">Du willst über uns berichten?</p>
             <p>Nutze gerne unsere Ressourcen unter Berücksichtung der oben angeführten Regeln.</p>
             <p className="lead font-weight-bold">Du benötigst Auskunft?</p>
-            <p>Über firmeninterne Details können wir Dir für deinen Bericht / Blog / Artikel gerne Auskunft geben.</p>
+            <p>Über firmeninterne Details können wir Dir für deinen Bericht / Blog / 
+            Artikel gerne Auskunft geben.</p>
             <MDBBtn
             color="elegant"
             size="md"
@@ -255,6 +260,7 @@ class BrandingPage extends React.Component {
           </MDBCol>
         </MDBRow>
       </MDBContainer>
+      </div>
     );
   }
 }
