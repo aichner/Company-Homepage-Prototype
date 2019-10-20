@@ -19,7 +19,7 @@ import {
     MDBContainer,
 } from "mdbreact";
 
-//> SCSS
+//> CSS
 import './bloglistlabel.scss';
 
 //> API

@@ -17,7 +17,7 @@ import {
     MDBBadge,
 } from "mdbreact";
 
-//> SCSS
+//> CSS
 import './bloglist.scss';
 
 //> API
