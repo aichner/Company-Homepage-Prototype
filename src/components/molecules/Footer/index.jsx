@@ -194,6 +194,11 @@ class Footer extends React.PureComponent{
                                     <MDBIcon icon="coffee" />Einen Kaffee spendieren
                                 </Link>
                             </li>
+                            <li className="list-unstyled">
+                                <Link to="/branding">
+                                    <MDBIcon icon="palette" />Presse / Branding
+                                </Link>
+                            </li>
                             </ul>
                         </MDBCol>
                         <MDBCol md="4">
