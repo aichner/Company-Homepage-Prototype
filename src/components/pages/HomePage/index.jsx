@@ -29,9 +29,6 @@ const Additional = loadableVisibility({
   loading: Loader
 });
 
-
-
-// This component shall not return any content
 class HomePage extends React.Component {
   render() {
     return (
