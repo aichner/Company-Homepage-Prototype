@@ -71,7 +71,7 @@ class Navbar extends React.Component{
                     href="/"
                     className="py-0 font-weight-bold"
                     >
-                    <Logo />
+                    <Logo id="logo" />
                     </MDBNavbarBrand>
                     <MDBNavbarToggler
                     onClick={this.toggleCollapse("mainNavbarCollapse")}

@@ -132,7 +132,7 @@ class Footer extends React.PureComponent{
                 <MDBContainer className="text-center text-md-left pt-5">
                     <MDBRow>
                         <MDBCol md="2">
-                            <Logo />
+                            <Logo id="logo" />
                             <p className="mt-2">
                             Hochwertige und individuelle Lösungen
                             </p>
