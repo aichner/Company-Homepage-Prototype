@@ -30,6 +30,8 @@ class LocationPage extends React.Component {
   render() {
 
     const { globalStore } = this.props;
+
+    const apiKey = process.env.REACT_APP_GOOGLE_MAPS_API;
   
     return (
       <div id="location">
@@ -103,7 +105,7 @@ class LocationPage extends React.Component {
               style={{ height: "400px" }}
             >
               <iframe
-                src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJuZmolFGAcEcRCu40kRxAfow&key=AIzaSyB4qUqrJx6S8Hmu-kDGggInVsX9aD1YCic"
+                src={`https://www.google.com/maps/embed/v1/place?q=place_id:ChIJuZmolFGAcEcRCu40kRxAfow&key=${apiKey}`}
                 title="This is a unique title"
                 width="100%"
                 height="100%"
