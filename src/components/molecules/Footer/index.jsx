@@ -14,6 +14,7 @@ import {
     MDBIcon,
     MDBBtn,
     MDBSwitch,
+    MDBBadge,
 } from 'mdbreact';
 
 //> Images
@@ -139,7 +140,7 @@ class Footer extends React.PureComponent{
                             <hr/>
                             <h4>Dark Mode</h4>
                             <MDBSwitch
-                            className="switch-red"
+                            className="switch-red mb-3"
                             checked={this.props.mode}
                             onChange={this.handleSwitchChange}
                             />
@@ -148,87 +149,97 @@ class Footer extends React.PureComponent{
                             <h5 className="title">Dienste</h5>
                             <hr className="agency-red mb-4 mt-0 d-inline-block" />
                             <ul>
-                            <li className="list-unstyled">
-                                <Link to="/service/online-presence">
-                                <   MDBIcon icon="globe" />Online-Präsenz
-                                </Link>
-                            </li>
-                            <li className="list-unstyled">
-                                <Link to="/service/events">
+                            <Link to="/service/online-presence">
+                                <li className="list-unstyled">
+                                    <MDBIcon icon="globe" />Online-Präsenz
+                                </li>
+                            </Link>
+                            <Link to="/service/events">
+                                <li className="list-unstyled">
                                     <MDBIcon icon="handshake" />Events / Messen
-                                </Link>
-                            </li>
-                            <li className="list-unstyled">
-                                <Link to="/service/wedding">
+                                </li>
+                            </Link>
+                            <Link to="/service/wedding">
+                                <li className="list-unstyled">
                                     <MDBIcon icon="ring" />Ihre Hochzeit
-                                </Link>
-                            </li>
-                            <li className="list-unstyled">
-                                <Link to="/service/image">
+                                </li>
+                            </Link>
+                            <Link to="/service/image">
+                                <li className="list-unstyled">
                                     <MDBIcon icon="user-tie" />Ihr Image
-                                </Link>
-                            </li>
+                                </li>
+                            </Link>
+                            <Link to="/printing">
+                                <li className="list-unstyled">
+                                    <MDBIcon icon="vector-square" />3D Druck Service
+                                    <MDBBadge pill color="success" className="ml-2">
+                                    New
+                                    </MDBBadge>
+                                </li>
+                            </Link>
                             </ul>
                         </MDBCol>
                         <MDBCol md="3">
                             <h5 className="title">Nützliche Links</h5>
                             <hr className="agency-red mb-4 mt-0 d-inline-block" />
                             <ul>
-                            <li className="list-unstyled">
-                                <Link to="/kisy">
+                            <Link to="/kisy">
+                                <li className="list-unstyled">
                                     <MDBIcon icon="user" />Kundenportal
-                                </Link>
-                            </li>
-                            <li className="list-unstyled">
-                                <Link to="/faq">
+                                </li>
+                            </Link>
+                            <Link to="/faq">
+                                <li className="list-unstyled">
                                     <MDBIcon icon="question" />FAQ
-                                </Link>
-                            </li>
-                            <li className="list-unstyled">
-                                <Link to="/dev">
+                                </li>
+                            </Link>
+                            <Link to="/dev">
+                                <li className="list-unstyled">
                                     <MDBIcon icon="code" />Development Roadmap
-                                </Link>
-                            </li>
-                            <li className="list-unstyled">
-                                <Link to="/coffee">
+                                </li>
+                            </Link>
+                            <Link to="/coffee">
+                                <li className="list-unstyled">
                                     <MDBIcon icon="coffee" />Einen Kaffee spendieren
-                                </Link>
-                            </li>
-                            <li className="list-unstyled">
-                                <Link to="/branding">
+                                </li>
+                            </Link>
+                            <Link to="/branding">
+                                <li className="list-unstyled">
                                     <MDBIcon icon="palette" />Presse / Branding
-                                </Link>
-                            </li>
+                                </li>
+                            </Link>
                             </ul>
                         </MDBCol>
                         <MDBCol md="4">
                             <h5 className="title">Kontakt</h5>
                             <hr className="agency-red mb-4 mt-0 d-inline-block" />
                             <ul>
-                            <li className="list-unstyled">
-                                <MDBIcon icon="home" />Villach, Kärnten, AT
-                            </li>
-                            <li className="list-unstyled">
-                                <a href="mailto:info@aichner-christian.com">
+                            <Link to="/location">
+                                <li className="list-unstyled">
+                                    <MDBIcon icon="home" />Villach, Kärnten, AT
+                                </li>
+                            </Link>
+                            <a href="mailto:info@aichner-christian.com">
+                                <li className="list-unstyled">
                                     <MDBIcon far icon="envelope" />info@aichner-christian.com
-                                </a>
-                            </li>
-                            <li className="list-unstyled">
-                                <a href="tel:004368120502754">
+                                </li>
+                            </a>
+                            <a href="tel:004368120502754">
+                                <li className="list-unstyled">
                                     <MDBIcon icon="phone" />+43 681 205027 54
-                                </a>
-                            </li>
+                                </li>
+                            </a>
                             <hr />
-                            <li className="list-unstyled">
-                                <Link to="/about">
+                            <Link to="/about">
+                                <li className="list-unstyled">
                                     <MDBIcon far icon="file-alt" />Impressum
-                                </Link>
-                            </li>
-                            <li className="list-unstyled">
-                                <Link to="/privacy">
+                                </li>
+                            </Link>
+                            <Link to="/privacy">
+                                <li className="list-unstyled">
                                     <MDBIcon icon="balance-scale" />Datenschutzerklärung
-                                </Link>
-                            </li>
+                                </li>
+                            </Link>
                             </ul>
                         </MDBCol>
                         <MDBCol md="12" className="text-center my-5">
