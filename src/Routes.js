@@ -18,6 +18,7 @@ import {
   BlogPage,
   BlogListPage,
   BlogListPageLabel,
+  PrintingPage,
 } from './components/pages';
 
 class Routes extends React.Component {
@@ -33,6 +34,11 @@ class Routes extends React.Component {
         exact
         path='/branding'
         component={(props) => <BrandingPage globalStore={this.props} {...props} />}
+        />
+        <Route
+        exact
+        path='/printing'
+        component={(props) => <PrintingPage globalStore={this.props} {...props} />}
         />
         <Route
         exact
