@@ -15,6 +15,8 @@ import {
 } from './components/molecules';
 // Routes
 import Routes from './Routes';
+// Scroll to top (needed to start pages on the top when clicking on <Link>)
+import ScrollToTop from './components/helpers/ScrollToTop.jsx';
 
 // Check if dark or light mode
 function getMode() {
@@ -48,13 +50,15 @@ class App extends React.Component {
   render() {
     return (
       <Router>
-        <div className={this.state.darkmode ? "flyout dark-mode" : "flyout"}>
-          <Navbar mode={this.state.darkmode} />
-          <main>
-            <Routes mode={this.state.darkmode} />
-          </main>
-          <Footer handler = {this._handler} mode={this.state.darkmode} />
-        </div>
+        <ScrollToTop>
+          <div className={this.state.darkmode ? "flyout dark-mode" : "flyout"}>
+            <Navbar mode={this.state.darkmode} />
+            <main>
+              <Routes mode={this.state.darkmode} />
+            </main>
+            <Footer handler = {this._handler} mode={this.state.darkmode} />
+          </div>
+        </ScrollToTop>
       </Router>
     );
   }
