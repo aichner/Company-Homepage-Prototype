@@ -6,6 +6,7 @@ import BlogPage from './Blog';
 import BlogListPage from './BlogList';
 import BlogListPageLabel from './BlogListLabel';
 import PrintingPage from './Printing';
+import LocationPage from './Location';
 
 export {
     HomePage,
@@ -14,6 +15,7 @@ export {
     BlogListPage,
     BlogListPageLabel,
     PrintingPage,
+    LocationPage,
 }
 
 /** 

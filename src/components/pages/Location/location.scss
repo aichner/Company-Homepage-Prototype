@@ -1,0 +1,43 @@
+#location {
+  .md-form.md-outline label.active{
+    color: #4285f4;
+    outline: none;
+  }
+}
+// Specific dark mode
+.dark-mode {
+  #location {
+    .card {
+      background: #1a1e21;
+      color: white;
+    }
+    .md-form.md-outline input[type="text"]:focus:not([readonly]) + label,
+    .md-form.md-outline input[type="password"]:focus:not([readonly]) + label,
+    .md-form.md-outline input[type="email"]:focus:not([readonly]) + label,
+    .md-form.md-outline input[type="url"]:focus:not([readonly]) + label,
+    .md-form.md-outline input[type="time"]:focus:not([readonly]) + label,
+    .md-form.md-outline input[type="date"]:focus:not([readonly]) + label,
+    .md-form.md-outline
+      input[type="datetime-local"]:focus:not([readonly])
+      + label,
+    .md-form.md-outline input[type="tel"]:focus:not([readonly]) + label,
+    .md-form.md-outline input[type="number"]:focus:not([readonly]) + label,
+    .md-form.md-outline input[type="search-md"]:focus:not([readonly]) + label,
+    .md-form.md-outline input[type="search"]:focus:not([readonly]) + label,
+    .md-form.md-outline textarea.md-textarea:focus:not([readonly]) + label {
+      background: #1a1e21;
+      outline: none;
+    }
+    .md-form.md-outline label.active{
+      background: #1a1e21;
+    }
+    input, textarea{
+      color: white;
+    }
+  }
+}
+
+/** 
+ * SPDX-License-Identifier: (EUPL-1.2)
+ * Copyright © 2019 Werbeagentur Christian Aichner
+ */
