@@ -48,7 +48,7 @@ class App extends React.Component {
   render() {
     return (
       <Router>
-        <div className="flyout">
+        <div className={this.state.darkmode ? "flyout dark-mode" : "flyout"}>
           <Navbar mode={this.state.darkmode} />
           <main>
             <Routes mode={this.state.darkmode} />
