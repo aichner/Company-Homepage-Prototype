@@ -43,7 +43,7 @@ const notusecases = [
   "Robuste Ersatzteile"
 ];
 
-class HomePage extends React.Component {
+class PrintingPage extends React.Component {
 
   componentDidMount = () => {
     // Set page title
@@ -238,7 +238,7 @@ class HomePage extends React.Component {
   }
 }
 
-export default HomePage;
+export default PrintingPage;
 
 /** 
  * SPDX-License-Identifier: (EUPL-1.2)
