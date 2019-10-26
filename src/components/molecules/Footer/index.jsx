@@ -28,7 +28,7 @@ const slogans = [
     "Jetzt Beratungsgespräch vereinbaren!",
     "Lassen Sie sich von uns beraten!",
     "Worauf warten Sie noch?",
-    "Der Erfolg wartet hinter diesem Kontakt!"
+    "Der Erfolg wartet!"
 ]
 
 class Footer extends React.PureComponent{
