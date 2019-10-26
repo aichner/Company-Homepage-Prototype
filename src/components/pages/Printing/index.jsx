@@ -21,6 +21,28 @@ import './printing.scss';
 import printImgDARK from '../../../assets/content/icons/3dprinting_dark.png';
 import printImgLIGHT from '../../../assets/content/icons/3dprinting_light.png';
 
+//> Data
+const usecases = [
+  "Protoypen",
+  "Einzelstücke",
+  "Messsemodelle",
+  "Werbegeschenke",
+  "Produktdesign",
+  "Werkzeug- und Formenbau",
+  "Forschung",
+  "Architekturmodelle",
+  "Ausstellmuster",
+  "Konzeptmodelle",
+  "Kleinersatzteile"
+];
+
+const notusecases = [
+  "Medizintechnik",
+  "Industrie-Fertigung",
+  "Verpackungen",
+  "Robuste Ersatzteile"
+];
+
 class HomePage extends React.Component {
 
   componentDidMount = () => {
@@ -56,12 +78,40 @@ class HomePage extends React.Component {
           className="img-fluid w-100 h-auto"
           alt="Man handling a 3D printer"
           />
-          <h3 className="mt-4">Wir drucken Ihre Dateien</h3>
+          <h3 className="mt-4 font-weight-bold">Wir drucken Ihre Dateien</h3>
             <p>
             Durch echtzeit Druckfortschrittanzeige immer auf dem Laufenden sein! Verfolgen Sie über 
             unser Portal bequem den Fortschritt Ihres Drucks. <strong>Vom Auftragseingang bis zum 
             Versand.</strong>
             </p>
+
+            <p className="lead font-weight-bold">Mach diese tollen Dinge</p>
+            <ul>
+              {usecases.map((usecase, i) => {
+                return(
+                  <li key={i}>
+                    <p className="mt-2">
+                      <MDBIcon icon="check" className="green-text pr-2" />
+                      {usecase}
+                    </p>
+                  </li>
+                )
+              })}
+            </ul>
+            <hr />
+            <p className="lead font-weight-bold">Das produzieren wir nicht</p>
+            <ul>
+              {notusecases.map((notusecase, i) => {
+                return(
+                  <li key={i}>
+                    <p className="mt-2">
+                      <MDBIcon icon="times" className="red-text pr-2" />
+                      {notusecase}
+                    </p>
+                  </li>
+                )
+              })}
+            </ul>
           </MDBCol>
           <MDBCol md="6">
             <MDBTimeline>
@@ -98,7 +148,7 @@ class HomePage extends React.Component {
               </MDBTimelineStep>
               <MDBTimelineStep color="blue">
                 <h4 className="font-weight-bold p-4 mb-0">
-                  Druck
+                  Druck & Inspektion
                 </h4>
                 <p className="text-muted px-4 mb-0">
                   <MDBIcon icon="clock" /> Noch 3 Stunden
@@ -114,30 +164,18 @@ class HomePage extends React.Component {
                   <MDBIcon icon="clock" className="blue-text pl-2" />
                   </span>
                 </p>
-                <MDBBtn color="danger" size="md">
-                  <MDBIcon icon="times" className="pr-2" />
-                  Abbruch
-                </MDBBtn>
               </MDBTimelineStep>
               <MDBTimelineStep inverted color="grey">
-                <h4 className="font-weight-bold p-4 mb-0">
-                  Inspektion
-                </h4>
-                <p className="text-muted px-4 mb-0">
-                  <MDBIcon icon="clock" /> Ausstehend
-                </p>
-              </MDBTimelineStep>
-              <MDBTimelineStep hoverable color="grey">
                 <h4 className="font-weight-bold p-4 mb-0">
                   Versand oder Abholung
                 </h4>
                 <p className="text-muted px-4 mb-0">
                   <MDBIcon icon="clock" /> Ausstehend
                 </p>
-                <MDBBtn color="green" className="mt-4">
+                <MDBBtn color="green" className="mt-4 w-100 m-0 mb-2">
                   <MDBIcon icon="shipping-fast" /> Lieferung
                 </MDBBtn>
-                <MDBBtn color="blue">
+                <MDBBtn color="blue" className="w-100 m-0">
                   <MDBIcon icon="building" /> Abholung
                 </MDBBtn>
               </MDBTimelineStep>
