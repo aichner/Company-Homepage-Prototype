@@ -19,10 +19,22 @@
     list-style: none;
     padding: 0;
   }
+  // Intersections
+  .whole {
+    background: rgba(0, 0, 0, 0.1);
+    padding-top: 4rem !important;
+    background: url('../../../assets/bg/angle_light.svg');
+    background-size: contain;
+  }
 }
 // Specific dark mode changes
 .dark-mode {
   #printing {
+    // Intersections
+    .whole {
+      background: url('../../../assets/bg/angle_dark.svg');
+    }
+    // Steps
     .step-content {
       color: white;
       background: #2e2e2e;

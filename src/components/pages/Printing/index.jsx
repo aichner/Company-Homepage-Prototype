@@ -55,9 +55,11 @@ class HomePage extends React.Component {
     const { globalStore } = this.props;
   
     return (
-      <MDBContainer className="py-5" id="printing">
-        <h2 className="text-center mb-5">3D Druck Service</h2>
-        <MDBRow className="text-center lead">
+      <div id="printing">
+      <MDBContainer className="pt-5">
+        <h2 className="text-center">3D Druck Service</h2>
+        <p className="lead text-danger text-center mb-5 font-weight-bold">Schon ab 1 Stück</p>
+        <MDBRow className="text-center lead mb-5">
           <MDBCol md="4">
             <MDBIcon icon="check" className="green-text" />
             <div>Wir prüfen jedes Modell per Hand auf Druckbarkeit</div>
@@ -71,6 +73,21 @@ class HomePage extends React.Component {
             <div>Wir nehmen Kontakt auf, falls Änderungen nötig sind</div>
           </MDBCol>
         </MDBRow>
+      </MDBContainer>
+        <div className="text-center whole py-5">
+          <MDBBtn
+          color="red"
+          size="lg"
+          rounded
+          >
+          <MDBIcon icon="upload" className="pr-2"/>
+          Upload files
+          </MDBBtn>
+          <div>
+            <small>Datenformat: .stl, .amf, .3ds, .obj, .ply</small>
+          </div>
+        </div>
+      <MDBContainer className="pb-5">
         <MDBRow className="my-5">
           <MDBCol md="6">
           <img 
@@ -182,8 +199,41 @@ class HomePage extends React.Component {
             </MDBTimeline>
           </MDBCol>
         </MDBRow>
-        
+        <div className="text-center mb-5">
+          <h3>Jetzt loslegen!</h3>
+          <MDBBtn
+          color="red"
+          size="lg"
+          rounded
+          >
+          <MDBIcon icon="upload" className="pr-2"/>
+          Upload files
+          </MDBBtn>
+          <div>
+            <small>Datenformat: .stl, .amf, .3ds, .obj, .ply</small>
+          </div>
+        </div>
+        <h3 className="text-center">Wie komme ich zu meinen Drucks?</h3>
+        <MDBRow className="text-center lead mb-5">
+          <MDBCol md="6">
+            <MDBIcon icon="check" className="green-text" />
+            <div>Einfach direkt bei uns abholen</div>
+            <div>
+            <small>Emailwerkstraße 29<br/>9500 Villach<br/>Kärnten, Österreich</small>
+            </div>
+          </MDBCol>
+          <MDBCol md="6">
+            <MDBIcon icon="check" className="green-text" />
+            <div>Zustellen lassen</div>
+            <MDBBtn
+            color="green"
+            >
+            <MDBIcon icon="shipping-fast" /> Lieferdaten eintragen
+            </MDBBtn>
+          </MDBCol>
+        </MDBRow>
       </MDBContainer>
+      </div>
     );
   }
 }
