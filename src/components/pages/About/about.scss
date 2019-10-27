@@ -1,3 +1,23 @@
+#about{
+  a:link {
+		color: #58aff5;
+	}
+	/* visited link */
+	a:visited {
+		color: #58aff5;;
+	}
+
+	/* mouse over link */
+	a:hover {
+		color: #a4cced;
+	}
+
+	/* selected link */
+	a:active {
+		color: #71abda;
+	}
+}
+
 /** 
  * SPDX-License-Identifier: (EUPL-1.2)
  * Copyright © 2019 Werbeagentur Christian Aichner
