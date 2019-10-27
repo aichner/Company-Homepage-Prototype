@@ -25,7 +25,7 @@ class AboutPage extends React.Component {
 
   componentDidMount = () => {
     // Set page title
-    document.title = "Wo Du uns findest";
+    document.title = "Impressum";
   }
 
   render() {
@@ -63,6 +63,7 @@ class AboutPage extends React.Component {
             <MDBTooltip
               placement="bottom"
               domElement
+              tag="span"
             >
               <span>
               <MDBIcon far icon="check-circle" className="pl-2 green-text" />
