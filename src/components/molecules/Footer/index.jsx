@@ -195,7 +195,7 @@ class Footer extends React.PureComponent{
                             </Link>
                             <Link to="/dev">
                                 <li className="list-unstyled">
-                                    <MDBIcon icon="code" />Development Roadmap
+                                    <MDBIcon icon="code" />Code quality
                                 </li>
                             </Link>
                             <Link to="/coffee">
