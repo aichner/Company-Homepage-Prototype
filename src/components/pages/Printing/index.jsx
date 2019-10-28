@@ -134,7 +134,7 @@ class PrintingPage extends React.Component {
           <MDBCol md="6">
             <h3 className="my-4 font-weight-bold text-center">
             So kannst Du den Status
-            <span className="red-text mr-2 ml-1">
+            <span className="red-text mr-2 ml-2">
             live
             <MDBAnimation type="pulse" infinite className="d-inline-block">
             <MDBIcon icon="circle" className="pl-2" />
