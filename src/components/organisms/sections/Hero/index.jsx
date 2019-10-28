@@ -44,50 +44,79 @@ import identity from '../../../../assets/content/hero/identity.jpg';
 import web from '../../../../assets/content/hero/web.jpg';
 import wedding from '../../../../assets/content/hero/wedding.jpg';
 
+//> Settings
+const optionsRadar = {
+  responsive: true,
+  elements: {
+    line: {
+      tension: 0.2
+    }
+  },
+  legend: {
+    display: false,
+  },
+  scale: {
+    ticks: {
+      beginAtZero: true,
+      display: false,
+      max: 100,
+      min: 0,
+      stepSize: 20
+    }
+  },
+  scales: {
+    yAxes: [{
+      gridLines: {
+        display: false,
+        drawBorder: false
+      },
+      ticks: {
+        display: false
+      }
+    }],
+    xAxes: [{
+      gridLines: {
+        display: false,
+        drawBorder: false
+      },
+      ticks: {
+        beginAtZero: true,
+        display: false,
+      }
+    }]
+  }
+}
+
 class Hero extends React.Component {
 
   state = {
-    optionsRadar: {
-        responsive: true,
-        elements: {
-          line: {
-            tension: 0
-          }
-        },
-        legend: {
-          display: false,
-        },
-        scale: {
-          ticks: {
-            beginAtZero: true,
-            display: false,
-            max: 100,
-            min: 0,
-            stepSize: 20
-          }
-        },
-        scales: {
-            yAxes: [{
-              gridLines: {
-                display: false,
-                drawBorder: false
-              },
-              ticks: {
-                display: false
-              }
-            }],
-            xAxes: [{
-              gridLines: {
-                display: false,
-                drawBorder: false
-              },
-              ticks: {
-                beginAtZero: true,
-                display: false,
-              }
-            }]
-        }
+    valuesRadar: undefined
+  }
+
+  componentDidMount = () => {
+    // First time
+    if(!this.state.valuesRadar){
+      this.setState({ valuesRadar: this.generateRandom() });
     }
+    // Every 1 sec
+    this.interval = setInterval(() => this.setState({ valuesRadar: this.generateRandom() }), 1000);
+  }
+
+  componentWillUnmount() {
+    clearInterval(this.interval);
+  }
+
+  generateRandom = () => {
+    let min = Math.ceil(10);
+    let max = Math.floor(100);
+
+    let arr = [1, 2, 3, 4, 5, 6];
+
+    let results = arr.map((item, i) => {
+      return Math.floor(Math.random() * (max - min + 1)) + min;
+    });
+
+    return results;
   }
 
   getRadarData = () => {
@@ -98,13 +127,13 @@ class Hero extends React.Component {
         "Branding",
         "Image",
         "Marketing",
-        "Facebook"
+        "Security"
       ],
       datasets: [
         {
           backgroundColor: "rgba(246, 26, 66, 0.5)",
           borderColor: "rgb(246, 26, 66)",
-          data: [65, 59, 33, 70, 56, 55]
+          data: this.state.valuesRadar
         }
       ]
     };
@@ -137,16 +166,16 @@ class Hero extends React.Component {
             </MDBView>
           </MDBContainer>
         </div>
-        <MDBContainer fluid id="seperator" className="d-sm-block d-none">
+        <MDBContainer fluid id="seperator" className="d-sm-block d-none text-dark">
           <MDBContainer>
             <MDBRow className="h-100">
-              <MDBCol md="3">
+              <MDBCol md="3" className="p-0">
                 <Radar 
                 data={this.getRadarData}
-                options={this.state.optionsRadar}
+                options={optionsRadar}
                 />
               </MDBCol>
-              <MDBCol md="7">
+              <MDBCol md="7" className="p-0">
                 <h3>Was taugt ihre Online-Präsenz?</h3>
                 <p className="lead">
                 Unsere <strong>kostenlose</strong> Analyse zeigt Ihnen den aktuellen Stand 
