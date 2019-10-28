@@ -193,16 +193,24 @@ class Footer extends React.PureComponent{
                                     <MDBIcon icon="question" />FAQ
                                 </li>
                             </Link>
-                            <Link to="/dev">
+                            <a 
+                            href="https://github.com/aichner/React-MDB-Template/blob/master/CONTRIBUTING.md"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            >
                                 <li className="list-unstyled">
                                     <MDBIcon icon="code" />Code quality
                                 </li>
-                            </Link>
-                            <Link to="/coffee">
+                            </a>
+                            <a 
+                            href="https://www.buymeacoffee.com/M4SVRWQ"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            >
                                 <li className="list-unstyled">
                                     <MDBIcon icon="coffee" />Einen Kaffee spendieren
                                 </li>
-                            </Link>
+                            </a>
                             <Link to="/branding">
                                 <li className="list-unstyled">
                                     <MDBIcon icon="palette" />Presse / Branding
