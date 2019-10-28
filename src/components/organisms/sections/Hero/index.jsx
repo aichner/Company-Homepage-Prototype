@@ -87,7 +87,7 @@ const optionsRadar = {
   }
 }
 
-class Hero extends React.Component {
+class Hero extends React.PureComponent {
 
   state = {
     valuesRadar: undefined
