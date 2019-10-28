@@ -10,6 +10,7 @@ import LocationPage from './Location';
 import PrivacyPage from './Privacy';
 import PrivacyMePage from './PrivacyMe';
 import AboutPage from './About';
+import FaqPage from './Faq';
 
 export {
     HomePage,
@@ -22,6 +23,7 @@ export {
     PrivacyPage,
     PrivacyMePage,
     AboutPage,
+    FaqPage,
 }
 
 /** 
