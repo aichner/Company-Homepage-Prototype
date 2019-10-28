@@ -11,6 +11,7 @@ import {
   MDBBtn,
   MDBTimeline,
   MDBTimelineStep,
+  MDBAnimation,
   MDBIcon,
 } from 'mdbreact';
 
@@ -131,6 +132,16 @@ class PrintingPage extends React.Component {
             </ul>
           </MDBCol>
           <MDBCol md="6">
+            <h3 className="my-4 font-weight-bold text-center">
+            So kannst Du den Status
+            <span className="red-text mr-2 ml-1">
+            live
+            <MDBAnimation type="pulse" infinite className="d-inline-block">
+            <MDBIcon icon="circle" className="pl-2" />
+            </MDBAnimation>
+            </span>
+            verfolgen
+            </h3>
             <MDBTimeline>
               <MDBTimelineStep className="normal" color="green">
                 <h4 className="font-weight-bold p-4 mb-0">
