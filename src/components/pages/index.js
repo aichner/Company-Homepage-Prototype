@@ -8,6 +8,7 @@ import BlogListPageLabel from './BlogListLabel';
 import PrintingPage from './Printing';
 import LocationPage from './Location';
 import PrivacyPage from './Privacy';
+import PrivacyMePage from './PrivacyMe';
 import AboutPage from './About';
 
 export {
@@ -19,6 +20,7 @@ export {
     PrintingPage,
     LocationPage,
     PrivacyPage,
+    PrivacyMePage,
     AboutPage,
 }
 
