@@ -27,6 +27,12 @@ import {
 } from './components/pages';
 
 class Routes extends React.Component {
+
+  // Update parent
+  handler = () => {
+    this.props.handler();
+  }
+
   render() {
     return (
       <Switch>
@@ -53,7 +59,10 @@ class Routes extends React.Component {
         <Route
         exact
         path='/privacy/me'
-        component={(props) => <PrivacyMePage globalStore={this.props} {...props} />}
+        component={(props) => <PrivacyMePage 
+        globalStore={this.props} {...props}
+        handler={this.handler}
+        />}
         />
         <Route
         exact

@@ -54,9 +54,9 @@ class App extends React.Component {
           <div className={this.state.darkmode ? "flyout dark-mode" : "flyout"}>
             <Navbar mode={this.state.darkmode} />
             <main>
-              <Routes mode={this.state.darkmode} />
+              <Routes mode={this.state.darkmode} handler={this._handler} />
             </main>
-            <Footer handler = {this._handler} mode={this.state.darkmode} />
+            <Footer handler={this._handler} mode={this.state.darkmode} />
           </div>
         </ScrollToTop>
       </Router>
