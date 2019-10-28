@@ -9,19 +9,21 @@ import { Link } from 'react-router-dom'
 import { ParallaxBanner, Parallax } from 'react-scroll-parallax';
 // Fade-In animation
 import FadeIn from 'react-fade-in';
+// Charts
+import { Radar } from "react-chartjs-2";
 
 //> MDB
 // "Material Design for Bootstrap" is a great UI design framework
 import {
-    MDBRow,
-    MDBCol,
-    MDBBtn,
-    MDBView,
-    MDBContainer,
-    MDBIcon,
-    MDBCard,
-    MDBCardBody,
-    MDBMask,
+  MDBRow,
+  MDBCol,
+  MDBBtn,
+  MDBView,
+  MDBContainer,
+  MDBIcon,
+  MDBCard,
+  MDBCardBody,
+  MDBMask,
 } from 'mdbreact';
 
 //> Images
@@ -43,47 +45,124 @@ import web from '../../../../assets/content/hero/web.jpg';
 import wedding from '../../../../assets/content/hero/wedding.jpg';
 
 class Hero extends React.Component {
-    render() {
-        
-        const { globalstore } = this.props;
 
-        return (
-            <>
-                <div id="hero" className={globalstore.mode ? ("dark") : ("light")}>
-                    <MDBContainer className="py-5">
-                        <MDBView className="hero-view">
-                            <MDBRow className="flex-center text-white">
-                                <MDBCol md="6">
-                                    <h1
-                                    className="font-weight-bold pb-4">
-                                    Ihre Vision ist unser Auftrag.
-                                    </h1>
-                                    <MDBBtn size="lg" color="white">
-                                    Mehr erfahren<MDBIcon icon="angle-down" className="pl-2" />
-                                    </MDBBtn>
-                                </MDBCol>
-                                <MDBCol md="6" className="py-5">
-                                    <Working />
-                                </MDBCol>
-                            </MDBRow>
-                        </MDBView>
-                    </MDBContainer>
-                </div>
-                <MDBContainer fluid id="seperator">
-                    <MDBContainer>
-                        <MDBRow className="h-100 flex-center">
-                            <MDBCol>
-                                <h3>Egal ob Website, Print, SEO oder Imagefilm</h3>
-                                <h2 className="font-weight-bold pl-4">Wir sind Ihr Allround-Partner</h2>
-                                <h2 className="red-text font-weight-bold pl-4">in Sachen Marketing</h2>
-                                <h2>Ein Partner für Ihr gesamtes Marketing!</h2>
-                            </MDBCol>
-                        </MDBRow>
-                    </MDBContainer>
-                </MDBContainer>
-            </>
-        );
+  state = {
+    optionsRadar: {
+        responsive: true,
+        elements: {
+          line: {
+            tension: 0
+          }
+        },
+        legend: {
+          display: false,
+        },
+        scale: {
+          ticks: {
+            beginAtZero: true,
+            display: false,
+            max: 100,
+            min: 0,
+            stepSize: 20
+          }
+        },
+        scales: {
+            yAxes: [{
+              gridLines: {
+                display: false,
+                drawBorder: false
+              },
+              ticks: {
+                display: false
+              }
+            }],
+            xAxes: [{
+              gridLines: {
+                display: false,
+                drawBorder: false
+              },
+              ticks: {
+                beginAtZero: true,
+                display: false,
+              }
+            }]
+        }
     }
+  }
+
+  getRadarData = () => {
+    return {
+      labels: [
+        "Website",
+        "Social Media",
+        "Branding",
+        "Image",
+        "Marketing",
+        "Facebook"
+      ],
+      datasets: [
+        {
+          backgroundColor: "rgba(246, 26, 66, 0.5)",
+          borderColor: "rgb(246, 26, 66)",
+          data: [65, 59, 33, 70, 56, 55]
+        }
+      ]
+    };
+  }
+
+  render() {
+    
+    const { globalstore } = this.props;
+
+    return (
+      <>
+        <div id="hero" className={globalstore.mode ? ("dark") : ("light")}>
+          <MDBContainer className="py-5">
+            <MDBView className="hero-view">
+              <MDBRow className="flex-center text-white">
+                <MDBCol md="6">
+                  <h1
+                  className="font-weight-bold pb-4">
+                  Ihre Vision ist unser Auftrag.
+                  </h1>
+                  <MDBBtn size="lg" color="white">
+                  Mehr erfahren
+                  <MDBIcon icon="angle-down" className="pl-2" />
+                  </MDBBtn>
+                </MDBCol>
+                <MDBCol md="6" className="py-5">
+                  <Working />
+                </MDBCol>
+              </MDBRow>
+            </MDBView>
+          </MDBContainer>
+        </div>
+        <MDBContainer fluid id="seperator" className="d-sm-block d-none">
+          <MDBContainer>
+            <MDBRow className="h-100">
+              <MDBCol md="3">
+                <Radar 
+                data={this.getRadarData}
+                options={this.state.optionsRadar}
+                />
+              </MDBCol>
+              <MDBCol md="7">
+                <h3>Was taugt ihre Online-Präsenz?</h3>
+                <p className="lead">
+                Unsere <strong>kostenlose</strong> Analyse zeigt Ihnen den aktuellen Stand 
+                Ihrer gesamten Online-Präsenz und liefert individuelle und unkomplizierte Lösungen.
+                </p>
+                <MDBBtn size="lg" color="agency-red" className="btn-start">
+                  <MDBIcon icon="rocket" className="pr-2" />
+                  JETZT kostenlos herausfinden
+                </MDBBtn>
+              </MDBCol>
+            </MDBRow>
+          </MDBContainer>
+        </MDBContainer>
+      </>
+    );
+  }
 }
 
 export default Hero;
