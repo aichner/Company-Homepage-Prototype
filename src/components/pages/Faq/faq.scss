@@ -1,0 +1,29 @@
+#faq {
+  .active-cyan-4 input[type="text"]:focus:not([readonly]) {
+    border: 1px solid #4dd0e1;
+    box-shadow: 0 0 10px 3px #4dd0e1;
+    display: block;
+    margin: auto;
+  }
+  .active-cyan-3 input[type="text"] {
+    border: 1px solid #4dd0e1;
+    box-shadow: 0 0 10px 1px #4dd0e1;
+    display: block;
+    margin: auto;
+  }
+}
+
+// Dark mode
+.dark-mode{
+  .active-cyan-4 input[type="text"]:focus:not([readonly]) {
+    box-shadow: 0 0 10px 3px #4dd0e1 !important;
+  }
+  .active-cyan-3 input[type="text"] {
+    box-shadow: 0 0 10px 1px #4dd0e1 !important;
+  }
+}
+
+/** 
+ * SPDX-License-Identifier: (EUPL-1.2)
+ * Copyright © 2019 Werbeagentur Christian Aichner
+ */

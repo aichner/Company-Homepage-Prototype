@@ -6,6 +6,29 @@ main{
 	margin-top: 3rem;
 }
 
+// Basic dark mode
+.dark-mode{
+	background: #3e3e3e;
+	color: white;
+	.text-muted{
+		color: #7f7f7f!important;
+	}
+	.blue-text{
+		color: #58aff5 !important;
+	}
+	.green-text{
+		color: #90ee90 !important;
+	}
+	.red-text{
+		color: #ff5e5e !important;
+	}
+}
+
+// IMG Border
+.img-border-bottom{
+	border-bottom: 1px black solid;
+}
+
 // Font
 .gidole{
 	font-family: 'Gidole', 'Roboto', sans-serif;
@@ -16,6 +39,7 @@ main{
 	flex-direction: column;
 	min-height:100vh;
 	justify-content: space-between;
+	transition: all .2s ease;
 }
 
 section{

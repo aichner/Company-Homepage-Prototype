@@ -8,17 +8,33 @@
 footer {
     transition: all .5s ease;
 
+    // List item style
+    // Footer link icons
+    ul {
+        padding: 0;
+        li {
+            background: rgba(255,255,255,.05);
+            transition: all .1s ease;
+            padding: 1rem !important;
+            align-items: center;
+            i{
+                width: 30px;
+                text-align: center;
+                padding-right: .5rem;
+            }
+            &:hover{
+                background: rgba(255,255,255,.1);
+            }
+            .badge{
+                box-shadow: none;
+            }
+        }
+    }
+
     // Custom pulsating heart
     .pulse {
         -webkit-animation: pulse 1s infinite;
         animation: pulse 1s infinite;
-    }
-
-    // Footer link icons
-    ul li i{
-        width: 30px;
-        text-align: center;
-        padding-right: .5rem;
     }
 
     // Footer column headers
@@ -78,6 +94,12 @@ footer {
     }
     // Light Mode
     &.white{
+        ul li{
+            background: rgba(0, 0, 0, .05);
+            &:hover{
+                background: rgba(0, 0, 0, .1);
+            }
+        }
         .footer-copyright{
             background: rgba(0, 0, 0, 0.1);
             color: #212121 !important;

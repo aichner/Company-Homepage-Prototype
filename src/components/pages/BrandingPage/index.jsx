@@ -81,7 +81,7 @@ class BrandingPage extends React.Component {
     }
 
     //> Temp output of the file URL
-    //console.log(options);
+    console.log(options);
   }
 
   render() {

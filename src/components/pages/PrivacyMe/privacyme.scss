@@ -1,0 +1,27 @@
+#privacyme{
+  .text-link{
+    cursor: pointer;
+  }
+  table{
+    &.text-white{
+      color: white !important;
+    }
+    tr{
+      td{
+        border: none;
+        &:last-child{
+          text-align: left;
+        }
+        &:first-child{
+          text-align: right;
+        }
+      }
+      
+    }
+  }
+}
+
+/** 
+ * SPDX-License-Identifier: (EUPL-1.2)
+ * Copyright © 2019 Werbeagentur Christian Aichner
+ */
