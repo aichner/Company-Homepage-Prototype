@@ -8,8 +8,6 @@ import { Link } from 'react-router-dom'
 // "Material Design for Bootstrap" is a great UI design framework
 import {
   MDBContainer,
-  MDBRow,
-  MDBCol,
   MDBBtn,
   MDBIcon,
 } from 'mdbreact';
@@ -25,8 +23,6 @@ class PrivacyPage extends React.Component {
   }
 
   render() {
-
-    const { globalStore } = this.props;
   
     return (
       <div id="privacy">

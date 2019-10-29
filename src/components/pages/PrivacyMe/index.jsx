@@ -1,20 +1,13 @@
 //> React
 // Contains all the functionality necessary to define React components
 import React from 'react';
-// Links (replaces <a> tags)
-import { Link } from 'react-router-dom'
-
 //> MDB
 // "Material Design for Bootstrap" is a great UI design framework
 import {
   MDBContainer,
-  MDBRow,
-  MDBCol,
   MDBTable,
   MDBTableBody,
-  MDBBtn,
   MDBIcon,
-  MDBTooltip,
 } from 'mdbreact';
 
 //> CSS

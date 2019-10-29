@@ -1,8 +1,6 @@
 //> React
 // Contains all the functionality necessary to define React components
 import React from 'react';
-// Links (replaces <a> tags)
-import { Link } from 'react-router-dom'
 
 //> MDB
 // "Material Design for Bootstrap" is a great UI design framework
@@ -12,7 +10,6 @@ import {
   MDBCol,
   MDBBtn,
   MDBIcon,
-  MDBTooltip,
 } from 'mdbreact';
 
 //> CSS
@@ -40,8 +37,6 @@ class FaqPage extends React.Component {
   }
 
   render() {
-
-    const { globalStore } = this.props;
   
     return (
       <div id="faq">

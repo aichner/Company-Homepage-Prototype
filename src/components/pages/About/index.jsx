@@ -29,8 +29,6 @@ class AboutPage extends React.Component {
   }
 
   render() {
-
-    const { globalStore } = this.props;
   
     return (
       <div id="about">

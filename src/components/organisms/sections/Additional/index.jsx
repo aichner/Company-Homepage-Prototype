@@ -2,21 +2,13 @@
 // Contains all the functionality necessary to define React components
 import React from 'react';
 
-//> Additional libraries
-// Parallax
-import { Parallax } from 'react-scroll-parallax';
-// Fade-In animation
-import FadeIn from 'react-fade-in';
-
 //> MDB
 // "Material Design for Bootstrap" is a great UI design framework
 import {
     MDBRow,
     MDBCol,
     MDBBtn,
-    MDBView,
     MDBIcon,
-    MDBMask,
     MDBContainer,
 } from 'mdbreact';
 

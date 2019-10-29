@@ -1,14 +1,8 @@
 //> React
 // Contains all the functionality necessary to define React components
 import React from 'react';
-// Links (replaces <a> tags)
-import { Link } from 'react-router-dom'
 
 //> Additional libraries
-// Parallax
-import { ParallaxBanner, Parallax } from 'react-scroll-parallax';
-// Fade-In animation
-import FadeIn from 'react-fade-in';
 // Charts
 import { Radar } from "react-chartjs-2";
 
@@ -21,28 +15,11 @@ import {
   MDBView,
   MDBContainer,
   MDBIcon,
-  MDBCard,
-  MDBCardBody,
-  MDBMask,
 } from 'mdbreact';
 
 //> Images
-// Parallax layers
-import { ReactComponent as Curve } from  '../../../../assets/bg/title-curve.svg';
+// Working svg
 import { ReactComponent as Working } from  '../../../../assets/content/hero/working.svg';
-import layer1 from '../../../../assets/bg/l1.png';
-import layer2 from '../../../../assets/bg/l2.png';
-import layer3 from '../../../../assets/bg/l3.png';
-import layer4 from '../../../../assets/bg/l4.png';
-// Logo
-//import { ReactComponent as Logo } from  '../../../../assets/content/logo_full.svg';
-// Content (services)
-import concept from '../../../../assets/content/hero/concept.jpg';
-import design from '../../../../assets/content/hero/design.jpg';
-import events from '../../../../assets/content/hero/events.jpg';
-import identity from '../../../../assets/content/hero/identity.jpg';
-import web from '../../../../assets/content/hero/web.jpg';
-import wedding from '../../../../assets/content/hero/wedding.jpg';
 
 //> Settings
 const optionsRadar = {

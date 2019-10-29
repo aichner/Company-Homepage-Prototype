@@ -11,7 +11,6 @@ import {
     MDBNavbarToggler,
     MDBCollapse,
     MDBNavItem,
-    MDBNavLink,
     MDBContainer,
     MDBSmoothScroll,
 } from 'mdbreact';
