@@ -176,10 +176,10 @@ class Hero extends React.PureComponent {
                 />
               </MDBCol>
               <MDBCol md="7" className="p-0">
-                <h3>Was taugt ihre Online-Präsenz?</h3>
+                <h3>Was taugt Deine Online-Präsenz?</h3>
                 <p className="lead">
-                Unsere <strong>kostenlose</strong> Analyse zeigt Ihnen den aktuellen Stand 
-                Ihrer gesamten Online-Präsenz und liefert individuelle und unkomplizierte Lösungen.
+                Unsere <strong>kostenlose</strong> Analyse zeigt Dir den aktuellen Stand 
+                Deiner gesamten Online-Präsenz und liefert individuelle und unkomplizierte Lösungen.
                 </p>
                 <MDBBtn size="lg" color="agency-red" className="btn-start">
                   <MDBIcon icon="rocket" className="pr-2" />
