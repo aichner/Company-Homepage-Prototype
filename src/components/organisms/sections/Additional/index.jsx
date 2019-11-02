@@ -29,17 +29,18 @@ class Weddings extends React.Component {
                     </h2>
                     <MDBRow className="flex-center text-center">
                     <MDBCol md="6">
-                            <h2>... Meetinglocations mit Dir teilen</h2>
+                            <h2>... Startups unterstützen</h2>
                             <p className="my-3">
-                            Bist Du auf der Suche nach einer <strong>modernen</strong> und 
-                            <strong>passenden</strong> Meetinglocation? Wir stellen Dir 
-                            unsere Räumlichkeiten für Besprechungen gerne zur Verfügung.
+                            Du bist ein Startup und auf der Suche nach <strong>professionellem Online 
+                            Auftritt?</strong><br/>Wir liefern Dir alles was zu einer tollen und 
+                            aussagekräftigen Internet-Präsenz gehört.<br/><strong>Das Beste für dein 
+                            Business.</strong>
                             </p>
                             <MDBBtn 
                             color="agency-red"
                             className=""
                             >
-                            <MDBIcon far icon="calendar-check" className="pr-2" />Jetzt buchen
+                            <MDBIcon icon="award" className="pr-2" />Jetzt Bonus sichern
                             </MDBBtn>
                         </MDBCol>
                         <MDBCol md="6">
