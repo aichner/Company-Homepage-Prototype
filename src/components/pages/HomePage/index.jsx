@@ -30,6 +30,10 @@ const Additional = loadableVisibility({
   loader: () => import("../../organisms/sections/Additional"),
   loading: Loader
 });
+const Services = loadableVisibility({
+  loader: () => import("../../organisms/sections/Services"),
+  loading: Loader
+});
 
 class HomePage extends React.Component {
 
@@ -42,6 +46,7 @@ class HomePage extends React.Component {
     return (
       <>
         <Hero globalstore={this.props.globalStore} />
+        <Services globalstore={this.props.globalStore} />
         <CallToAction globalstore={this.props.globalStore} />
         <Additional globalstore={this.props.globalStore} />
         <MessengerCustomerChat
