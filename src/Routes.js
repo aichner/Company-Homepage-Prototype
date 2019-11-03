@@ -82,17 +82,17 @@ class Routes extends React.Component {
         />
         <Route
         exact
-        path='/news'
+        path='/blog'
         component={(props) => <BlogListPage globalStore={this.props} {...props} />}
         />
         <Route
         exact
-        path='/news/:label'
+        path='/blog/:label'
         component={(props) => <BlogListPageLabel globalStore={this.props} {...props} />}
         />
         <Route
         exact
-        path='/news/article/:id'
+        path='/blog/article/:id'
         component={(props) => <BlogPage globalStore={this.props} {...props} />}
         />
 

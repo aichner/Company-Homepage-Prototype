@@ -127,7 +127,7 @@ class BlogList extends React.Component {
                         return(
                             <MDBCol key={i} lg="3" md="12" className="mb-lg-0 mb-4">
                                 {image &&
-                                <Link to={"/news/article/"+blog.id}>
+                                <Link to={"/blog/article/"+blog.id}>
                                     <MDBView hover className="mb-4" >
                                     <img
                                         className="img-fluid m-auto"
@@ -145,7 +145,7 @@ class BlogList extends React.Component {
                                     {blog.labels && blog.labels.map((title, i) => {
                                         if(!colorList.includes(title)){
                                             return(
-                                                <Link key={i} to={"/news/"+title}>
+                                                <Link key={i} to={"/blog/"+title}>
                                                     <MDBBadge className="mr-2" pill color={color}>{title}</MDBBadge>
                                                 </Link>
                                             );
