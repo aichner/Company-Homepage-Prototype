@@ -32,10 +32,11 @@ import imageIMG from '../../../../assets/content/services/image.png';
 const data = {
   services: [
     {
-      title: "Webdesign und Entwicklung",
+      title: "Website / Shop / App",
       img: webIMG,
-      lead: "Bla bla bla",
-      text: "Bla bla bla wieso eine Homepage wichtig ist.",
+      lead: "Gib Deinem Business ein einzigartiges zu Hause!",
+      text: `Wir designen und entwickeln Deine unique Homepage inkl. Online-Shop und 
+      sonstigen Zusatzfunktionen.`,
       action: {
         text: "Erkunden",
         color: "red",
@@ -57,13 +58,13 @@ const data = {
     {
       title: "Imagefilm",
       img: imageIMG,
-      lead: "Setzen Sie Ihr Unternehmen professionell ins Bild.",
-      text: `Mit einem Imagefilm erhalten Sie ein Video, welches Sie vielseitig und 
-      auf allen Plattformen einsetzen können.`,
+      lead: "Setze Dein Unternehmen professionell ins Bild.",
+      text: `Mit einem Imagefilm erhaltest Du ein Video, welches Du vielseitig und 
+      auf allen Plattformen einsetzen kannst.`,
       action: {
         text: "Erkunden",
         color: "red",
-        link: "/services/ads",
+        link: "/services/image",
       }
     }
   ]
@@ -90,23 +91,25 @@ class Services extends React.PureComponent {
                 return(
                   <MDBCol md="4" key={i}>
                     <img src={service.img} className="img-fluid" alt={service.title}/>
-                    <h4 className="font-weight-bold mt-3">
-                    {service.title}
-                    </h4>
-                    <p className="lead">
-                      {service.lead}
-                    </p>
-                    <p>
-                      {service.text}
-                    </p>
-                    <Link to={service.action.link}>
-                      <MDBBtn
-                      color={service.action.color}
-                      rounded
-                      >
-                      {service.action.text}
-                      </MDBBtn>
-                    </Link>
+                    <div className="pl-3 pr-3">
+                      <h4 className="font-weight-bold mt-3">
+                      {service.title}
+                      </h4>
+                      <p className="lead">
+                        {service.lead}
+                      </p>
+                      <p>
+                        {service.text}
+                      </p>
+                      <Link to={service.action.link}>
+                        <MDBBtn
+                        color={service.action.color}
+                        rounded
+                        >
+                        {service.action.text}
+                        </MDBBtn>
+                      </Link>
+                    </div>
                   </MDBCol>
                 );
               })}
