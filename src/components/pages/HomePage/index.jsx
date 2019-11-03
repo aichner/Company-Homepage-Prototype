@@ -6,6 +6,8 @@ import React from 'react';
 // Loadable
 import loadableVisibility from "react-loadable-visibility/react-loadable";
 import Loader from "../../atoms/Loader";
+// Facebook messenger
+import MessengerCustomerChat from 'react-messenger-customer-chat';
 
 //> MDB
 // "Material Design for Bootstrap" is a great UI design framework
@@ -42,6 +44,10 @@ class HomePage extends React.Component {
         <Hero globalstore={this.props.globalStore} />
         <CallToAction globalstore={this.props.globalStore} />
         <Additional globalstore={this.props.globalStore} />
+        <MessengerCustomerChat
+        pageId={process.env.REACT_APP_PAGE_ID}
+        appId={process.env.REACT_APP_APP_ID}
+        />
       </>
     );
   }
