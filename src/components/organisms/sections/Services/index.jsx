@@ -113,6 +113,9 @@ class Services extends React.PureComponent {
                   </MDBCol>
                 );
               })}
+              <MDBCol md="12">
+
+              </MDBCol>
             </MDBRow>
         </MDBContainer>
       </div>
