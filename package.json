@@ -1,7 +1,7 @@
 {
   "name": "company-homepage",
   "homepage": ".",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "private": true,
   "dependencies": {
     "mdbreact": "./mdbreact-4.21.0.tgz",
