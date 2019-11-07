@@ -25,6 +25,7 @@ import {
   PrivacyMePage,
   AboutPage,
   FaqPage,
+  LoginPage,
 } from './components/pages';
 
 class Routes extends React.Component {
@@ -79,6 +80,11 @@ class Routes extends React.Component {
         exact
         path='/about'
         component={(props) => <AboutPage globalStore={this.props} {...props} />}
+        />
+        <Route
+        exact
+        path='/kisy'
+        component={(props) => <LoginPage globalStore={this.props} {...props} />}
         />
         <Route
         exact

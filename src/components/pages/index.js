@@ -11,6 +11,7 @@ import PrivacyPage from './Privacy';
 import PrivacyMePage from './PrivacyMe';
 import AboutPage from './About';
 import FaqPage from './Faq';
+import LoginPage from './Login';
 
 export {
     HomePage,
@@ -24,6 +25,7 @@ export {
     PrivacyMePage,
     AboutPage,
     FaqPage,
+    LoginPage,
 }
 
 /** 
