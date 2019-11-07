@@ -193,6 +193,11 @@ class Footer extends React.PureComponent{
                                     <MDBIcon icon="question" />FAQ
                                 </li>
                             </Link>
+                            <Link to="/blog">
+                                <li className="list-unstyled">
+                                    <MDBIcon icon="rss" />Blog
+                                </li>
+                            </Link>
                             <a 
                             href="https://github.com/aichner/React-MDB-Template/blob/master/CONTRIBUTING.md"
                             target="_blank"

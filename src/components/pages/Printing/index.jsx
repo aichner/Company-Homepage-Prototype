@@ -82,7 +82,7 @@ class PrintingPage extends React.Component {
           rounded
           >
           <MDBIcon icon="upload" className="pr-2"/>
-          Upload files
+          Upload files (beta)
           </MDBBtn>
           <div>
             <small>Datenformat: .stl, .amf, .3ds, .obj, .ply</small>
@@ -218,7 +218,7 @@ class PrintingPage extends React.Component {
           rounded
           >
           <MDBIcon icon="upload" className="pr-2"/>
-          Upload files
+          Upload files (beta)
           </MDBBtn>
           <div>
             <small>Datenformat: .stl, .amf, .3ds, .obj, .ply</small>
