@@ -52,17 +52,18 @@ class Navbar extends React.Component{
 
     render(){
         const overlay = (
-        <div
-            id="sidenav-overlay"
-            style={{ backgroundColor: "transparent" }}
-            onClick={this.toggleCollapse("mainNavbarCollapse")}
-        />
+            <div
+                id="sidenav-overlay"
+                style={{ backgroundColor: "transparent" }}
+                onClick={this.toggleCollapse("mainNavbarCollapse")}
+            />
         );
 
+        // Get react-router-dom location and navbar collapseID
         const { location } = this.props;
-
         const { collapseID } = this.state;
 
+        // Debugging
         console.log(location);
 
         return(
@@ -92,14 +93,14 @@ class Navbar extends React.Component{
                         <MDBNavItem>
                             {location.pathname === "/" ? (
                                 <MDBSmoothScroll to="hero">
-                                    <strong>Home</strong>
+                                Home
                                 </MDBSmoothScroll>
                             ) : (
                                 <MDBNavLink 
                                 to="/"
                                 active={false}
                                 >
-                                    Home
+                                Home
                                 </MDBNavLink>
                             )}
                         </MDBNavItem>
