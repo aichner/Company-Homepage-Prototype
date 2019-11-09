@@ -5,8 +5,6 @@ import React from 'react';
 //> Additional libraries
 // Parallax
 import { Parallax } from 'react-scroll-parallax';
-// Fade-In animation
-import FadeIn from 'react-fade-in';
 
 //> MDB
 // "Material Design for Bootstrap" is a great UI design framework
