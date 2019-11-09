@@ -1,6 +1,7 @@
 //> React
 // Contains all the functionality necessary to define React components
 import React from 'react';
+import {withRouter} from 'react-router-dom';
 
 //> MDB
 // "Material Design for Bootstrap" is a great UI design framework
@@ -11,6 +12,7 @@ import {
     MDBNavbarToggler,
     MDBCollapse,
     MDBNavItem,
+    MDBNavLink,
     MDBContainer,
     MDBSmoothScroll,
 } from 'mdbreact';
@@ -57,7 +59,10 @@ class Navbar extends React.Component{
         />
         );
 
+        const { pathname } = this.props;
+
         const { collapseID } = this.state;
+
         return(
             <div>
                 <MDBNavbar
@@ -83,9 +88,23 @@ class Navbar extends React.Component{
                     >
                     <MDBNavbarNav right>
                         <MDBNavItem>
-                            <MDBSmoothScroll to="hero">
-                                <strong>Home</strong>
-                            </MDBSmoothScroll>
+                            {pathname === "/" ? (
+                                <MDBSmoothScroll to="hero">
+                                    <strong>Home</strong>
+                                </MDBSmoothScroll>
+                            ) : (
+                                <MDBNavLink 
+                                to="/"
+                                active={false}
+                                >
+                                    Home
+                                </MDBNavLink>
+                            )}
+                        </MDBNavItem>
+                        <MDBNavItem>
+                            <MDBNavLink to="/kisy">
+                                Login
+                            </MDBNavLink>
                         </MDBNavItem>
                     </MDBNavbarNav>
                     </MDBCollapse>
@@ -97,7 +116,7 @@ class Navbar extends React.Component{
     }
 }
 
-export default Navbar;
+export default withRouter(Navbar);
 
 /** 
  * SPDX-License-Identifier: (EUPL-1.2)
