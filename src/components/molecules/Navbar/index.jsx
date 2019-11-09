@@ -59,9 +59,11 @@ class Navbar extends React.Component{
         />
         );
 
-        const { pathname } = this.props;
+        const { location } = this.props;
 
         const { collapseID } = this.state;
+
+        console.log(location);
 
         return(
             <div>
@@ -88,7 +90,7 @@ class Navbar extends React.Component{
                     >
                     <MDBNavbarNav right>
                         <MDBNavItem>
-                            {pathname === "/" ? (
+                            {location.pathname === "/" ? (
                                 <MDBSmoothScroll to="hero">
                                     <strong>Home</strong>
                                 </MDBSmoothScroll>
