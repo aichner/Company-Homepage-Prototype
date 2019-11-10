@@ -13,9 +13,6 @@ import {
   MDBBtn,
   MDBView,
   MDBIcon,
-  MDBCarousel,
-  MDBCarouselItem,
-  MDBCarouselInner,
 } from 'mdbreact';
 
 //> CSS
@@ -26,26 +23,9 @@ import kelagIMG from '../.././../../assets/content/trusted/kelag.png';
 import kelagbigbandIMG from '../.././../../assets/content/trusted/kelagbigband.png';
 import pharmaziegasseIMG from '../.././../../assets/content/trusted/pharmaziegasse.png';
 import bluelupiIMG from '../.././../../assets/content/trusted/bluelupi.png';
-
-//> Data
-const data = [
-  kelagIMG,
-  pharmaziegasseIMG,
-  kelagbigbandIMG,
-  bluelupiIMG,
-];
+import erlebnishotelIMG from '../.././../../assets/content/trusted/erlebnishotel.png';
 
 class Trusted extends React.PureComponent {
-
-  renderItems = () => {
-    return data.map((logo, i) => {
-      return(
-        <MDBCol md="3" className="p-5">
-          <img src={logo} alt="Kundenlogo" className="img-fluid" />
-        </MDBCol>
-      )
-    });
-  }
 
   render() {
     
@@ -61,49 +41,23 @@ class Trusted extends React.PureComponent {
             Wir bieten Dir <strong>hochwertige</strong>, auf Deine Vision zugeschnittene Lösungen in sämtlichen 
             Bereichen des Marketings.
             </p>
-            <MDBCarousel 
-            activeItem={1}
-            length={3}
-            slide={true}
-            showControls={false}
-            showIndicators={true}
-            mobileGesture={true}
-            interval={4000}
-            multiItem
-            onHoverStop={true}
-            >
-              <MDBCarouselInner>
-                <MDBRow>
-                  <MDBCarouselItem itemId="1">
-                    <MDBRow className="flex-center">
-                    {this.renderItems()}
-                    </MDBRow>
-                  </MDBCarouselItem>
-                  <MDBCarouselItem itemId="2">
-                    <MDBCol md="4">
-                      <p>Test4</p>
-                    </MDBCol>
-                    <MDBCol md="4">
-                      <p>Test5</p>
-                    </MDBCol>
-                    <MDBCol md="4">
-                      <p>Test6</p>
-                    </MDBCol>
-                  </MDBCarouselItem>
-                  <MDBCarouselItem itemId="3">
-                    <MDBCol md="4">
-                      <p>Test7</p>
-                    </MDBCol>
-                    <MDBCol md="4">
-                      <p>Test8</p>
-                    </MDBCol>
-                    <MDBCol md="4">
-                      <p>Test9</p>
-                    </MDBCol>
-                  </MDBCarouselItem>
-                </MDBRow>
-              </MDBCarouselInner>
-            </MDBCarousel>
+            <MDBRow className="flex-center">
+              <MDBCol md="2" className="p-3">
+                <img src={pharmaziegasseIMG} alt="Pharmaziegasse Logo" className="img-fluid" />
+              </MDBCol>
+              <MDBCol md="2" className="p-3">
+                <img src={bluelupiIMG} alt="Blue Lupi Logo" className="img-fluid" />
+              </MDBCol>
+              <MDBCol md="2" className="p-3">
+                <img src={kelagIMG} alt="Kelag Logo" className="img-fluid" />
+              </MDBCol>
+              <MDBCol md="2" className="p-3">
+                <img src={kelagbigbandIMG} alt="Kelag Big Band Logo" className="img-fluid" />
+              </MDBCol>
+              <MDBCol md="2" className="p-3">
+                <img src={erlebnishotelIMG} alt="Erlebnishotel Mölltal Logo" className="img-fluid" />
+              </MDBCol>
+            </MDBRow>
         </MDBContainer>
       </div>
     );
