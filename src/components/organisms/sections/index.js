@@ -4,12 +4,14 @@ import Hero from './Hero';
 import Services from './Services';
 import CallToAction from './CallToAction';
 import Additional from './Additional';
+import Trusted from './Trusted';
 
 export {
     Hero,
     Services,
     CallToAction,
     Additional,
+    Trusted,
 }
 
 /** 
