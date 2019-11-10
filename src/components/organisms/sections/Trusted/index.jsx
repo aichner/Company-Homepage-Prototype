@@ -19,15 +19,20 @@ import {
 } from 'mdbreact';
 
 //> CSS
-//import './trusted.scss';
+import './trusted.scss';
 
 //> Images
 import kelagIMG from '../.././../../assets/content/trusted/kelag.png';
+import kelagbigbandIMG from '../.././../../assets/content/trusted/kelagbigband.png';
+import pharmaziegasseIMG from '../.././../../assets/content/trusted/pharmaziegasse.png';
+import bluelupiIMG from '../.././../../assets/content/trusted/bluelupi.png';
 
 //> Data
 const data = [
   kelagIMG,
-
+  pharmaziegasseIMG,
+  kelagbigbandIMG,
+  bluelupiIMG,
 ];
 
 class Trusted extends React.PureComponent {
@@ -35,11 +40,9 @@ class Trusted extends React.PureComponent {
   renderItems = () => {
     return data.map((logo, i) => {
       return(
-        <>
-          <MDBCol md="2">
+        <MDBCol md="3" className="p-5">
           <img src={logo} alt="Kundenlogo" className="img-fluid" />
-          </MDBCol>
-        </>
+        </MDBCol>
       )
     });
   }
@@ -65,14 +68,16 @@ class Trusted extends React.PureComponent {
             showControls={false}
             showIndicators={true}
             mobileGesture={true}
-            multiItem
             interval={4000}
+            multiItem
             onHoverStop={true}
             >
               <MDBCarouselInner>
                 <MDBRow>
                   <MDBCarouselItem itemId="1">
+                    <MDBRow className="flex-center">
                     {this.renderItems()}
+                    </MDBRow>
                   </MDBCarouselItem>
                   <MDBCarouselItem itemId="2">
                     <MDBCol md="4">
