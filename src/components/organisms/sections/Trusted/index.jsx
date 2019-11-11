@@ -33,7 +33,7 @@ class Trusted extends React.PureComponent {
 
     return (
       <div id="trusted">
-        <MDBContainer className="py-5 text-center">
+        <MDBContainer className="py-5 text-center text-dark">
             <h2 className="gidole h1-responsive font-weight-bold">
               Viele Firmen profitieren von unseren Services
             </h2>
