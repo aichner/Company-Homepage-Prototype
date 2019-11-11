@@ -4,19 +4,13 @@ import React from 'react';
 // Router Link
 import { Link } from 'react-router-dom';
 
-//> Additional libraries
-// Charts
-import { Radar } from "react-chartjs-2";
-
 //> MDB
 // "Material Design for Bootstrap" is a great UI design framework
 import {
   MDBRow,
   MDBCol,
   MDBBtn,
-  MDBView,
   MDBContainer,
-  MDBIcon,
 } from 'mdbreact';
 
 //> CSS
@@ -73,8 +67,6 @@ const data = {
 class Services extends React.PureComponent {
 
   render() {
-    
-    const { globalstore } = this.props;
 
     return (
       <div id="services">

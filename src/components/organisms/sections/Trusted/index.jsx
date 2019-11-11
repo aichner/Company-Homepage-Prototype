@@ -1,8 +1,6 @@
 //> React
 // Contains all the functionality necessary to define React components
 import React from 'react';
-// Router Link
-import { Link } from 'react-router-dom';
 
 //> MDB
 // "Material Design for Bootstrap" is a great UI design framework
@@ -10,9 +8,6 @@ import {
   MDBContainer,
   MDBRow,
   MDBCol,
-  MDBBtn,
-  MDBView,
-  MDBIcon,
 } from 'mdbreact';
 
 //> CSS
@@ -28,9 +23,6 @@ import erlebnishotelIMG from '../.././../../assets/content/trusted/erlebnishotel
 class Trusted extends React.PureComponent {
 
   render() {
-    
-    const { globalstore } = this.props;
-
     return (
       <div id="trusted">
         <MDBContainer className="py-5 text-center text-dark">

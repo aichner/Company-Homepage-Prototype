@@ -32,9 +32,6 @@ class LoginPage extends React.Component {
   }
 
   render() {
-
-    const { globalStore } = this.props;
-  
     return (
       <MDBContainer className="py-5" id="login">
         <MDBRow className="flex-center">
