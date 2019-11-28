@@ -1,6 +1,8 @@
 //> React
 // Contains all the functionality necessary to define React components
 import React from 'react';
+// Links
+import { Link } from 'react-router-dom'
 
 //> Additional libraries
 // Charts
@@ -158,10 +160,12 @@ class Hero extends React.PureComponent {
                 Unsere <strong>kostenlose</strong> Analyse zeigt Dir den aktuellen Stand 
                 Deiner gesamten Online-Präsenz und liefert individuelle und unkomplizierte Lösungen.
                 </p>
-                <MDBBtn size="lg" color="agency-red" className="btn-start">
-                  <MDBIcon icon="rocket" className="pr-2" />
-                  JETZT kostenlos herausfinden
-                </MDBBtn>
+                <Link to="/me">
+                  <MDBBtn size="lg" color="agency-red" className="btn-start">
+                    <MDBIcon icon="rocket" className="pr-2" />
+                    JETZT kostenlos herausfinden
+                  </MDBBtn>
+                </Link>
               </MDBCol>
             </MDBRow>
           </MDBContainer>
