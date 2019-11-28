@@ -20,6 +20,9 @@ import {
 //> CSS
 import './request.scss';
 
+//> Images
+import requestImg from '../../../assets/content/request/request.gif';
+
 class LoginPage extends React.Component {
 
   // Init state
@@ -56,12 +59,17 @@ class LoginPage extends React.Component {
   render() {
     console.log(this.state);
     return (
-      <MDBContainer className="py-5" id="request">
+      <div id="request">
+      <MDBContainer className="py-5" fluid>
         <MDBRow className="flex-center">
-          <MDBCol md="6">
-            
+          <MDBCol md="6" className="px-5">
+            <img 
+            src={requestImg}
+            alt="Companies"
+            className="img-fluid"
+            />
           </MDBCol>
-          <MDBCol md="6">
+          <MDBCol md="4" className="px-5">
             <MDBCard>
               <div className="card-title-head p-3 text-center">
                 <h2 className="gidole">Jetzt kostenlose Analyse</h2>
@@ -210,6 +218,7 @@ class LoginPage extends React.Component {
           </MDBCol>
         </MDBRow>
       </MDBContainer>
+      </div>
     );
   }
 }
