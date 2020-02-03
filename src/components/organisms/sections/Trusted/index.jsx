@@ -19,6 +19,7 @@ import kelagbigbandIMG from '../.././../../assets/content/trusted/kelagbigband.p
 import pharmaziegasseIMG from '../.././../../assets/content/trusted/pharmaziegasse.png';
 import bluelupiIMG from '../.././../../assets/content/trusted/bluelupi.png';
 import erlebnishotelIMG from '../.././../../assets/content/trusted/erlebnishotel.png';
+import rauchIMG from '../.././../../assets/content/trusted/rauch.png';
 
 class Trusted extends React.PureComponent {
 
@@ -48,6 +49,9 @@ class Trusted extends React.PureComponent {
               </MDBCol>
               <MDBCol md="2" className="p-3">
                 <img src={erlebnishotelIMG} alt="Erlebnishotel Mölltal Logo" className="img-fluid" />
+              </MDBCol>
+              <MDBCol md="2" className="p-3">
+                <img src={rauchIMG} alt="Andreas Rauch" className="img-fluid" />
               </MDBCol>
             </MDBRow>
         </MDBContainer>
