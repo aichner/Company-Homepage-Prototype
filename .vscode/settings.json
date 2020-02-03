@@ -4,6 +4,7 @@
     "editor.snippetSuggestions": "top",
     "terminal.integrated.fontFamily": "Consolas",
     "workbench.colorTheme": "Dracula Soft",
+    "editor.rulers": [120],
     "cSpell.ignoreWords": [
         "aichner",
         "eupl",
