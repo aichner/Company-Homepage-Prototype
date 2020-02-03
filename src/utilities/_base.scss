@@ -114,6 +114,12 @@ section{
 	&:hover{
 		box-shadow: none;
 	}
+	&:focus{
+		box-shadow: none;
+	}
+	&:active{
+		box-shadow: none;
+	}
 }
 .btn-fancy {
 	--offset: 10px;

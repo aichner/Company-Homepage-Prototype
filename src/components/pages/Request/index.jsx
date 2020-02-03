@@ -107,6 +107,20 @@ class LoginPage extends React.Component {
                         onChange={this.handleChange}
                         outline
                         />
+                        <MDBInput
+                        type="email"
+                        name="email"
+                        size="lg"
+                        label="E-Mail"
+                        value={this.state.email}
+                        onChange={this.handleChange}
+                        outline
+                        />
+                        <MDBBtn
+                        color="agency-red"
+                        >
+                        Anfragen
+                        </MDBBtn>
                       </>
                     ) : (
                       <>
@@ -189,6 +203,11 @@ class LoginPage extends React.Component {
                         filled
                         type="checkbox"
                         />
+                        <MDBBtn
+                        color="agency-red"
+                        >
+                        Anfragen
+                        </MDBBtn>
                       </>
                     )}
                   </>

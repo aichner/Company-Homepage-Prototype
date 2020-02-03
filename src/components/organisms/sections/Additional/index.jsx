@@ -70,13 +70,13 @@ class Weddings extends React.Component {
                             </button>  
                         </MDBCol>
                         <MDBCol md="6">
-                            <h2>... Tutorials anbieten</h2>
+                            <h2>... Open-Source entwickeln</h2>
                             <MDBBtn
-                            social="yt"
-                            href="https://www.youtube.com/channel/UCgiTWA1uLFvyFZTi_hWapnw"
+                            social="git"
+                            href="https://www.github.com/aichner"
                             target="_blank"
-                            ><MDBIcon fab icon="youtube" className="pr-2" />
-                            YouTube
+                            ><MDBIcon fab icon="github" className="pr-2" />
+                            GitHub
                             </MDBBtn>
                         </MDBCol>
                         <MDBCol md="6">

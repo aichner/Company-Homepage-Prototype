@@ -55,15 +55,15 @@
   &.light {
     background: linear-gradient(
       to top,
-      $agencyRed 0%,
-      lighten($agencyRed, 10%) 100%
+      white 0%,
+      darken(white, 10%) 100%
     );
     color: $agencyDark !important;
   }
 }
 
 #seperator {
-  background-image: url("./assets/bg/title-curve.svg");
+  background-image: url("../../../../assets/bg/title-curve.svg");
   background-position: left top;
   background-repeat: no-repeat;
   background-size: cover;

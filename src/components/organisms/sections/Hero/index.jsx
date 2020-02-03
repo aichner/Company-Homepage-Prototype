@@ -127,13 +127,13 @@ class Hero extends React.PureComponent {
         <div id="hero" className={globalstore.mode ? ("dark") : ("light")}>
           <MDBContainer className="py-5">
             <MDBView className="hero-view">
-              <MDBRow className="flex-center text-white">
+              <MDBRow className="flex-center">
                 <MDBCol md="6">
                   <h1
                   className="font-weight-bold pb-4">
                   Ihre Vision ist unser Auftrag.
                   </h1>
-                  <MDBBtn size="lg" color="white">
+                  <MDBBtn size="lg" color="agency-red">
                   Mehr erfahren
                   <MDBIcon icon="angle-down" className="pl-2" />
                   </MDBBtn>
