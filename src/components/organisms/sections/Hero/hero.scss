@@ -1,7 +1,11 @@
 #hero {
   // Basic setup
   h1 {
-    font-size: 4.625rem;
+    font-size: 4.2rem;
+  }
+  // Left column text more center
+  .col-md-6:first-child{
+    margin-bottom: 6rem !important;
   }
   .gradient {
     background: -moz-linear-gradient(

@@ -89,7 +89,7 @@ class Hero extends React.PureComponent {
     let min = Math.ceil(10);
     let max = Math.floor(100);
 
-    let arr = [1, 2, 3, 4, 5, 6];
+    let arr = [1, 2, 3, 4, 5, 6, 7];
 
     let results = arr.map((item, i) => {
       return Math.floor(Math.random() * (max - min + 1)) + min;
@@ -104,6 +104,7 @@ class Hero extends React.PureComponent {
         "Website",
         "Social Media",
         "Branding",
+        "SEO",
         "Image",
         "Marketing",
         "Security"
@@ -131,7 +132,7 @@ class Hero extends React.PureComponent {
                 <MDBCol md="6">
                   <h1
                   className="font-weight-bold pb-4">
-                  Ihre Vision ist unser Auftrag.
+                  Deine Vision ist unser Auftrag
                   </h1>
                   <MDBBtn size="lg" color="agency-red">
                   Mehr erfahren
