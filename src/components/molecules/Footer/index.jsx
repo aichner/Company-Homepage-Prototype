@@ -57,7 +57,7 @@ class Footer extends React.PureComponent{
             <MDBFooter color={this.props.mode ? ("agency-dark") : ("white text-dark")}>
                 <MDBRow className="social">
                     <MDBCol md="12" className="text-center">
-                        <h4>Verbinden Sie sich mit uns!</h4>
+                        <h4>Verbinde Dich mit uns!</h4>
                     </MDBCol>
                     <MDBCol md="12" className="text-center">
                         <MDBBtn
@@ -139,10 +139,14 @@ class Footer extends React.PureComponent{
                             </p>
                             <hr/>
                             <h4>Dark Mode</h4>
+                            <small className="text-muted red-text">
+                            Bald verfügbar
+                            </small>
                             <MDBSwitch
                             className="switch-red mb-3"
                             checked={this.props.mode}
                             onChange={this.handleSwitchChange}
+                            disabled
                             />
                         </MDBCol>
                         <MDBCol md="3">
@@ -264,6 +268,31 @@ class Footer extends React.PureComponent{
                 <div className="footer-copyright text-center py-3">
                     <MDBContainer fluid>
                         &copy; 2017 - {new Date().getFullYear()} Copyright: Werbeagentur Christian Aichner
+                        <div>
+                          <small className="text-muted">
+                              Stable release
+                              <span className="pl-2 pr-2">·</span>
+                              Version v{process.env.REACT_APP_VERSION}
+                              <span className="pl-2 pr-2">·</span>
+                              <a 
+                              href="https://github.com/aichner/Company-Homepage"
+                              rel="noopener noreferrer"
+                              target="_blank"
+                              >
+                              <MDBIcon fab icon="github" className="pr-2"/>
+                              View on GitHub
+                              </a>
+                              <span className="pl-2 pr-2">·</span>
+                              <a 
+                              href="https://github.com/aichner/Company-Homepage/issues/new?template=bug_report.md"
+                              rel="noopener noreferrer"
+                              target="_blank"
+                              >
+                              <MDBIcon icon="bug" className="pr-2"/>
+                              Report bug
+                              </a>
+                          </small>
+                      </div>
                         <p className="my-2 font-weight-bold gidole">
                             Made with <i className="fas fa-heart pulse red-text" aria-hidden="true"></i> by us.
                         </p>
