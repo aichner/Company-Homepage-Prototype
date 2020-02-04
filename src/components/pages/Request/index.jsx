@@ -1,8 +1,8 @@
 //> React
 // Contains all the functionality necessary to define React components
-import React from 'react';
+import React from "react";
 // Links (replaces <a> tags)
-import { Link } from 'react-router-dom'
+import { Link } from "react-router-dom"
 
 //> MDB
 // "Material Design for Bootstrap" is a great UI design framework
@@ -15,13 +15,17 @@ import {
   MDBInput,
   MDBBtn,
   MDBIcon,
-} from 'mdbreact';
+} from "mdbreact";
 
 //> CSS
-import './request.scss';
+import "./request.scss";
 
 //> Images
-import requestImg from '../../../assets/content/request/request.gif';
+import requestImg from "../../../assets/content/request/request.gif";
+
+//> Images
+import { ReactComponent as SvgNoPresence } from "../../../assets/content/request/noPresence.svg";
+import { ReactComponent as SvgPresence } from "../../../assets/content/request/presence.svg";
 
 class LoginPage extends React.Component {
 
@@ -62,16 +66,16 @@ class LoginPage extends React.Component {
       <div id="request">
       <MDBContainer className="py-5" fluid>
         <MDBRow className="flex-center">
-          <MDBCol md="6" className="px-5">
+          <MDBCol md="4" className="px-5">
             <img 
             src={requestImg}
             alt="Companies"
             className="img-fluid"
             />
           </MDBCol>
-          <MDBCol md="4" className="px-5">
+          <MDBCol md="6" className="px-5 text-center">
             <MDBCard>
-              <div className="card-title-head p-3 text-center">
+              <div className="card-title-head p-3">
                 <h2 className="gidole">Jetzt kostenlose Analyse</h2>
               </div>
               <MDBCardBody className="py-4">
@@ -123,7 +127,7 @@ class LoginPage extends React.Component {
                         </MDBBtn>
                       </>
                     ) : (
-                      <>
+                      <div className="text-left">
                         <p 
                         className="text-muted mb-3"
                         >
@@ -134,9 +138,11 @@ class LoginPage extends React.Component {
                         <MDBIcon icon="angle-left" className="pr-2"/>Zurück
                         </span>
                         </p>
-                        <p>
-                        Wir schaffen Dir eine <strong>einzigartige</strong> und <strong>aussagekräftige </strong>
-                        Online-Präsenz für Dein Unternehmen.
+                        <h4 className="gidole">Glückwunsch!</h4>
+                        <p className="gidole lead">
+                        Bei uns bist Du richtig. Wir schaffen Dir eine <span className="underlined gidole">
+                        einzigartige
+                        </span> und <span className="underlined gidole">aussagekräftige</span> Online-Präsenz.
                         </p>
                         <MDBInput
                         type="text"
@@ -186,15 +192,6 @@ class LoginPage extends React.Component {
                         type="checkbox"
                         />
                         <MDBInput 
-                        label="Fotografie"
-                        name="serviceFotografie"
-                        id="serviceFotografie"
-                        checked={this.state.serviceFotografie}
-                        onChange={this.handleCheckboxChange}
-                        filled
-                        type="checkbox"
-                        />
-                        <MDBInput 
                         label="Social Media"
                         name="serviceSocialMedia"
                         id="serviceSocialMedia"
@@ -203,34 +200,49 @@ class LoginPage extends React.Component {
                         filled
                         type="checkbox"
                         />
+                        <MDBInput 
+                        label="Sonstiges"
+                        name="serviceOther"
+                        id="serviceOther"
+                        checked={this.state.serviceOther}
+                        onChange={this.handleCheckboxChange}
+                        filled
+                        type="checkbox"
+                        />
                         <MDBBtn
                         color="agency-red"
+                        className="mt-4"
                         >
                         Anfragen
                         </MDBBtn>
-                      </>
+                      </div>
                     )}
                   </>
                 ) : (
-                  <>
-                    <p className="lead">
-                    Hat Ihr Unternehmen bereits eine Online-Präsenz?
+                  <div className="selectYourState">
+                    <p className="lead font-weight-bold gidole">
+                    Hat Dein Unternehmen bereits eine Online-Präsenz?
                     </p>
-                    <MDBBtn
-                    size="lg"
-                    color="danger"
-                    onClick={() => this.setState({hasPresence: true})}
-                    >
-                    <MDBIcon icon="check" className="pr-2"/>Ja
-                    </MDBBtn>
-                    <MDBBtn
-                    size="lg"
-                    color="danger"
-                    onClick={() => this.setState({hasPresence: false})}
-                    >
-                    <MDBIcon icon="times" className="pr-2"/>Nein
-                    </MDBBtn>
-                  </>
+                    <div>
+                    <small className="text-muted">
+                    Um die Online Präsenz Deines Unternehmens zu verstehen, benötigen wir einige Informationen.
+                    </small>
+                    </div>
+                    <MDBRow className="text-center flex-center mt-4">
+                      <MDBCol md="4">
+                        <div className="selectType" onClick={() => this.setState({hasPresence: false})}>
+                          <p className="lead">Keine Online Präsenz</p>
+                          <SvgNoPresence />
+                        </div>
+                      </MDBCol>
+                      <MDBCol md="4">
+                        <div className="selectType" onClick={() => this.setState({hasPresence: true})}>
+                        <p className="lead">Vorhandene Online-Präsenz</p>
+                          <SvgPresence />
+                        </div>
+                      </MDBCol>
+                    </MDBRow>
+                  </div>
                 )}
               </MDBCardBody>
             </MDBCard>
