@@ -1,20 +1,79 @@
-.form-elegant .font-small {
-	font-size: 0.8rem;
+#login {
+	.form-elegant .font-small {
+		font-size: 0.8rem;
+	}
+
+	.form-elegant .z-depth-1a {
+		-webkit-box-shadow: 0 2px 5px 0 rgba(55, 161, 255, 0.26),
+			0 4px 12px 0 rgba(121, 155, 254, 0.25);
+		box-shadow: 0 2px 5px 0 rgba(55, 161, 255, 0.26),
+			0 4px 12px 0 rgba(121, 155, 254, 0.25);
+	}
+
+	.form-elegant .z-depth-1-half,
+	.form-elegant .btn:hover {
+		-webkit-box-shadow: 0 5px 11px 0 rgba(85, 182, 255, 0.28),
+			0 4px 15px 0 rgba(36, 133, 255, 0.15);
+		box-shadow: 0 5px 11px 0 rgba(85, 182, 255, 0.28),
+			0 4px 15px 0 rgba(36, 133, 255, 0.15);
+	}
+
+	.card {
+		color: #4f4f4f !important;
+	}
 }
 
-.form-elegant .z-depth-1a {
-	-webkit-box-shadow: 0 2px 5px 0 rgba(55, 161, 255, 0.26),
-		0 4px 12px 0 rgba(121, 155, 254, 0.25);
-	box-shadow: 0 2px 5px 0 rgba(55, 161, 255, 0.26),
-		0 4px 12px 0 rgba(121, 155, 254, 0.25);
-}
-
-.form-elegant .z-depth-1-half,
-.form-elegant .btn:hover {
-	-webkit-box-shadow: 0 5px 11px 0 rgba(85, 182, 255, 0.28),
-		0 4px 15px 0 rgba(36, 133, 255, 0.15);
-	box-shadow: 0 5px 11px 0 rgba(85, 182, 255, 0.28),
-		0 4px 15px 0 rgba(36, 133, 255, 0.15);
+.dark-mode {
+	#login {
+		.card {
+			background: #2e2e2e;
+			color: white !important;
+		}
+		.md-form.md-outline input[type="text"]:focus:not([readonly]) + label,
+		.md-form.md-outline input[type="password"]:focus:not([readonly]) + label,
+		.md-form.md-outline input[type="email"]:focus:not([readonly]) + label,
+		.md-form.md-outline input[type="url"]:focus:not([readonly]) + label,
+		.md-form.md-outline input[type="time"]:focus:not([readonly]) + label,
+		.md-form.md-outline input[type="date"]:focus:not([readonly]) + label,
+		.md-form.md-outline
+			input[type="datetime-local"]:focus:not([readonly])
+			+ label,
+		.md-form.md-outline input[type="tel"]:focus:not([readonly]) + label,
+		.md-form.md-outline input[type="number"]:focus:not([readonly]) + label,
+		.md-form.md-outline input[type="search-md"]:focus:not([readonly]) + label,
+		.md-form.md-outline input[type="search"]:focus:not([readonly]) + label,
+		.md-form.md-outline textarea.md-textarea:focus:not([readonly]) + label {
+			background: #2e2e2e;
+			outline: none;
+			color: white;
+		}
+		.md-form.md-outline
+			> input[type]:-webkit-autofill:not(.browser-default):not([type="search"])
+			+ label,
+		.md-form.md-outline > input[type="time"]:not(.browser-default) + label {
+			background: #2e2e2e;
+			color: white;
+		}
+		input:-webkit-autofill,
+		input:-webkit-autofill:hover,
+		input:-webkit-autofill:focus,
+		textarea:-webkit-autofill,
+		textarea:-webkit-autofill:hover,
+		textarea:-webkit-autofill:focus,
+		select:-webkit-autofill,
+		select:-webkit-autofill:hover,
+		select:-webkit-autofill:focus {
+			-webkit-text-fill-color: white;
+		}
+		.md-form.md-outline label.active {
+			background: #2e2e2e;
+			color: white;
+		}
+		input,
+		textarea {
+			color: white !important;
+		}
+	}
 }
 
 /** 

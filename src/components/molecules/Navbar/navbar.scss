@@ -1,4 +1,10 @@
 .navbar{
+    li{
+        align-self: center;
+        .btn{
+            margin-right: 2rem;
+        }
+    }
     // Brand image size
     svg{
         // Color of logo

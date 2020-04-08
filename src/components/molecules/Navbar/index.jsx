@@ -1,6 +1,7 @@
 //> React
 // Contains all the functionality necessary to define React components
 import React from 'react';
+import { withRouter, Link } from 'react-router-dom';
 
 //> MDB
 // "Material Design for Bootstrap" is a great UI design framework
@@ -11,8 +12,10 @@ import {
     MDBNavbarToggler,
     MDBCollapse,
     MDBNavItem,
+    MDBNavLink,
     MDBContainer,
     MDBSmoothScroll,
+    MDBBtn,
 } from 'mdbreact';
 
 //> Images
@@ -50,14 +53,20 @@ class Navbar extends React.Component{
 
     render(){
         const overlay = (
-        <div
-            id="sidenav-overlay"
-            style={{ backgroundColor: "transparent" }}
-            onClick={this.toggleCollapse("mainNavbarCollapse")}
-        />
+            <div
+                id="sidenav-overlay"
+                style={{ backgroundColor: "transparent" }}
+                onClick={this.toggleCollapse("mainNavbarCollapse")}
+            />
         );
 
+        // Get react-router-dom location and navbar collapseID
+        const { location } = this.props;
         const { collapseID } = this.state;
+
+        // Debugging
+        console.log(location);
+
         return(
             <div>
                 <MDBNavbar
@@ -69,7 +78,7 @@ class Navbar extends React.Component{
                 <MDBContainer>
                     <MDBNavbarBrand
                     href="/"
-                    className="py-0 font-weight-bold"
+                    className="py-1 font-weight-bold"
                     >
                     <Logo id="logo" />
                     </MDBNavbarBrand>
@@ -83,9 +92,35 @@ class Navbar extends React.Component{
                     >
                     <MDBNavbarNav right>
                         <MDBNavItem>
-                            <MDBSmoothScroll to="hero">
-                                <strong>Home</strong>
-                            </MDBSmoothScroll>
+                            <Link to="/me">
+                                <MDBBtn
+                                size="md"
+                                color="agency-red"
+                                >
+                                Kostenlose Analyse
+                                </MDBBtn>
+                            </Link>
+                        </MDBNavItem>
+                        <MDBNavItem>
+                            {location.pathname === "/" ? (
+                                <MDBSmoothScroll to="hero" active>
+                                Home
+                                </MDBSmoothScroll>
+                            ) : (
+                                <MDBNavLink 
+                                exact 
+                                to="/"
+                                >
+                                Home
+                                </MDBNavLink>
+                            )}
+                        </MDBNavItem>
+                        <MDBNavItem>
+                            <MDBNavLink 
+                            exact
+                            to="/kisy">
+                            Login
+                            </MDBNavLink>
                         </MDBNavItem>
                     </MDBNavbarNav>
                     </MDBCollapse>
@@ -97,7 +132,7 @@ class Navbar extends React.Component{
     }
 }
 
-export default Navbar;
+export default withRouter(Navbar);
 
 /** 
  * SPDX-License-Identifier: (EUPL-1.2)

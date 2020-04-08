@@ -18,10 +18,9 @@ import {
 */
 
 //> Components
-const Hero = loadableVisibility({
-  loader: () => import("../../organisms/sections/Hero"),
-  loading: Loader
-});
+import {
+  Hero
+} from '../../organisms/sections';
 const CallToAction = loadableVisibility({
   loader: () => import("../../organisms/sections/CallToAction"),
   loading: Loader
@@ -32,6 +31,10 @@ const Additional = loadableVisibility({
 });
 const Services = loadableVisibility({
   loader: () => import("../../organisms/sections/Services"),
+  loading: Loader
+});
+const Trusted = loadableVisibility({
+  loader: () => import("../../organisms/sections/Trusted"),
   loading: Loader
 });
 
@@ -47,6 +50,7 @@ class HomePage extends React.Component {
       <>
         <Hero globalstore={this.props.globalStore} />
         <Services globalstore={this.props.globalStore} />
+        <Trusted globalstore={this.props.globalStore} />
         <CallToAction globalstore={this.props.globalStore} />
         <Additional globalstore={this.props.globalStore} />
         <MessengerCustomerChat

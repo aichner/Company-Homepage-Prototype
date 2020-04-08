@@ -23,23 +23,23 @@ import './login.scss';
 
 class LoginPage extends React.Component {
 
+  // Init state
+  state = {}
+
   componentDidMount = () => {
     // Set page title
     document.title = "Kundenlogin";
   }
 
   render() {
-
-    const { globalStore } = this.props;
-  
     return (
-      <MDBContainer className="py-5">
+      <MDBContainer className="py-5" id="login">
         <MDBRow className="flex-center">
           <MDBCol md="6">
             <MDBCard className="z-depth-3">
               <MDBCardBody className="mx-4">
                 <div className="text-center">
-                  <h3 className="dark-grey-text mb-5">
+                  <h3 className="mb-5">
                     <strong>KISy Login</strong><br/>
                     <small>Kunden Informations System</small>
                   </h3>
@@ -48,8 +48,11 @@ class LoginPage extends React.Component {
                   label="Deine E-Mail"
                   group
                   type="email"
+                  name="email"
+                  value={this.state.email}
                   outline
                   validate
+                  onChange={(e) => {this.setState({[e.target.name]: e.target.value})}}
                   error="wrong"
                   success="right"
                 />
@@ -57,8 +60,11 @@ class LoginPage extends React.Component {
                   label="Dein Passwort"
                   group
                   type="password"
+                  name="password"
+                  value={this.state.password}
                   outline
                   validate
+                  onChange={(e) => {this.setState({[e.target.name]: e.target.value})}}
                   containerClass="mb-0"
                 />
                 <p className="font-small blue-text d-flex justify-content-end pb-3">
@@ -76,7 +82,7 @@ class LoginPage extends React.Component {
                     Sign in
                   </MDBBtn>
                 </div>
-                <p className="font-small dark-grey-text text-right d-flex justify-content-center mb-3 pt-2">
+                <p className="font-small text-right d-flex justify-content-center mb-3 pt-2">
 
                   or Sign in with:
                 </p>
